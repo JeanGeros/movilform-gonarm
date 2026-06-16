@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="flex items-start pt-1">
             <a href="/" className="flex items-center gap-2">
               <LogoIcon />
-              <span className="font-inter text-[22px] leading-none">
+              <span className="font-satoshi text-[22px] leading-none">
                 <span className="font-black text-black">movil</span>
                 <span className="font-black text-[#e42433]">form</span>
               </span>
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Servicios */}
           <div>
-            <h4 className="font-inter text-[18px] font-bold text-[#192437] mb-5">
+            <h4 className="font-satoshi text-[18px] font-bold text-[#192437] mb-5">
               Servicios
             </h4>
             <ul className="space-y-2">
@@ -55,7 +55,7 @@ export default function Footer() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="font-inter text-[15px] text-[#e42433] hover:underline"
+                    className="font-satoshi text-[15px] text-[#e42433] hover:underline"
                   >
                     {item.label}
                   </a>
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Casos de uso */}
           <div>
-            <h4 className="font-inter text-[18px] font-bold text-[#192437] mb-5">
+            <h4 className="font-satoshi text-[18px] font-bold text-[#192437] mb-5">
               Casos de uso
             </h4>
             <ul className="space-y-2">
@@ -74,7 +74,7 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href="#"
-                    className="font-inter text-[15px] text-[#e42433] hover:underline"
+                    className="font-satoshi text-[15px] text-[#e42433] hover:underline"
                   >
                     {item}
                   </a>
@@ -85,15 +85,15 @@ export default function Footer() {
 
           {/* Contacto */}
           <div>
-            <h4 className="font-inter text-[18px] font-bold text-[#192437] mb-5">
+            <h4 className="font-satoshi text-[18px] font-bold text-[#192437] mb-5">
               Información de contacto
             </h4>
-            <p className="font-inter text-[15px] text-[#192437]">Teléfono:</p>
-            <p className="font-inter text-[15px] text-[#e42433] mt-1">+56 232241522</p>
-            <p className="font-inter text-[15px] text-[#192437] mt-4">Correo Electrónico:</p>
+            <p className="font-satoshi text-[15px] text-[#192437]">Teléfono:</p>
+            <p className="font-satoshi text-[15px] text-[#e42433] mt-1">+56 232241522</p>
+            <p className="font-satoshi text-[15px] text-[#192437] mt-4">Correo Electrónico:</p>
             <a
               href="mailto:contacto@movilform.com"
-              className="font-inter text-[15px] text-[#e42433] mt-1 block hover:underline"
+              className="font-satoshi text-[15px] text-[#e42433] mt-1 block hover:underline"
             >
               contacto@movilform.com
             </a>
@@ -107,10 +107,10 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="mx-[70px] mt-4 flex items-center justify-between">
-        <p className="font-inter text-[14px] text-[#e42433]">
+        <p className="font-satoshi text-[14px] text-[#e42433]">
           MovilForm • Todos los derechos reservados © 2018
         </p>
-        <p className="font-inter text-[14px] text-[#e42433]">
+        <p className="font-satoshi text-[14px] text-[#e42433]">
           Diseñado y Desarrollado por GonArm
         </p>
       </div>

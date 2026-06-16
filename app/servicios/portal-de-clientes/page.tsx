@@ -59,8 +59,8 @@ function ServiceCard({ icon, title, description, href }: {
       <div className="w-[80px] h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
         {icon}
       </div>
-      <h3 className="font-inter mt-6 text-[22px] font-bold text-black leading-[30px]">{title}</h3>
-      <p className="font-inter mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">{description}</p>
+      <h3 className="font-satoshi mt-6 text-[22px] font-bold text-black leading-[30px]">{title}</h3>
+      <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">{description}</p>
     </a>
   );
 }
@@ -80,10 +80,10 @@ export default function PortalDeClientes() {
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
           <div className="grid grid-cols-[42%_1fr] gap-12 items-center">
-            <h1 className="font-inter text-[62px] font-black text-[#e52533] leading-[70px]">
+            <h1 className="font-satoshi text-[62px] font-black text-[#e52533] leading-[70px]">
               Portal de<br />Clientes
             </h1>
-            <div className="font-inter text-[17px] text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[17px] text-[#231d1b] leading-[28px] space-y-4">
               <p>
                 Permite a tus clientes interactuar con información y datos de forma automática,
                 con este portal podrás entregarles acceso a informes, documentos y Dashboard
@@ -102,10 +102,10 @@ export default function PortalDeClientes() {
         <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
           <div className="grid grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
                 Portales personalizados a tu<br />medida
               </h2>
-              <div className="font-inter mt-8 text-[16px] text-[#232321] leading-[26px]">
+              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px]">
                 <p>
                   Podrás agregar imágenes y contenido relacionados con tu negocio y generar
                   cuentas de acceso con niveles de seguridad para ofrecer una experiencia de
@@ -127,7 +127,7 @@ export default function PortalDeClientes() {
 
       {/* ── 3. MÁS SERVICIOS ────────────────────────────────────────────────── */}
       <section className="pb-16 max-w-[1440px] mx-auto px-[110px]">
-        <h2 className="font-inter text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
+        <h2 className="font-satoshi text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
           Conoce más de nuestros servicios
         </h2>
         <div className="grid grid-cols-3 gap-6">

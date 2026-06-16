@@ -65,8 +65,8 @@ function CasoCard({ icon, title, description, href }: {
       <div className="w-[80px] h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
         {icon}
       </div>
-      <h3 className="font-inter mt-6 text-[22px] font-bold text-black leading-[30px]">{title}</h3>
-      <p className="font-inter mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">{description}</p>
+      <h3 className="font-satoshi mt-6 text-[22px] font-bold text-black leading-[30px]">{title}</h3>
+      <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">{description}</p>
     </a>
   );
 }
@@ -92,7 +92,7 @@ export default function MantenimientosPreventivosYCorrectivos() {
           />
           <div className="absolute inset-0 bg-black/70 rounded-[20px]" />
           <div className="relative h-full flex items-center justify-center">
-            <h1 className="font-inter text-[38px] font-bold text-white text-center leading-[48px]">
+            <h1 className="font-satoshi text-[38px] font-bold text-white text-center leading-[48px]">
               Mantenimientos preventivos y correctivos
             </h1>
           </div>
@@ -102,10 +102,10 @@ export default function MantenimientosPreventivosYCorrectivos() {
         <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
           <div className="grid grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
                 Mantenimientos<br />preventivos y correctivos
               </h2>
-              <div className="font-inter mt-8 text-[16px] text-[#232321] leading-[26px]">
+              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px]">
                 <p>
                   Realiza la programación de tus mantenimientos preventivos o correctivos con el
                   módulo de tareas, programa visitas mensuales, semestrales o anuales o para uno
@@ -134,10 +134,10 @@ export default function MantenimientosPreventivosYCorrectivos() {
               />
             </div>
             <div>
-              <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
                 Gestión de Inventario
               </h2>
-              <div className="font-inter mt-8 text-[16px] text-[#232321] leading-[26px]">
+              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px]">
                 <p>
                   Administra tu inventario en nuestro portal, podrás crear grupos y tipos de
                   artículos, gestionar su ubicación y además podrás ver los servicios realizados
@@ -152,10 +152,10 @@ export default function MantenimientosPreventivosYCorrectivos() {
         <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
           <div className="grid grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
                 Órdenes de Servicio
               </h2>
-              <div className="font-inter mt-8 text-[16px] text-[#232321] leading-[26px]">
+              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px]">
                 <p>
                   Gestiona tus ordenes de servicio y empresas colaboradoras, selecciona la empresa
                   que ejecutará el trabajo y asígnale una orden de servicio, luego de su ejecución,
@@ -178,7 +178,7 @@ export default function MantenimientosPreventivosYCorrectivos() {
 
       {/* ── 5. CONOCE NUESTROS CASOS DE USO ─────────────────────────────────── */}
       <section className="pb-16 max-w-[1440px] mx-auto px-[110px]">
-        <h2 className="font-inter text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
+        <h2 className="font-satoshi text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
           Conoce nuestros casos de uso
         </h2>
         <div className="grid grid-cols-3 gap-6">

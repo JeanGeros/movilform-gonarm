@@ -104,10 +104,10 @@ function SolutionCard({
       <div className="w-20 h-20 bg-white rounded-[40px] flex items-center justify-center">
         {icon}
       </div>
-      <h3 className="font-inter mt-7 text-[22px] font-bold text-black leading-[31px]">
+      <h3 className="font-satoshi mt-7 text-[22px] font-bold text-black leading-[31px]">
         {title}
       </h3>
-      <p className="font-inter mt-3 text-[16px] font-medium text-[#3f4648] leading-[26px]">
+      <p className="font-satoshi mt-3 text-[16px] font-medium text-[#3f4648] leading-[26px]">
         {description}
       </p>
     </div>
@@ -128,10 +128,10 @@ function UseCaseCard({
       <div className="absolute -top-[55px] left-1/2 -translate-x-1/2 w-[120px] h-[120px] rounded-full bg-[#f9dfe2] flex items-center justify-center overflow-hidden">
         <img src={img} alt={title} className="w-2/3 h-2/3 object-contain" />
       </div>
-      <h3 className="font-inter text-[22px] font-black text-[#313131] leading-[26px]">
+      <h3 className="font-satoshi text-[22px] font-black text-[#313131] leading-[26px]">
         {title}
       </h3>
-      <p className="font-nunito mt-3 text-[16px] text-[#3f4648] leading-[27px]">
+      <p className="font-satoshi mt-3 text-[16px] text-[#3f4648] leading-[27px]">
         {description}
       </p>
     </div>
@@ -155,23 +155,23 @@ export default function Inicio() {
         <div className="absolute inset-0 bg-[rgba(20,20,20,0.8)]" />
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-8">
-          <h1 className="font-montserrat text-[55px] font-bold leading-[65px] tracking-[-1px] text-white max-w-[860px]">
+          <h1 className="font-satoshi text-[55px] font-bold leading-[65px] tracking-[-1px] text-white max-w-[860px]">
             Integraciones, personalización<br />y mucho más.
           </h1>
-          <p className="font-montserrat font-medium mt-7 text-[20px] leading-[22px] text-[#b5b5b5] max-w-[600px]">
+          <p className="font-satoshi font-medium mt-7 text-[20px] leading-[22px] text-[#b5b5b5] max-w-[600px]">
             Integra tu software con MovilForm, podrás extraer o enviar
             datos, completa tus formularios digitales y optimiza tus procesos.
           </p>
           <div className="flex gap-4 mt-10">
             <a
               href="#"
-              className="font-montserrat inline-flex items-center justify-center h-[50px] px-8 rounded-[30px] bg-[rgba(229,35,51,0.8)] text-white text-[18px] font-bold hover:bg-[#e52333] transition-colors"
+              className="font-satoshi inline-flex items-center justify-center h-[50px] px-8 rounded-[30px] bg-[rgba(229,35,51,0.8)] text-white text-[18px] font-bold hover:bg-[#e52333] transition-colors"
             >
               Ver servicios
             </a>
             <a
               href="#"
-              className="font-montserrat inline-flex items-center justify-center h-[50px] px-8 rounded-[30px] bg-[rgba(229,35,51,0.8)] text-white text-[18px] font-bold hover:bg-[#e52333] transition-colors"
+              className="font-satoshi inline-flex items-center justify-center h-[50px] px-8 rounded-[30px] bg-[rgba(229,35,51,0.8)] text-white text-[18px] font-bold hover:bg-[#e52333] transition-colors"
             >
               Solicitar demo
             </a>
@@ -199,14 +199,14 @@ export default function Inicio() {
 
       {/* ── 2. VALUE PROPOSITION ────────────────────────────────────────────── */}
       <section className="max-w-[1440px] mx-auto px-[70px] pt-28 pb-16">
-        <h2 className="font-inter text-[42px] font-black leading-[49px] text-center max-w-[760px] mx-auto">
+        <h2 className="font-satoshi text-[42px] font-black leading-[49px] text-center max-w-[760px] mx-auto">
           <span className="text-[#192437]">Simplificamos tus </span>
           <span className="text-[#e42433]">procesos,</span>
           <br />
           <span className="text-[#192437]">impulsamos tu </span>
           <span className="text-[#e42433]">crecimiento.</span>
         </h2>
-        <p className="font-inter mt-10 text-[16.8px] leading-[25px] text-black text-center max-w-[960px] mx-auto">
+        <p className="font-satoshi mt-10 text-[16.8px] leading-[25px] text-black text-justify max-w-[960px] mx-auto">
           Transformamos la gestión de procesos operativos mediante la
           digitalización de documentos, la optimización de rutas y la
           programación de tareas. Ofrecemos soluciones seguras y personalizadas,
@@ -234,10 +234,10 @@ export default function Inicio() {
             <div className="w-[100px] h-[100px]">
               <img src={IMG_CODING} alt="" className="w-full h-full object-contain" />
             </div>
-            <h3 className="font-inter mt-6 text-[20px] font-bold text-black leading-[27px]">
+            <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[27px]">
               Plataforma Web:
             </h3>
-            <p className="font-inter mt-2 text-[16px] leading-[22px] text-black">
+            <p className="font-satoshi mt-2 text-[16px] leading-[22px] text-black">
               Accede a diferentes módulos para gestionar tu operación.
             </p>
           </div>
@@ -246,10 +246,10 @@ export default function Inicio() {
             <div className="w-[100px] h-[100px]">
               <img src={IMG_INNOVATION} alt="" className="w-full h-full object-contain" />
             </div>
-            <h3 className="font-inter mt-6 text-[20px] font-bold text-black leading-[27px]">
+            <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[27px]">
               Innovación reconocida:
             </h3>
-            <p className="font-inter mt-2 text-[16px] leading-[22px] text-black">
+            <p className="font-satoshi mt-2 text-[16px] leading-[22px] text-black">
               MovilForm es utilizado por empresas líderes del mercado nacional e internacional.
             </p>
           </div>
@@ -258,10 +258,10 @@ export default function Inicio() {
             <div className="w-[100px] h-[100px]">
               <img src={IMG_QUALITY} alt="" className="w-full h-full object-contain" />
             </div>
-            <h3 className="font-inter mt-6 text-[20px] font-bold text-black leading-[27px]">
+            <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[27px]">
               Compromiso con el éxito:
             </h3>
-            <p className="font-inter mt-2 text-[16px] leading-[22px] text-black">
+            <p className="font-satoshi mt-2 text-[16px] leading-[22px] text-black">
               Estamos para apoyarte y alcanzar el éxito de tu operación.
             </p>
           </div>
@@ -270,14 +270,14 @@ export default function Inicio() {
 
       {/* ── 5. CLIENTS CAROUSEL ─────────────────────────────────────────────── */}
       <section className="mx-[70px] rounded-[20px] bg-[#e42233] py-10 px-[130px]">
-        <h2 className="font-inter text-[38px] font-black text-white text-center leading-[40px]">
+        <h2 className="font-satoshi text-[38px] font-black text-white text-center leading-[40px]">
           Empresas que confían en nosotros
         </h2>
         <div className="mt-6 flex items-center justify-between h-[121px] overflow-hidden">
           <img src={IMG_CLIENT_10} alt="Cliente" className="h-[60px] w-auto object-contain" />
-          <img src={IMG_CLIENT_1}  alt="Cliente" className="h-[87px] w-auto object-contain" />
-          <img src={IMG_CLIENT_2}  alt="Cliente" className="h-[104px] w-auto object-contain" />
-          <img src={IMG_CLIENT_3}  alt="Cliente" className="h-[68px] w-auto object-contain" />
+          <img src={IMG_CLIENT_1}  alt="Cliente" className="h-[60px] w-auto object-contain" />
+          <img src={IMG_CLIENT_2}  alt="Cliente" className="h-[60px] w-auto object-contain" />
+          <img src={IMG_CLIENT_3}  alt="Cliente" className="h-[60px] w-auto object-contain" />
           <img src={IMG_CLIENT_4}  alt="Cliente" className="h-[60px] w-auto object-contain" />
         </div>
         <div className="flex justify-center gap-1 mt-6">
@@ -290,10 +290,10 @@ export default function Inicio() {
 
       {/* ── 6. SOLUTIONS ────────────────────────────────────────────────────── */}
       <section className="max-w-[1440px] mx-auto px-[70px] py-20">
-        <h2 className="font-inter text-[37px] font-extrabold text-black text-center leading-[40px]">
+        <h2 className="font-satoshi text-[37px] font-extrabold text-black text-center leading-[40px]">
           Soluciones que se adaptan a tus necesidades
         </h2>
-        <p className="font-inter mt-8 text-[17px] text-[#3f4648] text-center leading-[32px]">
+        <p className="font-satoshi mt-8 text-[17px] text-[#3f4648] text-center leading-[32px]">
           Con MovilForm podrás optimizar, gestionar y controlar de forma fácil y eficiente tu operación.
         </p>
 
@@ -309,10 +309,10 @@ export default function Inicio() {
 
       {/* ── 7. USE CASES ────────────────────────────────────────────────────── */}
       <section className="max-w-[1440px] mx-auto px-[70px] pb-20">
-        <p className="font-inter text-[37px] font-extrabold text-[#e42433] text-center leading-[40px]">
+        <p className="font-satoshi text-[37px] font-extrabold text-[#e42433] text-center leading-[40px]">
           Casos de Usos
         </p>
-        <h2 className="font-inter mt-10 text-[38px] font-bold text-black text-center leading-[40px]">
+        <h2 className="font-satoshi mt-10 text-[38px] font-bold text-black text-center leading-[40px]">
           Descubre cómo MovilForm impulsa la eficiencia en tu negocio
         </h2>
 
@@ -322,12 +322,12 @@ export default function Inicio() {
             <img src={IMG_USE_CASE_BG} alt="" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/70" />
             <div className="relative z-10 h-full flex flex-col items-center justify-end pb-20 px-8">
-              <h3 className="font-montserrat text-white text-[32px] font-bold text-center leading-[32px]">
+              <h3 className="font-satoshi text-white text-[32px] font-bold text-center leading-[32px]">
                 Automatiza y<br />digitaliza tus<br />procesos para<br />potenciar tu<br />operación.
               </h3>
               <a
                 href="#"
-                className="font-nunito mt-8 flex items-center justify-center h-[40px] px-10 rounded-[14px] bg-[#1d1d1b] text-white text-[16px] hover:bg-[#333] transition-colors"
+                className="font-satoshi mt-8 flex items-center justify-center h-[40px] px-10 rounded-[14px] bg-[#1d1d1b] text-white text-[16px] hover:bg-[#333] transition-colors"
               >
                 Haz clic aquí
               </a>
@@ -355,8 +355,8 @@ export default function Inicio() {
             </div>
           </div>
 
-          <div className="font-inter flex flex-col justify-center px-10 py-16 text-white">
-            <h2 className="text-[30px] font-black text-center leading-[32px]">
+          <div className="font-satoshi flex flex-col justify-center px-10 py-16 text-white">
+            <h2 className="font-satoshi text-[30px] font-black text-center leading-[32px]">
               Integre su sistema con MovilForm
             </h2>
             <p className="mt-8 text-[19px] leading-[28px]">

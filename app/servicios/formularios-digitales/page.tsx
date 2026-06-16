@@ -103,12 +103,12 @@ function StepItem({
         {icon}
       </div>
       <div className="flex flex-col justify-center">
-        <h3 className="font-inter text-[28px] font-bold text-black leading-[42px]">
+        <h3 className="font-satoshi text-[28px] font-bold text-black leading-[42px]">
           {title}
         </h3>
         <ul className="mt-2 space-y-1">
           {bullets.map((b) => (
-            <li key={b} className="font-inter text-[15px] font-medium text-black leading-[27px]">
+            <li key={b} className="font-satoshi text-[15px] font-medium text-black leading-[27px]">
               {b}
             </li>
           ))}
@@ -137,10 +137,10 @@ function ServiceCard({
       <div className="w-[80px] h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
         {icon}
       </div>
-      <h3 className="font-inter mt-6 text-[22px] font-bold text-black leading-[30px]">
+      <h3 className="font-satoshi mt-6 text-[22px] font-bold text-black leading-[30px]">
         {title}
       </h3>
-      <p className="font-inter mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">
+      <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">
         {description}
       </p>
     </a>
@@ -163,10 +163,10 @@ export default function FormulariosDigitales() {
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
           <div className="grid grid-cols-[42%_1fr] gap-12 items-center">
-            <h1 className="font-inter text-[60px] font-black text-[#e52533] leading-[68px]">
+            <h1 className="font-satoshi text-[60px] font-black text-[#e52533] leading-[68px]">
               Formularios<br />Digitales
             </h1>
-            <div className="font-inter text-[17px] text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[17px] text-[#231d1b] leading-[28px] space-y-4">
               <p>
                 Los formularios digitales han sido diseñados para capturar información de forma
                 ordenada y efectiva. Esta tecnología es una evolución del formulario en papel, la
@@ -188,10 +188,10 @@ export default function FormulariosDigitales() {
         <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
           <div className="grid grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
                 Mejora en la eficiencia y<br />productividad
               </h2>
-              <div className="font-inter mt-8 text-[15px] text-[#232321] leading-[26px] space-y-4">
+              <div className="font-satoshi mt-8 text-[15px] text-[#232321] leading-[26px] space-y-4">
                 <p>
                   Con MovilForm, puedes despedirte de los formularios de papel y dar la bienvenida
                   a un sistema digital intuitivo.
@@ -217,10 +217,10 @@ export default function FormulariosDigitales() {
         <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
           <div className="grid grid-cols-2 gap-12 items-start">
             <div>
-              <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
                 Funcionalidades para un<br />mayor control
               </h2>
-              <ul className="font-inter mt-10 text-[15px] text-[#232321] leading-[26px] space-y-5">
+              <ul className="font-satoshi mt-10 text-[15px] text-[#232321] leading-[26px] space-y-5">
                 <li>
                   Registra automáticamente la ubicación, fecha y hora de cuándo y dónde se
                   completó un formulario, captura firmas directamente en el formulario para
@@ -251,7 +251,7 @@ export default function FormulariosDigitales() {
 
         {/* ── 4. HOW IT WORKS ─────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
-          <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+          <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
             ¿Como funciona?
           </h2>
           <div className="mt-8 divide-y divide-gray-100">
@@ -293,7 +293,7 @@ export default function FormulariosDigitales() {
 
       {/* ── 5. MORE SERVICES ────────────────────────────────────────────────── */}
       <section className="pb-16 max-w-[1440px] mx-auto px-[110px]">
-        <h2 className="font-inter text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
+        <h2 className="font-satoshi text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
           Conoce más de nuestros servicios
         </h2>
         <div className="grid grid-cols-3 gap-6">

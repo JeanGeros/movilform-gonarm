@@ -59,8 +59,8 @@ function ServiceCard({ icon, title, description, href }: {
       <div className="w-[80px] h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
         {icon}
       </div>
-      <h3 className="font-inter mt-6 text-[22px] font-bold text-black leading-[30px]">{title}</h3>
-      <p className="font-inter mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">{description}</p>
+      <h3 className="font-satoshi mt-6 text-[22px] font-bold text-black leading-[30px]">{title}</h3>
+      <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">{description}</p>
     </a>
   );
 }
@@ -80,10 +80,10 @@ export default function Integraciones() {
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
           <div className="grid grid-cols-[42%_1fr] gap-12 items-center">
-            <h1 className="font-inter text-[60px] font-black text-[#e52533] leading-[68px]">
+            <h1 className="font-satoshi text-[60px] font-black text-[#e52533] leading-[68px]">
               Integraciones
             </h1>
-            <div className="font-inter text-[17px] text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[17px] text-[#231d1b] leading-[28px] space-y-4">
               <p>
                 MovilForm pone a disposición su API Rest de integración para diferentes tipos de
                 softwares, ya sean propios o externos. Nuestros clientes tienen acceso a su
@@ -106,10 +106,10 @@ export default function Integraciones() {
         <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
           <div className="grid grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
                 Integración de MovilForm con<br />Bussiness Central y ENWIS
               </h2>
-              <div className="font-inter mt-8 text-[16px] text-[#232321] leading-[26px] space-y-4">
+              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px] space-y-4">
                 <p>
                   ENWIS es una solución empresarial basada en la plataforma Business Central, el
                   cual fue desarrollado por TegosGroup.
@@ -143,10 +143,10 @@ export default function Integraciones() {
         <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
           <div className="grid grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-inter text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
                 Integración de MovilForm con<br />GpsGate
               </h2>
-              <div className="font-inter mt-8 text-[16px] text-[#232321] leading-[26px] space-y-4">
+              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px] space-y-4">
                 <p>
                   GPSGate es una solución de gestión de flotas presente en más de 150 países
                   permitiendo a sus clientes gestionar de manera eficiente sus flotas de vehículos.
@@ -174,7 +174,7 @@ export default function Integraciones() {
 
       {/* ── 4. MÁS SERVICIOS ────────────────────────────────────────────────── */}
       <section className="pb-16 max-w-[1440px] mx-auto px-[110px]">
-        <h2 className="font-inter text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
+        <h2 className="font-satoshi text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
           Conoce más de nuestros servicios
         </h2>
         <div className="grid grid-cols-3 gap-6">

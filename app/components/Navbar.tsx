@@ -70,15 +70,15 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 flex-shrink-0">
           <LogoIcon />
-          <span className="font-inter text-[22px] leading-none">
+          <span className="font-gilmer text-[22px] leading-none">
             <span className="font-black text-black">movil</span>
             <span className="font-black text-[#e42433]">form</span>
           </span>
         </a>
 
         {/* Nav links */}
-        <div className="font-inter flex items-center gap-8">
-          <a href="/" className="text-[15px] font-medium text-black hover:text-[#e42433] transition-colors">
+        <div className="font-gilmer flex items-center gap-8">
+          <a href="/" className="text-[16px] font-bold text-black hover:text-[#e42433] transition-colors">
             Inicio
           </a>
 
@@ -86,7 +86,7 @@ export default function Navbar() {
           <div ref={serviciosRef} className="relative">
             <button
               onClick={() => setServiciosOpen((v) => !v)}
-              className="flex items-center gap-1 text-[15px] font-medium text-black hover:text-[#e42433] transition-colors cursor-pointer"
+              className="flex items-center gap-1 text-[16px] font-bold text-black hover:text-[#e42433] transition-colors cursor-pointer"
             >
               Servicios <ChevronDown open={serviciosOpen} />
             </button>
@@ -98,7 +98,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={() => setServiciosOpen(false)}
-                    className={`block px-6 py-4 text-[15px] font-medium text-black hover:text-[#e42433] hover:bg-gray-50 transition-colors ${
+                    className={`block px-6 py-4 text-[16px] font-bold text-black hover:text-[#e42433] hover:bg-gray-50 transition-colors ${
                       i < SERVICIOS.length - 1 ? "border-b border-gray-100" : ""
                     }`}
                   >
@@ -113,7 +113,7 @@ export default function Navbar() {
           <div ref={casosRef} className="relative">
             <button
               onClick={() => setCasosOpen((v) => !v)}
-              className="flex items-center gap-1 text-[15px] font-medium text-black hover:text-[#e42433] transition-colors cursor-pointer"
+              className="flex items-center gap-1 text-[16px] font-bold text-black hover:text-[#e42433] transition-colors cursor-pointer"
             >
               Casos de Uso <ChevronDown open={casosOpen} />
             </button>
@@ -125,7 +125,7 @@ export default function Navbar() {
                     key={item.label}
                     href={item.href}
                     onClick={() => setCasosOpen(false)}
-                    className={`block px-6 py-4 text-[15px] font-medium text-black hover:text-[#e42433] hover:bg-gray-50 transition-colors ${
+                    className={`block px-6 py-4 text-[16px] font-bold text-black hover:text-[#e42433] hover:bg-gray-50 transition-colors ${
                       i < CASOS_DE_USO.length - 1 ? "border-b border-gray-100" : ""
                     }`}
                   >
@@ -136,11 +136,11 @@ export default function Navbar() {
             )}
           </div>
 
-          <a href="/soporte" className="text-[15px] font-medium text-black hover:text-[#e42433] transition-colors">
+          <a href="/soporte" className="text-[16px] font-bold text-black hover:text-[#e42433] transition-colors">
             Soporte
           </a>
 
-          <a href="#" className="text-[15px] font-medium text-black hover:text-[#e42433] transition-colors">
+          <a href="#" className="text-[16px] font-bold text-black hover:text-[#e42433] transition-colors">
             Recursos
           </a>
         </div>
@@ -148,7 +148,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#"
-          className="font-inter flex-shrink-0 inline-flex items-center justify-center h-[46px] px-8 rounded-full bg-[#e42433] text-white text-[15px] font-semibold hover:bg-[#c01f2d] transition-colors"
+          className="font-gilmer flex-shrink-0 inline-flex items-center justify-center h-[46px] px-8 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"
         >
           Contacto
         </a>

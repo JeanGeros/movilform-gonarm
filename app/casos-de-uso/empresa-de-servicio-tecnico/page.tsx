@@ -60,7 +60,7 @@ export default function EmpresaDeServicioTecnico() {
           />
           <div className="absolute inset-0 bg-black/70 rounded-[20px]" />
           <div className="relative h-full flex items-center justify-center">
-            <h1 className="font-inter text-[38px] font-bold text-white text-center leading-[48px]">
+            <h1 className="font-satoshi text-[38px] font-bold text-white text-center leading-[48px]">
               Empresa de servicio técnico
             </h1>
           </div>
@@ -70,7 +70,7 @@ export default function EmpresaDeServicioTecnico() {
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
           <div className="flex gap-6 max-w-[700px] mx-auto">
             <div className="w-[9px] flex-shrink-0 rounded-full bg-[#e42433]" />
-            <p className="font-inter text-[16px] text-[#231d1b] leading-[26px]">
+            <p className="font-satoshi text-[16px] text-[#231d1b] leading-[26px]">
               Si tu empresa se encuentra en el rubro de la atención y reparación de productos o
               sistemas, MovilForm será tu nuevo aliado ya que podrás utilizar el módulo de tareas
               para programar las atenciones diarias, semanales y mensuales. También tendrás acceso
@@ -81,10 +81,10 @@ export default function EmpresaDeServicioTecnico() {
 
         {/* ── 3. GESTIÓN DE TAREAS Y SERVICIOS ─────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px] text-center">
-          <h2 className="font-inter text-[32px] font-extrabold text-[#192437] leading-[40px]">
+          <h2 className="font-satoshi text-[32px] font-extrabold text-[#192437] leading-[40px]">
             Gestión de tareas y servicios
           </h2>
-          <p className="font-inter mt-6 text-[16px] text-[#232321] leading-[26px] max-w-[500px] mx-auto">
+          <p className="font-satoshi mt-6 text-[16px] text-[#232321] leading-[26px] max-w-[500px] mx-auto">
             Con nuestro módulo de tareas, podrás planificar y asignar recursos y recibir reportes
             en línea de los trabajos realizados, todo en una plataforma web intuitiva y fácil de
             utilizar.
@@ -93,7 +93,7 @@ export default function EmpresaDeServicioTecnico() {
 
         {/* ── 4. BENEFICIOS ────────────────────────────────────────────────── */}
         <div>
-          <h2 className="font-inter text-[32px] font-extrabold text-[#192437] text-center leading-[40px] mb-6">
+          <h2 className="font-satoshi text-[32px] font-extrabold text-[#192437] text-center leading-[40px] mb-6">
             Beneficios para tu empresa
           </h2>
           <div className="grid grid-cols-3 gap-6">
@@ -102,8 +102,8 @@ export default function EmpresaDeServicioTecnico() {
                 <img src={IMG_EFICIENCIA} alt="Eficiencia en empresa de servicio técnico" className="w-full h-full object-cover" />
               </div>
               <div className="p-8 text-center">
-                <h3 className="font-inter text-[22px] font-bold text-[#192437] leading-[30px]">Eficiencia</h3>
-                <p className="font-inter mt-4 text-[15px] text-[#3f4648] leading-[26px]">
+                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">Eficiencia</h3>
+                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
                   Planifica tus servicios y optimiza los recursos y aumenta el control de
                   las tareas que se ejecutan diariamente.
                 </p>
@@ -114,8 +114,8 @@ export default function EmpresaDeServicioTecnico() {
                 <img src={IMG_ACCESIBILIDAD} alt="Accesibilidad en servicio técnico" className="w-full h-full object-cover" />
               </div>
               <div className="p-8 text-center">
-                <h3 className="font-inter text-[22px] font-bold text-[#192437] leading-[30px]">Accesibilidad</h3>
-                <p className="font-inter mt-4 text-[15px] text-[#3f4648] leading-[26px]">
+                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">Accesibilidad</h3>
+                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
                   Desde tu Smartphone o Tablet, captura toda la información que necesites
                   y envía reportes automáticos.
                 </p>
@@ -126,8 +126,8 @@ export default function EmpresaDeServicioTecnico() {
                 <img src={IMG_PRODUCTIVIDAD} alt="Productividad con formularios digitales" className="w-full h-full object-cover" />
               </div>
               <div className="p-8 text-center">
-                <h3 className="font-inter text-[22px] font-bold text-[#192437] leading-[30px]">Productividad</h3>
-                <p className="font-inter mt-4 text-[15px] text-[#3f4648] leading-[26px]">
+                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">Productividad</h3>
+                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
                   Simplifica tus procesos y facilita el trabajo de tu equipo utilizando
                   formularios digitales.
                 </p>
@@ -138,7 +138,7 @@ export default function EmpresaDeServicioTecnico() {
 
         {/* ── 5. BANNER CTA ────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px] text-center">
-          <p className="font-inter text-[26px] font-bold text-[#192437] leading-[36px] max-w-[780px] mx-auto">
+          <p className="font-satoshi text-[26px] font-bold text-[#192437] leading-[36px] max-w-[780px] mx-auto">
             Digitaliza y planifica tus servicios, consiguiendo control y eficiencia para
             tu empresa.
           </p>
@@ -172,8 +172,8 @@ export default function EmpresaDeServicioTecnico() {
               <div className="w-[80px] h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
                 {icon}
               </div>
-              <h3 className="font-inter mt-6 text-[20px] font-bold text-black leading-[28px]">{title}</h3>
-              <p className="font-inter mt-3 text-[15px] font-medium text-[#3f4648] leading-[26px]">{desc}</p>
+              <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[28px]">{title}</h3>
+              <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[26px]">{desc}</p>
             </div>
           ))}
         </div>

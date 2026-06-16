@@ -65,7 +65,7 @@ export default function EmpresaDeGestionDeResiduos() {
           />
           <div className="absolute inset-0 bg-black/70 rounded-[20px]" />
           <div className="relative h-full flex items-center justify-center">
-            <h1 className="font-inter text-[38px] font-bold text-white text-center leading-[48px]">
+            <h1 className="font-satoshi text-[38px] font-bold text-white text-center leading-[48px]">
               Gestión de residuos domiciliarios e industriales
             </h1>
           </div>
@@ -76,7 +76,7 @@ export default function EmpresaDeGestionDeResiduos() {
           <div className="grid grid-cols-2 gap-12">
             <div className="flex gap-6">
               <div className="w-[9px] flex-shrink-0 rounded-full bg-[#e42433]" />
-              <p className="font-inter text-[16px] text-[#231d1b] leading-[26px]">
+              <p className="font-satoshi text-[16px] text-[#231d1b] leading-[26px]">
                 Si tu empresa pertenece al rubro de la gestión de residuos industriales,
                 domiciliarios, de contenedores o reciclaje, estás en el lugar correcto.
                 MovilForm te permitirá planificar todos los servicios de recolección que
@@ -86,7 +86,7 @@ export default function EmpresaDeGestionDeResiduos() {
             </div>
             <div className="flex gap-6">
               <div className="w-[9px] flex-shrink-0 rounded-full bg-[#e42433]" />
-              <div className="font-inter text-[16px] text-[#231d1b] leading-[26px] space-y-4">
+              <div className="font-satoshi text-[16px] text-[#231d1b] leading-[26px] space-y-4">
                 <p>
                   Además, podrás optimizar los servicios de forma automática, generando
                   importantes ahorros de tiempo, combustible y desgaste del vehículo, lo
@@ -104,10 +104,10 @@ export default function EmpresaDeGestionDeResiduos() {
 
         {/* ── 3. COMPROMISO Y EXCELENCIA ───────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px] text-center">
-          <h2 className="font-inter text-[32px] font-extrabold text-[#192437] leading-[40px]">
+          <h2 className="font-satoshi text-[32px] font-extrabold text-[#192437] leading-[40px]">
             Compromiso y excelencia
           </h2>
-          <p className="font-inter mt-6 text-[16px] text-[#232321] leading-[26px] max-w-[500px] mx-auto">
+          <p className="font-satoshi mt-6 text-[16px] text-[#232321] leading-[26px] max-w-[500px] mx-auto">
             Nos especializamos en digitalizar procesos con tecnología intuitiva y eficiente.
             Trabajamos junto a nuestros clientes para asegurar la mejor experiencia y calidad
             en los resultados.
@@ -116,7 +116,7 @@ export default function EmpresaDeGestionDeResiduos() {
 
         {/* ── 4. BENEFICIOS ────────────────────────────────────────────────── */}
         <div>
-          <h2 className="font-inter text-[32px] font-extrabold text-[#192437] text-center leading-[40px] mb-6">
+          <h2 className="font-satoshi text-[32px] font-extrabold text-[#192437] text-center leading-[40px] mb-6">
             Beneficios para tu empresa
           </h2>
           <div className="grid grid-cols-3 gap-6">
@@ -126,10 +126,10 @@ export default function EmpresaDeGestionDeResiduos() {
                 <img src={IMG_EFICIENCIA} alt="Eficiencia operativa" className="w-full h-full object-cover" />
               </div>
               <div className="p-8 text-center">
-                <h3 className="font-inter text-[22px] font-bold text-[#192437] leading-[30px]">
+                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">
                   Eficiencia
                 </h3>
-                <p className="font-inter mt-4 text-[15px] text-[#3f4648] leading-[26px]">
+                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
                   Planifica tus servicios y optimiza los recursos y aumenta el control de
                   las tareas que se ejecutan diariamente.
                 </p>
@@ -141,10 +141,10 @@ export default function EmpresaDeGestionDeResiduos() {
                 <img src={IMG_ACCESIBILIDAD} alt="Accesibilidad desde smartphones" className="w-full h-full object-cover" />
               </div>
               <div className="p-8 text-center">
-                <h3 className="font-inter text-[22px] font-bold text-[#192437] leading-[30px]">
+                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">
                   Accesibilidad
                 </h3>
-                <p className="font-inter mt-4 text-[15px] text-[#3f4648] leading-[26px]">
+                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
                   Desde tu Smartphone o Tablet, captura toda la información que necesites
                   y envía reportes automáticos.
                 </p>
@@ -156,10 +156,10 @@ export default function EmpresaDeGestionDeResiduos() {
                 <img src={IMG_PRODUCTIVIDAD} alt="Productividad con formularios digitales" className="w-full h-full object-cover" />
               </div>
               <div className="p-8 text-center">
-                <h3 className="font-inter text-[22px] font-bold text-[#192437] leading-[30px]">
+                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">
                   Productividad
                 </h3>
-                <p className="font-inter mt-4 text-[15px] text-[#3f4648] leading-[26px]">
+                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
                   Simplifica tus procesos y facilita el trabajo de tu equipo utilizando
                   formularios digitales.
                 </p>
@@ -170,7 +170,7 @@ export default function EmpresaDeGestionDeResiduos() {
 
         {/* ── 5. BANNER CTA ────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px] text-center">
-          <p className="font-inter text-[26px] font-bold text-[#192437] leading-[36px] max-w-[780px] mx-auto">
+          <p className="font-satoshi text-[26px] font-bold text-[#192437] leading-[36px] max-w-[780px] mx-auto">
             Planifica tus servicios y optimiza los recursos, consiguiendo control y eficiencia
             para tu empresa
           </p>
@@ -204,8 +204,8 @@ export default function EmpresaDeGestionDeResiduos() {
               <div className="w-[80px] h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
                 {icon}
               </div>
-              <h3 className="font-inter mt-6 text-[20px] font-bold text-black leading-[28px]">{title}</h3>
-              <p className="font-inter mt-3 text-[15px] font-medium text-[#3f4648] leading-[26px]">{desc}</p>
+              <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[28px]">{title}</h3>
+              <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[26px]">{desc}</p>
             </div>
           ))}
         </div>
