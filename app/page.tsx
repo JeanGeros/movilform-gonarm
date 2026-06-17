@@ -295,7 +295,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 8. INTEGRATION ──────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-[1440px] mb-16 p-17.5 rounded-[20px] bg-[#1d1d1b] overflow-hidden">
+      <section className="mx-auto max-w-[1440px] mb-16 p-15 rounded-[20px] bg-[#1d1d1b] overflow-hidden">
         <div className="grid grid-cols-2 gap-15 w-[90%] mx-auto">
           <div className="p-3">
             <div className="w-full h-full rounded-[15px] overflow-hidden">

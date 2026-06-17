@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const SERVICIOS = [
@@ -19,18 +20,6 @@ const CASOS_DE_USO = [
   { label: "Empresas de Servicio de Higiene",          href: "/casos-de-uso/empresa-de-servicio-de-higiene" },
   { label: "Empresas de Servicio Técnico",             href: "/casos-de-uso/empresa-de-servicio-tecnico" },
 ];
-
-function LogoIcon() {
-  return (
-    <svg width="38" height="34" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="5" width="26" height="28" rx="3" fill="#e42433" opacity="0.35" />
-      <rect x="8" y="1" width="26" height="28" rx="3" fill="#e42433" />
-      <line x1="14" y1="9"  x2="28" y2="9"  stroke="white" strokeWidth="2.2" strokeLinecap="round" />
-      <line x1="14" y1="15" x2="28" y2="15" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
-      <line x1="14" y1="21" x2="22" y2="21" stroke="white" strokeWidth="2.2" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 function ChevronDown({ open }: { open?: boolean }) {
   return (
@@ -68,12 +57,8 @@ export default function Navbar() {
       <div className="bg-white rounded-[20px] px-8 h-[72px] flex items-center justify-between shadow-[0_4px_24px_rgba(0,0,0,0.12)]">
 
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 flex-shrink-0">
-          <LogoIcon />
-          <span className="font-gilmer text-[22px] leading-none">
-            <span className="font-black text-black">movil</span>
-            <span className="font-black text-[#e42433]">form</span>
-          </span>
+        <a href="/" className="flex-shrink-0">
+          <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" width={160} height={44} className="h-[44px] w-auto object-contain" />
         </a>
 
         {/* Nav links */}
