@@ -1,3 +1,7 @@
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMobileAlt, faRoute, faChartBar, faProjectDiagram, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faFileAlt } from "@fortawesome/free-regular-svg-icons";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -21,72 +25,14 @@ const IMG_INTEGRATION = "/inicio/integration.jpg";
 const IMG_ARROW_LEFT  = "/inicio/arrow-left.png";
 const IMG_ARROW_RIGHT = "/inicio/arrow-right.png";
 
-// ─── Icon SVGs ────────────────────────────────────────────────────────────────
+// ─── Icons ────────────────────────────────────────────────────────────────────
 
-function FormIcon() {
-  return (
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <polyline points="14 2 14 8 20 8" />
-      <line x1="16" y1="13" x2="8" y2="13" />
-      <line x1="16" y1="17" x2="8" y2="17" />
-      <polyline points="10 9 9 9 8 9" />
-    </svg>
-  );
-}
-
-function RouteIcon() {
-  return (
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="5" cy="5" r="2" />
-      <circle cx="19" cy="19" r="2" />
-      <path d="M5 7v5a5 5 0 0 0 5 5h4" />
-      <polyline points="17 15 19 17 17 19" />
-    </svg>
-  );
-}
-
-function TaskIcon() {
-  return (
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <polyline points="14 2 14 8 20 8" />
-      <polyline points="9 15 11 17 15 13" />
-    </svg>
-  );
-}
-
-function ChartIcon() {
-  return (
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="18" y1="20" x2="18" y2="10" />
-      <line x1="12" y1="20" x2="12" y2="4" />
-      <line x1="6" y1="20" x2="6" y2="14" />
-      <rect x="2" y="20" width="20" height="1" />
-    </svg>
-  );
-}
-
-function IntegrationIcon() {
-  return (
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="8" height="8" rx="1" />
-      <rect x="14" y="14" width="8" height="8" rx="1" />
-      <path d="M10 6h2a2 2 0 0 1 2 2v2" />
-      <path d="M14 10V8" />
-      <path d="M6 10v2a2 2 0 0 0 2 2h2" />
-    </svg>
-  );
-}
-
-function UserIcon() {
-  return (
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4d4d4d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-      <circle cx="12" cy="7" r="4" />
-    </svg>
-  );
-}
+function FormIcon()        { return <FontAwesomeIcon icon={faMobileAlt}       className="w-10 h-10 text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" />; }
+function RouteIcon()       { return <FontAwesomeIcon icon={faRoute}           className="w-10 h-10 text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" />; }
+function TaskIcon()        { return <FontAwesomeIcon icon={faFileAlt}         className="w-10 h-10 text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" />; }
+function ChartIcon()       { return <FontAwesomeIcon icon={faChartBar}        className="w-10 h-10 text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" />; }
+function IntegrationIcon() { return <FontAwesomeIcon icon={faProjectDiagram}  className="w-10 h-10 text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" />; }
+function UserIcon()        { return <FontAwesomeIcon icon={faUserCircle}      className="w-10 h-10 text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" />; }
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
@@ -100,14 +46,16 @@ function SolutionCard({
   description: string;
 }) {
   return (
-    <div className="bg-[#feeaed] rounded-[20px] p-[30px]">
-      <div className="w-20 h-20 bg-white rounded-[40px] flex items-center justify-center">
-        {icon}
+    <div className="group bg-[#feeaed] rounded-[20px] hover:bg-[#ebebeb] p-[30px] flex flex-col">
+      <div className="flex items-center justify-center">
+        <div className="w-20 h-20 bg-white rounded-[40px] flex items-center justify-center">
+          {icon}
+        </div>
       </div>
-      <h3 className="font-satoshi mt-7 text-[22px] font-bold text-black leading-[31px]">
+      <h3 className="font-satoshi mt-7 text-[24px] text-start font-bold text-black group-hover:text-[#e42233] leading-[31px] transition-colors duration-300">
         {title}
       </h3>
-      <p className="font-satoshi mt-3 text-[16px] font-medium text-[#3f4648] leading-[26px]">
+      <p className=" font-satoshi mt-3 text-[16px] font-medium text-[#3f4648] group-hover:text-[#192437] text-justify leading-[26px] transition-colors duration-300">
         {description}
       </p>
     </div>
@@ -128,10 +76,10 @@ function UseCaseCard({
       <div className="absolute -top-[55px] left-1/2 -translate-x-1/2 w-[120px] h-[120px] rounded-full bg-[#f9dfe2] flex items-center justify-center overflow-hidden">
         <img src={img} alt={title} className="w-2/3 h-2/3 object-contain" />
       </div>
-      <h3 className="font-satoshi text-[22px] font-black text-[#313131] leading-[26px]">
+      <h3 className="font-satoshi text-[24px] font-black text-[#313131] leading-[26px]">
         {title}
       </h3>
-      <p className="font-satoshi mt-3 text-[16px] text-[#3f4648] leading-[27px]">
+      <p className="font-satoshi mt-3 text-[16px] text-[#3f4648] leading-[27px] text-justify">
         {description}
       </p>
     </div>
@@ -206,7 +154,7 @@ export default function Inicio() {
           <span className="text-[#192437]">impulsamos tu </span>
           <span className="text-[#e42433]">crecimiento.</span>
         </h2>
-        <p className="font-satoshi mt-10 text-[16.8px] leading-[25px] text-black text-justify max-w-[960px] mx-auto">
+        <p className="font-satoshi mt-10 text-[17.6px] leading-[25px] text-black text-justify max-w-[960px] mx-auto">
           Transformamos la gestión de procesos operativos mediante la
           digitalización de documentos, la optimización de rutas y la
           programación de tareas. Ofrecemos soluciones seguras y personalizadas,
@@ -216,9 +164,9 @@ export default function Inicio() {
       </section>
 
       {/* ── 3. IMAGES ───────────────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto px-[140px] pb-20">
-        <div className="grid grid-cols-2 gap-6">
-          <div className="rounded-[15px] overflow-hidden aspect-[510/360]">
+      <section className="max-w-[1440px] mx-auto px-[140px] pb-30">
+        <div className="grid grid-cols-2 gap-26">
+          <div className="rounded-[15px] overflow-hidden h-[360px]">
             <img src={IMG_TEAM} alt="Equipo técnico utilizando MovilForm" className="w-full h-full object-cover" />
           </div>
           <div className="rounded-[15px] overflow-hidden h-[360px]">
@@ -269,16 +217,16 @@ export default function Inicio() {
       </section>
 
       {/* ── 5. CLIENTS CAROUSEL ─────────────────────────────────────────────── */}
-      <section className="mx-[70px] rounded-[20px] bg-[#e42233] py-10 px-[130px]">
-        <h2 className="font-satoshi text-[38px] font-black text-white text-center leading-[40px]">
+      <section className="max-w-[1440px] mx-auto rounded-[20px] bg-[#e42233] py-10 px-[130px]">
+        <h2 className="font-satoshi text-[40px] font-black text-white text-center leading-[40px]">
           Empresas que confían en nosotros
         </h2>
         <div className="mt-6 flex items-center justify-between h-[121px] overflow-hidden">
-          <img src={IMG_CLIENT_10} alt="Cliente" className="h-[60px] w-auto object-contain" />
-          <img src={IMG_CLIENT_1}  alt="Cliente" className="h-[60px] w-auto object-contain" />
-          <img src={IMG_CLIENT_2}  alt="Cliente" className="h-[60px] w-auto object-contain" />
-          <img src={IMG_CLIENT_3}  alt="Cliente" className="h-[60px] w-auto object-contain" />
-          <img src={IMG_CLIENT_4}  alt="Cliente" className="h-[60px] w-auto object-contain" />
+          <Image src={IMG_CLIENT_10} alt="Cliente" height={60} width={120} className="object-contain" />
+          <Image src={IMG_CLIENT_1}  alt="Cliente" height={60} width={120} className="object-contain" />
+          <Image src={IMG_CLIENT_2}  alt="Cliente" height={60} width={120} className="object-contain" />
+          <Image src={IMG_CLIENT_3}  alt="Cliente" height={60} width={120} className="object-contain" />
+          <Image src={IMG_CLIENT_4}  alt="Cliente" height={60} width={120} className="object-contain" />
         </div>
         <div className="flex justify-center gap-1 mt-6">
           {Array.from({ length: 9 }).map((_, i) => (
@@ -290,14 +238,14 @@ export default function Inicio() {
 
       {/* ── 6. SOLUTIONS ────────────────────────────────────────────────────── */}
       <section className="max-w-[1440px] mx-auto px-[70px] py-20">
-        <h2 className="font-satoshi text-[37px] font-extrabold text-black text-center leading-[40px]">
+        <h2 className="font-satoshi text-[40px] font-extrabold text-black text-center leading-[40px]">
           Soluciones que se adaptan a tus necesidades
         </h2>
-        <p className="font-satoshi mt-8 text-[17px] text-[#3f4648] text-center leading-[32px]">
+        <p className="font-satoshi mt-5 text-[19.2px] text-[#3f4648] text-center leading-[32px]">
           Con MovilForm podrás optimizar, gestionar y controlar de forma fácil y eficiente tu operación.
         </p>
 
-        <div className="mt-10 grid grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-3 gap-6 justify-center">
           <SolutionCard icon={<FormIcon />}        title="Módulo de Formularios"  description="Los formularios digitales son la evolución del papel, diseña los tuyos con fotos, checkbox o desplegables, potencia tus equipos de trabajo y aumenta su productividad y eficiencia." />
           <SolutionCard icon={<RouteIcon />}        title="Módulo de Rutas"         description="Planifica tus servicios, programa fácilmente las visitas a tus clientes y recibe información en línea de las actividades ejecutadas." />
           <SolutionCard icon={<TaskIcon />}         title="Módulo de Tareas"        description="Programa tus visitas individuales sin necesidad de asignarlas a una ruta, podrás incluir diferentes servicios en una misma visita y validar los trabajos realizados de forma online." />
@@ -309,19 +257,19 @@ export default function Inicio() {
 
       {/* ── 7. USE CASES ────────────────────────────────────────────────────── */}
       <section className="max-w-[1440px] mx-auto px-[70px] pb-20">
-        <p className="font-satoshi text-[37px] font-extrabold text-[#e42433] text-center leading-[40px]">
+        <p className="font-satoshi text-[40px] font-extrabold text-[#e42433] text-center leading-[40px]">
           Casos de Usos
         </p>
-        <h2 className="font-satoshi mt-10 text-[38px] font-bold text-black text-center leading-[40px]">
+        <h2 className="font-satoshi mt-10 text-[40px] font-bold text-black text-center leading-[40px]">
           Descubre cómo MovilForm impulsa la eficiencia en tu negocio
         </h2>
 
-        <div className="mt-10 grid grid-cols-[390px_1fr] gap-6">
+        <div className="mt-10 grid grid-cols-[390px_1fr] gap-6 gap-y-10">
           {/* Dark left panel */}
           <div className="relative rounded-[12px] overflow-hidden row-span-2 min-h-[706px]">
             <img src={IMG_USE_CASE_BG} alt="" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/70" />
-            <div className="relative z-10 h-full flex flex-col items-center justify-end pb-20 px-8">
+            <div className="relative z-10 h-full flex flex-col items-center justify-center pb-20 px-8">
               <h3 className="font-satoshi text-white text-[32px] font-bold text-center leading-[32px]">
                 Automatiza y<br />digitaliza tus<br />procesos para<br />potenciar tu<br />operación.
               </h3>
@@ -347,25 +295,25 @@ export default function Inicio() {
       </section>
 
       {/* ── 8. INTEGRATION ──────────────────────────────────────────────────── */}
-      <section className="mx-[70px] mb-16 rounded-[20px] bg-[#1d1d1b] overflow-hidden">
-        <div className="grid grid-cols-2 min-h-[500px]">
-          <div className="p-8">
+      <section className="mx-auto max-w-[1440px] mb-16 p-17.5 rounded-[20px] bg-[#1d1d1b] overflow-hidden">
+        <div className="grid grid-cols-2 gap-15 w-[90%] mx-auto">
+          <div className="p-3">
             <div className="w-full h-full rounded-[15px] overflow-hidden">
-              <img src={IMG_INTEGRATION} alt="Integración con MovilForm" className="w-full h-full object-cover" />
+              <Image src={IMG_INTEGRATION} alt="Integración con MovilForm" width={700} height={380} className="w-[700px] h-[380px] object-cover" />
             </div>
           </div>
 
-          <div className="font-satoshi flex flex-col justify-center px-10 py-16 text-white">
-            <h2 className="font-satoshi text-[30px] font-black text-center leading-[32px]">
+          <div className="font-satoshi flex flex-col justify-center text-white">
+            <h2 className="font-satoshi text-[32px] font-black text-center leading-[32px]">
               Integre su sistema con MovilForm
             </h2>
-            <p className="mt-8 text-[19px] leading-[28px]">
+            <p className="mt-8 text-[19px] leading-[28px] text-justify">
               Nuestra plataforma se integra fácilmente con tu ERP o sistema de
               información enviando y recibiendo datos de forma automática y
               totalmente online, eliminando el ingreso manual de información,
               mejorando la productividad y reduciendo costos operativos.
             </p>
-            <p className="mt-6 text-[17px] leading-[22px]">
+            <p className="mt-6 text-[17px] leading-[22px] text-justify">
               ¡Con MovilForm sincronice sus datos y automatice procesos!
             </p>
             <div className="mt-10 flex justify-center">
