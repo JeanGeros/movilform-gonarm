@@ -11,11 +11,18 @@ const IMG_TASKS       = "/inicio/tasks.jpg";
 const IMG_CODING      = "/inicio/coding.png";
 const IMG_INNOVATION  = "/inicio/innovation.png";
 const IMG_QUALITY     = "/inicio/quality.png";
-const IMG_CLIENT_10   = "/inicio/client10.png";
-const IMG_CLIENT_1    = "/inicio/client1.png";
-const IMG_CLIENT_2    = "/inicio/client2.png";
-const IMG_CLIENT_3    = "/inicio/client3.png";
-const IMG_CLIENT_4    = "/inicio/client4.png";
+const CLIENTS = [
+  { src: "/clientes/imgi_11_Rentokil-1-1.webp",      alt: "Rentokil" },
+  { src: "/clientes/imgi_12_Ingeclean-1.webp",        alt: "Ingeclean" },
+  { src: "/clientes/imgi_13_KDM_Industrial-1.webp",   alt: "KDM Industrial" },
+  { src: "/clientes/imgi_14_Veolia-2.webp",           alt: "Veolia" },
+  { src: "/clientes/imgi_15_Rema-1.webp",             alt: "Rema" },
+  { src: "/clientes/imgi_16_vielco.webp",             alt: "Vielco" },
+  { src: "/clientes/imgi_17_Elemont-1.webp",          alt: "Elemont" },
+  { src: "/clientes/imgi_18_Flutech-1.webp",          alt: "Flutech" },
+  { src: "/clientes/imgi_19_Maquipan-1.webp",         alt: "Maquipan" },
+  { src: "/clientes/imgi_20_Precision-chile.webp",    alt: "Precisión Chile" },
+];
 const IMG_USE_CASE_BG = "/inicio/usecase-bg.jpg";
 const IMG_SERVICES    = "/inicio/services.png";
 const IMG_WASTE       = "/inicio/waste.png";
@@ -74,7 +81,7 @@ function UseCaseCard({
   return (
     <div className="relative bg-[#f9dfe2] rounded-[12px] pt-[80px] pb-8 px-8">
       <div className="absolute -top-[55px] left-1/2 -translate-x-1/2 w-[120px] h-[120px] rounded-full bg-[#f9dfe2] flex items-center justify-center overflow-hidden">
-        <img src={img} alt={title} className="w-2/3 h-2/3 object-contain" />
+        <Image src={img} alt={title} width={80} height={80} className="w-2/3 h-2/3 object-contain" />
       </div>
       <h3 className="font-satoshi text-[24px] font-black text-[#313131] leading-[26px]">
         {title}
@@ -130,13 +137,13 @@ export default function Inicio() {
           aria-label="Anterior"
           className="absolute left-5 top-1/2 -translate-y-1/2 w-[70px] h-[70px] rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition-colors"
         >
-          <img src={IMG_ARROW_LEFT} alt="" className="w-[9px] h-5" />
+          <Image src={IMG_ARROW_LEFT} alt="" width={9} height={20} />
         </button>
         <button
           aria-label="Siguiente"
           className="absolute right-5 top-1/2 -translate-y-1/2 w-[70px] h-[70px] rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition-colors"
         >
-          <img src={IMG_ARROW_RIGHT} alt="" className="w-[9px] h-5" />
+          <Image src={IMG_ARROW_RIGHT} alt="" width={9} height={20} />
         </button>
 
         <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-[5px]">
@@ -167,10 +174,10 @@ export default function Inicio() {
       <section className="max-w-[1440px] mx-auto px-[140px] pb-30">
         <div className="grid grid-cols-2 gap-26">
           <div className="rounded-[15px] overflow-hidden h-[360px]">
-            <img src={IMG_TEAM} alt="Equipo técnico utilizando MovilForm" className="w-full h-full object-cover" />
+            <Image src={IMG_TEAM} alt="Equipo técnico utilizando MovilForm" width={600} height={360} className="w-full h-full object-cover" />
           </div>
           <div className="rounded-[15px] overflow-hidden h-[360px]">
-            <img src={IMG_TASKS} alt="Vista de tareas asignadas a diferentes técnicos" className="w-full h-full object-cover" />
+            <Image src={IMG_TASKS} alt="Vista de tareas asignadas a diferentes técnicos" width={600} height={360} className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -180,7 +187,7 @@ export default function Inicio() {
         <div className="grid grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center">
             <div className="w-[100px] h-[100px]">
-              <img src={IMG_CODING} alt="" className="w-full h-full object-contain" />
+              <Image src={IMG_CODING} alt="" width={100} height={100} className="w-full h-full object-contain" />
             </div>
             <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[27px]">
               Plataforma Web:
@@ -192,7 +199,7 @@ export default function Inicio() {
 
           <div className="flex flex-col items-center text-center">
             <div className="w-[100px] h-[100px]">
-              <img src={IMG_INNOVATION} alt="" className="w-full h-full object-contain" />
+              <Image src={IMG_INNOVATION} alt="" width={100} height={100} className="w-full h-full object-contain" />
             </div>
             <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[27px]">
               Innovación reconocida:
@@ -204,7 +211,7 @@ export default function Inicio() {
 
           <div className="flex flex-col items-center text-center">
             <div className="w-[100px] h-[100px]">
-              <img src={IMG_QUALITY} alt="" className="w-full h-full object-contain" />
+              <Image src={IMG_QUALITY} alt="" width={100} height={100} className="w-full h-full object-contain" />
             </div>
             <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[27px]">
               Compromiso con el éxito:
@@ -216,23 +223,19 @@ export default function Inicio() {
         </div>
       </section>
 
-      {/* ── 5. CLIENTS CAROUSEL ─────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto rounded-[20px] bg-[#e42233] py-10 px-[130px]">
-        <h2 className="font-satoshi text-[40px] font-black text-white text-center leading-[40px]">
+      {/* ── 5. CLIENTS ──────────────────────────────────────────────────────── */}
+      <section className="max-w-[1440px] mx-auto rounded-[20px] bg-[#e42233] py-10 overflow-hidden">
+        <h2 className="font-satoshi text-[40px] font-black text-white text-center leading-[40px] mb-8">
           Empresas que confían en nosotros
         </h2>
-        <div className="mt-6 flex items-center justify-between h-[121px] overflow-hidden">
-          <Image src={IMG_CLIENT_10} alt="Cliente" height={60} width={120} className="object-contain" />
-          <Image src={IMG_CLIENT_1}  alt="Cliente" height={60} width={120} className="object-contain" />
-          <Image src={IMG_CLIENT_2}  alt="Cliente" height={60} width={120} className="object-contain" />
-          <Image src={IMG_CLIENT_3}  alt="Cliente" height={60} width={120} className="object-contain" />
-          <Image src={IMG_CLIENT_4}  alt="Cliente" height={60} width={120} className="object-contain" />
-        </div>
-        <div className="flex justify-center gap-1 mt-6">
-          {Array.from({ length: 9 }).map((_, i) => (
-            <div key={i} className="w-[6px] h-[6px] rounded-full bg-white/70" />
-          ))}
-          <div className="w-[6px] h-[6px] rounded-full bg-red-600" />
+        <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="flex gap-18 animate-[scroll_40s_linear_infinite] w-max">
+            {[...CLIENTS, ...CLIENTS].map((client, i) => (
+              <div key={i} className="flex-shrink-0 flex items-center justify-center  rounded-xl h-20 w-[180px]">
+                <Image src={client.src} alt={client.alt} height={80} width={150} className="h-[80px] w-auto object-contain" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -267,7 +270,7 @@ export default function Inicio() {
         <div className="mt-10 grid grid-cols-[390px_1fr] gap-6 gap-y-10">
           {/* Dark left panel */}
           <div className="relative rounded-[12px] overflow-hidden row-span-2 min-h-[706px]">
-            <img src={IMG_USE_CASE_BG} alt="" className="absolute inset-0 w-full h-full object-cover" />
+            <Image src={IMG_USE_CASE_BG} alt="" fill className="object-cover" />
             <div className="absolute inset-0 bg-black/70" />
             <div className="relative z-10 h-full flex flex-col items-center justify-center pb-20 px-8">
               <h3 className="font-satoshi text-white text-[32px] font-bold text-center leading-[32px]">
