@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: "¿Qué funciones contiene el módulo de Rutas?",
-    a: "El módulo de Rutas permite planificar y optimizar las visitas a clientes, asignar técnicos, registrar actividades en terreno y recibir reportes en línea de las tareas ejecutadas.",
+    a: `En el modulo de rutas puede planificar rutas para tus empleados, puede optimizar estas rutas de tus colaboradores considerando distintos factores como: La disponibilidad de tus clientes, la jornada laboral de tus colaboradores, el consumo del combustible, etc…\n\nAdicional a esto desde la pagina web se puede realizar un seguimiento el tiempo real de los colaboradores en ruta y la cantidad de puntos de servicios que tienen pendiente.`,
   },
   {
     q: "¿Puedo modificar las rutas?",
@@ -28,14 +28,13 @@ const FAQS = [
   },
 ];
 
-function ChevronIcon({ open }: { open: boolean }) {
+function TriangleIcon({ open }: { open: boolean }) {
   return (
     <svg
-      width="20" height="20" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
-      className={`transition-transform duration-200 flex-shrink-0 ${open ? "rotate-180" : ""}`}
+      width="10" height="12" viewBox="0 0 10 12" fill="#434343"
+      className={`flex-shrink-0 transition-transform duration-200 ${open ? "rotate-90" : ""}`}
     >
-      <polyline points="6 9 12 15 18 9" />
+      <polygon points="0,0 10,6 0,12" />
     </svg>
   );
 }
@@ -98,25 +97,32 @@ export default function Soporte() {
           <h2 className="font-satoshi text-[32px] font-extrabold text-[#dd2838] text-center leading-[40px] mb-8">
             Preguntas frecuentes
           </h2>
-          <div className="max-w-[600px] mx-auto flex flex-col divide-y divide-gray-100">
-            {FAQS.map((faq, i) => (
-              <div key={i}>
-                <button
-                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between gap-4 py-5 text-left"
-                >
-                  <span className="font-satoshi text-[16px] font-semibold text-[#192437] leading-[24px]">
-                    {faq.q}
-                  </span>
-                  <ChevronIcon open={openFaq === i} />
-                </button>
-                {openFaq === i && (
-                  <p className="font-satoshi pb-5 text-[15px] text-[#3f4648] leading-[26px]">
-                    {faq.a}
-                  </p>
-                )}
-              </div>
-            ))}
+          <div className="max-w-[700px] mx-auto flex flex-col gap-3">
+            {FAQS.map((faq, i) => {
+              const isOpen = openFaq === i;
+              return (
+                <div key={i}>
+                  <button
+                    onClick={() => setOpenFaq(isOpen ? null : i)}
+                    className="w-full flex items-center justify-center gap-3 bg-white rounded-full px-6 py-4 text-left"
+                  >
+                    <TriangleIcon open={isOpen} />
+                    <span className={`font-satoshi text-[16px] leading-[22px] transition-colors duration-300 ${isOpen ? "text-[#434343]" : "text-[#192437]"}`}>
+                      {faq.q}
+                    </span>
+                  </button>
+                  <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100 mt-1" : "grid-rows-[0fr] opacity-0"}`}>
+                    <div className="overflow-hidden">
+                      <div className="bg-white rounded-[20px] px-6 py-4">
+                        <p className="font-satoshi text-[16px] text-[#3f4648] leading-[26px] whitespace-pre-line">
+                          {faq.a}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 
