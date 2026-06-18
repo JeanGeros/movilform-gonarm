@@ -36,6 +36,7 @@ function ChevronDown({ open }: { open?: boolean }) {
 export default function Navbar() {
   const [serviciosOpen, setServiciosOpen] = useState(false);
   const [casosOpen, setCasosOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const serviciosRef = useRef<HTMLDivElement>(null);
   const casosRef = useRef<HTMLDivElement>(null);
 
@@ -52,17 +53,26 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   return (
-    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 w-[calc(100%-80px)] max-w-7xl">
-      <div className="bg-white rounded-[20px] px-8 h-[72px] flex items-center justify-between shadow-[0_4px_24px_rgba(0,0,0,0.12)]">
+    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 w-[calc(100%-32px)] md:w-[calc(100%-80px)] max-w-7xl">
+      <div className="bg-white rounded-[20px] px-5 md:px-8 h-[60px] md:h-[72px] flex items-center justify-between shadow-[0_4px_24px_rgba(0,0,0,0.12)]">
 
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
-          <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" width={160} height={44} className="h-[44px] w-auto object-contain" />
+          <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" width={160} height={44} className="h-[36px] md:h-[44px] w-auto object-contain" />
         </a>
 
-        {/* Nav links */}
-        <div className="font-gilmer flex items-center gap-8">
+        {/* Desktop nav links */}
+        <div className="font-gilmer hidden lg:flex items-center gap-8">
           <a href="/" className="text-[16px] font-bold text-black hover:text-[#e42433] transition-colors">
             Inicio
           </a>
@@ -130,14 +140,87 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* CTA */}
+        {/* Desktop CTA */}
         <a
           href="#"
-          className="font-gilmer flex-shrink-0 inline-flex items-center justify-center h-[46px] px-8 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"
+          className="font-gilmer flex-shrink-0 hidden lg:inline-flex items-center justify-center h-[46px] px-8 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"
         >
           Contacto
         </a>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMobileOpen((v) => !v)}
+          className="lg:hidden flex flex-col justify-center gap-[5px] w-8 h-8 cursor-pointer"
+          aria-label="Menú"
+        >
+          <span className={`block h-[2.5px] w-full bg-black rounded transition-transform duration-300 ${mobileOpen ? "translate-y-[7.5px] rotate-45" : ""}`} />
+          <span className={`block h-[2.5px] w-full bg-black rounded transition-opacity duration-300 ${mobileOpen ? "opacity-0" : ""}`} />
+          <span className={`block h-[2.5px] w-full bg-black rounded transition-transform duration-300 ${mobileOpen ? "-translate-y-[7.5px] -rotate-45" : ""}`} />
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="lg:hidden mt-3 bg-white rounded-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.12)] p-6 max-h-[calc(100vh-100px)] overflow-y-auto">
+          <a href="/" className="block py-3 text-[16px] font-bold text-black hover:text-[#e42433]" onClick={() => setMobileOpen(false)}>
+            Inicio
+          </a>
+
+          <div className="border-t border-gray-100">
+            <button
+              onClick={() => setServiciosOpen((v) => !v)}
+              className="flex items-center justify-between w-full py-3 text-[16px] font-bold text-black hover:text-[#e42433] cursor-pointer"
+            >
+              Servicios <ChevronDown open={serviciosOpen} />
+            </button>
+            {serviciosOpen && (
+              <div className="pl-4 pb-2">
+                {SERVICIOS.map((item) => (
+                  <a key={item.label} href={item.href} onClick={() => setMobileOpen(false)} className="block py-2 text-[15px] text-black hover:text-[#e42433]">
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div className="border-t border-gray-100">
+            <button
+              onClick={() => setCasosOpen((v) => !v)}
+              className="flex items-center justify-between w-full py-3 text-[16px] font-bold text-black hover:text-[#e42433] cursor-pointer"
+            >
+              Casos de Uso <ChevronDown open={casosOpen} />
+            </button>
+            {casosOpen && (
+              <div className="pl-4 pb-2">
+                {CASOS_DE_USO.map((item) => (
+                  <a key={item.label} href={item.href} onClick={() => setMobileOpen(false)} className="block py-2 text-[15px] text-black hover:text-[#e42433]">
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <a href="/soporte" className="block py-3 text-[16px] font-bold text-black hover:text-[#e42433] border-t border-gray-100" onClick={() => setMobileOpen(false)}>
+            Soporte
+          </a>
+          <a href="#" className="block py-3 text-[16px] font-bold text-black hover:text-[#e42433] border-t border-gray-100" onClick={() => setMobileOpen(false)}>
+            Recursos
+          </a>
+
+          <div className="mt-4 border-t border-gray-100 pt-4">
+            <a
+              href="#"
+              className="block text-center py-3 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              Contacto
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

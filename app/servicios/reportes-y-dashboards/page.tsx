@@ -10,7 +10,7 @@ const IMG_INFO      = "/servicios/reportes-y-dashboards/informacion-linea.webp";
 
 export default function ReportesYDashboards() {
   return (
-    <main className="w-full bg-[#feeaed] min-h-screen flex flex-col">
+    <main className="w-full bg-[#feeaed] min-h-screen">
 
       <div className="relative h-[88px]">
         <Navbar />

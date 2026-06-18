@@ -22,19 +22,19 @@ export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string })
   return (
     <footer className="mt-auto">
       {/* Card */}
-      <div className={`max-w-7xl mx-auto ${cardBg} rounded-[20px] px-[40px] pt-14 pb-5`}>
-        <div className="grid grid-cols-[250px_1fr_1fr_1fr] gap-8">
+      <div className={`max-w-7xl mx-auto ${cardBg} rounded-[20px] px-6 md:px-[40px] pt-10 md:pt-14 pb-5`}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[250px_1fr_1fr_1fr] gap-8">
 
           {/* Logo */}
-          <div className="flex items-center pt-1">
+          <div className="flex items-center justify-center sm:justify-start pt-1">
             <Link href="/">
-              <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" width={300} height={140} className="h-[150px] w-[400px] object-contain" />
+              <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" width={300} height={140} className="h-[100px] md:h-[150px] w-auto object-contain" />
             </Link>
           </div>
 
           {/* Servicios */}
           <div>
-            <h4 className="font-satoshi text-[24px] font-bold text-[#192437] mb-4">
+            <h4 className="font-satoshi text-[20px] md:text-[24px] font-bold text-[#192437] mb-4">
               Servicios
             </h4>
             <ul className="space-y-1">
@@ -42,7 +42,7 @@ export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string })
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="font-satoshi text-[16px] text-black hover:underline"
+                    className="font-satoshi text-[15px] md:text-[16px] text-black hover:underline"
                   >
                     {item.label}
                   </a>
@@ -53,7 +53,7 @@ export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string })
 
           {/* Casos de uso */}
           <div>
-            <h4 className="font-satoshi text-[24px] font-bold text-[#192437] mb-4">
+            <h4 className="font-satoshi text-[20px] md:text-[24px] font-bold text-[#192437] mb-4">
               Casos de uso
             </h4>
             <ul className="space-y-1">
@@ -61,7 +61,7 @@ export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string })
                 <li key={item}>
                   <a
                     href="#"
-                    className="font-satoshi text-[16px] text-black hover:underline"
+                    className="font-satoshi text-[15px] md:text-[16px] text-black hover:underline"
                   >
                     {item}
                   </a>
@@ -72,33 +72,33 @@ export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string })
 
           {/* Contacto */}
           <div>
-            <h4 className="font-satoshi text-[24px] font-bold text-[#192437] mb-4">
+            <h4 className="font-satoshi text-[20px] md:text-[24px] font-bold text-[#192437] mb-4">
               Información de contacto
             </h4>
-            <p className="font-satoshi text-[16px] text-[#192437]">Teléfono:</p>
-            <p className="font-satoshi text-[16px] text-black mt-1">+56 232241522</p>
-            <p className="font-satoshi text-[16px] text-[#192437] mt-4">Correo Electrónico:</p>
+            <p className="font-satoshi text-[15px] md:text-[16px] text-[#192437]">Teléfono:</p>
+            <p className="font-satoshi text-[15px] md:text-[16px] text-black mt-1">+56 232241522</p>
+            <p className="font-satoshi text-[15px] md:text-[16px] text-[#192437] mt-4">Correo Electrónico:</p>
             <a
               href="mailto:contacto@movilform.com"
-              className="font-satoshi text-[16px] text-black mt-1 block hover:underline"
+              className="font-satoshi text-[15px] md:text-[16px] text-black mt-1 block hover:underline"
             >
               contacto@movilform.com
             </a>
           </div>
 
         </div>
-          {/* Divider */}
-      <div className="mx-[70px] mt-6 border-t border-[black]" />
+        {/* Divider */}
+        <div className="mx-0 md:mx-[70px] mt-6 border-t border-[black]" />
 
-      {/* Bottom bar */}
-      <div className="mx-[70px] mt-4 flex items-center justify-between">
-        <p className="font-satoshi text-[16px] text-black">
-          MovilForm • Todos los derechos reservados © 2026
-        </p>
-        <p className="font-satoshi text-[16px] text-black">
-          Desarrollado por GONARM
-        </p>
-      </div>
+        {/* Bottom bar */}
+        <div className="mx-0 md:mx-[70px] mt-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="font-satoshi text-[14px] md:text-[16px] text-black text-center sm:text-left">
+            MovilForm • Todos los derechos reservados © 2026
+          </p>
+          <p className="font-satoshi text-[14px] md:text-[16px] text-black">
+            Desarrollado por GONARM
+          </p>
+        </div>
       </div>
     </footer>
   );
