@@ -105,7 +105,7 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
   }
 
   return (
-    <section className="pb-16 max-w-[1250px] mx-auto">
+    <section className="pb-16 max-w-7xl mx-auto">
       <h2 className="font-satoshi text-[48px] font-black text-[#e22939] text-center leading-[52px] mb-10">
         Conoce más de nuestros servicios
       </h2>

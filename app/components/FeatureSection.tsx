@@ -49,7 +49,7 @@ export default function FeatureSection({
   );
 
   return (
-    <section className="bg-white rounded-[20px] p-[40px]">
+    <section className="bg-white rounded-[20px] px-[70px] py-[40px]">
       <div className={`grid gap-12 items-center ${imagePosition === "left" ? "grid-cols-[9fr_11fr]" : "grid-cols-[11fr_9fr]"}`}>
         {imagePosition === "left" ? (
           <>

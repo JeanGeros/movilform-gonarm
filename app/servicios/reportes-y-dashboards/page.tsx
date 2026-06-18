@@ -16,7 +16,7 @@ export default function ReportesYDashboards() {
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-[1440px] mx-auto">
+      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">

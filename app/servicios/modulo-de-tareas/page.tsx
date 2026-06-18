@@ -17,11 +17,11 @@ export default function ModuloDeTareas() {
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-[1440px] mx-auto">
+      <div className="mt-10 pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
-          <div className="grid grid-cols-[42%_1fr] gap-12 items-center">
+          <div className="grid grid-cols-[40%_1fr] gap-12 items-center">
             <h1 className="font-satoshi text-[60px] font-black text-[#e52533] leading-[68px]">
               Módulo de<br />Tareas
             </h1>

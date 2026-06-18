@@ -17,7 +17,7 @@ export default function ModuloDeRutas() {
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-[1440px] mx-auto">
+      <div className="pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="mt-10 bg-white rounded-[20px] px-[70px] py-[60px]">
@@ -29,7 +29,7 @@ export default function ModuloDeRutas() {
               <p>
                 Para las empresas que realizan diferentes tipos de servicios en terreno, MovilForm
                 será su aliado perfecto utilizando el módulo de rutas.
-              </p>
+              </p>16px
               <p>
                 Con este módulo, podrás programar las visitas a tus clientes generando rutas
                 diarias, semanales o mensuales, las cuales se asignarán de forma automática al

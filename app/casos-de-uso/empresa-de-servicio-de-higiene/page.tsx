@@ -49,7 +49,7 @@ export default function EmpresaDeServicioDeHigiene() {
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-[1440px] mx-auto">
+      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <section className="relative rounded-[20px] overflow-hidden h-[400px]">

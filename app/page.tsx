@@ -153,7 +153,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 2. VALUE PROPOSITION ────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto px-[70px] pt-28 pb-16">
+      <section className="max-w-7xl mx-auto px-[70px] pt-28 pb-16">
         <h2 className="font-satoshi text-[42px] font-black leading-[49px] text-center max-w-[760px] mx-auto">
           <span className="text-[#192437]">Simplificamos tus </span>
           <span className="text-[#e42433]">procesos,</span>
@@ -171,7 +171,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 3. IMAGES ───────────────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto px-[140px] pb-30">
+      <section className="max-w-7xl mx-auto px-[140px] pb-30">
         <div className="grid grid-cols-2 gap-26">
           <div className="rounded-[15px] overflow-hidden h-[360px]">
             <Image src={IMG_TEAM} alt="Equipo técnico utilizando MovilForm" width={600} height={360} className="w-full h-full object-cover" />
@@ -183,7 +183,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 4. FEATURES ─────────────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto px-[70px] pb-24">
+      <section className="max-w-7xl mx-auto px-[70px] pb-24">
         <div className="grid grid-cols-3 gap-8">
           <div className="flex flex-col items-center text-center">
             <div className="w-[100px] h-[100px]">
@@ -224,7 +224,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 5. CLIENTS ──────────────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto rounded-[20px] bg-[#e42233] py-10 overflow-hidden">
+      <section className="max-w-7xl mx-auto rounded-[20px] bg-[#e42233] py-10 overflow-hidden">
         <h2 className="font-satoshi text-[40px] font-black text-white text-center leading-[40px] mb-8">
           Empresas que confían en nosotros
         </h2>
@@ -240,7 +240,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 6. SOLUTIONS ────────────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto px-[70px] py-20">
+      <section className="max-w-7xl mx-auto px-[70px] py-20">
         <h2 className="font-satoshi text-[40px] font-extrabold text-black text-center leading-[40px]">
           Soluciones que se adaptan a tus necesidades
         </h2>
@@ -259,7 +259,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 7. USE CASES ────────────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto px-[70px] pb-20">
+      <section className="max-w-7xl mx-auto px-[70px] pb-20">
         <p className="font-satoshi text-[40px] font-extrabold text-[#e42433] text-center leading-[40px]">
           Casos de Usos
         </p>
@@ -298,7 +298,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 8. INTEGRATION ──────────────────────────────────────────────────── */}
-      <section className="mx-auto max-w-[1440px] mb-16 p-15 rounded-[20px] bg-[#1d1d1b] overflow-hidden">
+      <section className="mx-auto max-w-7xl mb-16 p-15 rounded-[20px] bg-[#1d1d1b] overflow-hidden">
         <div className="grid grid-cols-2 gap-15 w-[90%] mx-auto">
           <div className="p-3">
             <div className="w-full h-full rounded-[15px] overflow-hidden">

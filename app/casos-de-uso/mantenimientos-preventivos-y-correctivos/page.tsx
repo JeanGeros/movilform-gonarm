@@ -81,7 +81,7 @@ export default function MantenimientosPreventivosYCorrectivos() {
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-[1440px] mx-auto">
+      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <section className="relative rounded-[20px] overflow-hidden h-[400px]">
@@ -177,7 +177,7 @@ export default function MantenimientosPreventivosYCorrectivos() {
       </div>
 
       {/* ── 5. CONOCE NUESTROS CASOS DE USO ─────────────────────────────────── */}
-      <section className="pb-16 max-w-[1440px] mx-auto px-[110px]">
+      <section className="pb-16 max-w-7xl mx-auto px-[110px]">
         <h2 className="font-satoshi text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
           Conoce nuestros casos de uso
         </h2>
