@@ -1,48 +1,12 @@
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTasks, faMapMarkedAlt, faRoute, faTabletAlt } from "@fortawesome/free-solid-svg-icons";
 
 const IMG_HERO          = "/casos-de-uso/empresa-de-gestion-de-residuos/hero.webp";
 const IMG_EFICIENCIA    = "/casos-de-uso/empresa-de-gestion-de-residuos/eficiencia.webp";
 const IMG_ACCESIBILIDAD = "/casos-de-uso/empresa-de-gestion-de-residuos/accesibilidad.webp";
 const IMG_PRODUCTIVIDAD = "/casos-de-uso/empresa-de-gestion-de-residuos/productividad.webp";
-
-// ─── Feature card icons ───────────────────────────────────────────────────────
-
-function TaskIcon() {
-  return (
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e42433" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-      <polyline points="14 2 14 8 20 8" /><polyline points="9 15 11 17 15 13" />
-    </svg>
-  );
-}
-
-function RouteIcon() {
-  return (
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e42433" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="5" cy="5" r="2" /><circle cx="19" cy="19" r="2" />
-      <path d="M5 7v5a5 5 0 0 0 5 5h4" /><polyline points="17 15 19 17 17 19" />
-    </svg>
-  );
-}
-
-function OptimizeIcon() {
-  return (
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e42433" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2L2 7l10 5 10-5-10-5z" />
-      <path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
-    </svg>
-  );
-}
-
-function TrackIcon() {
-  return (
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e42433" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M1 6l5 5 4-4 4 4 5-5" />
-      <path d="M1 12l5 5 4-4 4 4 5-5" />
-    </svg>
-  );
-}
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
@@ -162,33 +126,31 @@ export default function EmpresaDeGestionDeResiduos() {
         </section>
 
         {/* ── 6. FUNCIONALIDADES ───────────────────────────────────────────── */}
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-4 gap-6 my-15">
           {[
             {
-              icon: <TaskIcon />,
+              icon: faTasks,
               title: "Asigna tareas",
               desc: "Asigna tareas individuales sin necesidad de generar rutas y registra toda la actividad realizada en terreno.",
             },
             {
-              icon: <RouteIcon />,
+              icon: faMapMarkedAlt,
               title: "Planifica rutas",
               desc: "Establece los criterios necesarios para planificar tus servicios diarios, semanales o mensuales.",
             },
             {
-              icon: <OptimizeIcon />,
+              icon: faRoute,
               title: "Optimiza rutas",
               desc: "Mejora la eficiencia y reduce costos operativos con la mejor secuencia de atención.",
             },
             {
-              icon: <TrackIcon />,
+              icon: faTabletAlt,
               title: "Controla rutas",
               desc: "Realiza el seguimiento de los servicios de forma remota y totalmente online.",
             },
           ].map(({ icon, title, desc }) => (
-            <div key={title} className="bg-white rounded-[20px] p-8 flex flex-col items-center text-center">
-              <div className="w-[80px] h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
-                {icon}
-              </div>
+            <div key={title} className="bg-[#feeaed] rounded-[20px] p-8 flex flex-col items-center text-center">
+              <FontAwesomeIcon icon={icon} className="text-[#4d4d4d] w-12 h-12" />
               <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[28px]">{title}</h3>
               <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[26px]">{desc}</p>
             </div>
