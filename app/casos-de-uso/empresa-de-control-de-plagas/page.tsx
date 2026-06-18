@@ -41,13 +41,13 @@ export default function EmpresaDeControlDePlagas() {
             <div className="flex gap-4 items-center">
               <div className="w-[9px] flex-shrink-0 self-stretch rounded-full bg-[#feeaed]" />
               <div>
-<p className="font-satoshi text-[16px] text-[#231d1b] leading-[26px] text-justify">
+<p className="font-satoshi text-[16px] text-[#231d1b] text-justify leading-[26px] text-justify">
                 Las empresas de control de plaga residencial y comercial necesitan tener una
                 planificación precisa de sus servicios, para realizar esto, MovilForm pone a su
                 disposición las herramientas necesarias para soportar y ejecutar los distintos
                 servicios que se deban realizar en sus clientes.
               </p>
-              <p className="font-satoshi text-[16px] text-[#231d1b] mt-3 leading-[26px] text-justify">
+              <p className="font-satoshi text-[16px] text-[#231d1b] text-justify mt-3 leading-[26px] text-justify">
                 Servicios de desratización, control de aves, termitas, TUV, cucarachas y muchos más, son ejecutados a
                 diario con nuestra aplicación,
               </p>
@@ -57,11 +57,11 @@ export default function EmpresaDeControlDePlagas() {
             <div className="flex gap-4 items-center">
               <div className="w-[9px] flex-shrink-0 self-stretch rounded-full bg-[#feeaed]" />
               <div>
-                <p className="font-satoshi text-[16px] text-[#231d1b] leading-[26px] text-justify">
+                <p className="font-satoshi text-[16px] text-[#231d1b] text-justify leading-[26px] text-justify">
                   Permitiendo informar inmediatamente a los clientes y generar reportes
                   personalizados con los resultados obtenidos en terreno. 
                 </p>
-                <p className="font-satoshi text-[16px] mt-3 text-[#231d1b] leading-[26px] text-justify">
+                <p className="font-satoshi text-[16px] mt-3 text-[#231d1b] text-justify leading-[26px] text-justify">
                   Gestionamos tu información para darte acceso a Dashboard personalizados, certificados digitales
                   e informes customizados. Además, tendrás acceso al portal de clientes, donde
                   podrás entregar toda la información que tus clientes te soliciten.
