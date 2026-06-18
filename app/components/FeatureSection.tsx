@@ -42,14 +42,14 @@ export default function FeatureSection({
       <h2 className="font-satoshi text-[40px] font-extrabold text-[#192437] leading-[46px]">
         {title}
       </h2>
-      <div className="font-satoshi text-justify mt-8 text-[16px] text-[#232321] leading-[26px] space-y-4">
+      <div className="font-satoshi text-justify mt-8 text-[17.6px] text-[#232321] leading-[26px] space-y-4">
         {children}
       </div>
     </div>
   );
 
   return (
-    <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
+    <section className="bg-white rounded-[20px] p-[40px]">
       <div className={`grid gap-12 items-center ${imagePosition === "left" ? "grid-cols-[9fr_11fr]" : "grid-cols-[11fr_9fr]"}`}>
         {imagePosition === "left" ? (
           <>

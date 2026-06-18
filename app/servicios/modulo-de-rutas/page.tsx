@@ -20,12 +20,12 @@ export default function ModuloDeRutas() {
       <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-[1440px] mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
-          <div className="grid grid-cols-[42%_1fr] gap-12 items-center">
+        <section className="mt-10 bg-white rounded-[20px] px-[70px] py-[60px]">
+          <div className="grid grid-cols-[35%_1fr] gap-12 items-center">
             <h1 className="font-satoshi text-[60px] font-black text-[#e52533] leading-[68px]">
               Módulo de<br />Rutas
             </h1>
-            <div className="font-satoshi text-[17px] text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[17.6px] text-justify text-[#231d1b] leading-[28px] space-y-4">
               <p>
                 Para las empresas que realizan diferentes tipos de servicios en terreno, MovilForm
                 será su aliado perfecto utilizando el módulo de rutas.
