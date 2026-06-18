@@ -18,11 +18,11 @@ const CASOS_DE_USO = [
   "Empresa de Servicio de higiene",
 ];
 
-export default function Footer() {
+export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string }) {
   return (
-    <footer className="">
+    <footer className="mt-auto">
       {/* Card */}
-      <div className="max-w-7xl mx-auto bg-[#feeaed] rounded-[20px] px-[40px] pt-14 pb-5">
+      <div className={`max-w-7xl mx-auto ${cardBg} rounded-[20px] px-[40px] pt-14 pb-5`}>
         <div className="grid grid-cols-[250px_1fr_1fr_1fr] gap-8">
 
           {/* Logo */}

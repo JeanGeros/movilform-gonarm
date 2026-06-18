@@ -10,14 +10,14 @@ const IMG_DETALLE   = "/servicios/modulo-de-tareas/detalle-tarea.webp";
 
 export default function ModuloDeTareas() {
   return (
-    <main className="w-full bg-[#feeaed] min-h-screen">
+    <main className="w-full bg-[#feeaed] min-h-screen flex flex-col">
 
       {/* ── Navbar ──────────────────────────────────────────────────────────── */}
       <div className="relative h-[88px]">
         <Navbar />
       </div>
 
-      <div className="mt-10 pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
@@ -83,7 +83,7 @@ export default function ModuloDeTareas() {
       {/* ── 4. MÁS SERVICIOS ────────────────────────────────────────────────── */}
       <ServicesCarousel currentSlug="modulo-de-tareas" />
 
-      <Footer />
+      <Footer cardBg="bg-white" />
     </main>
   );
 }

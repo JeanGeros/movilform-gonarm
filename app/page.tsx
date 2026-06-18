@@ -97,7 +97,7 @@ function UseCaseCard({
 
 export default function Inicio() {
   return (
-    <main className="w-full bg-white">
+    <main className="w-full bg-white min-h-screen flex flex-col">
 
       {/* ── 1. HERO ─────────────────────────────────────────────────────────── */}
       <section className="relative w-full h-[700px] overflow-hidden">

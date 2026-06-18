@@ -44,14 +44,14 @@ function StepItem({
 
 export default function FormulariosDigitales() {
   return (
-    <main className="w-full bg-[#feeaed] min-h-screen">
+    <main className="w-full bg-[#feeaed] min-h-screen flex flex-col">
 
       {/* ── Navbar overlay ──────────────────────────────────────────────────── */}
       <div className="relative h-[88px]">
         <Navbar />
       </div>
 
-      <div className=" mt-10 pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
@@ -166,7 +166,7 @@ export default function FormulariosDigitales() {
       {/* ── 5. MORE SERVICES ────────────────────────────────────────────────── */}
       <ServicesCarousel currentSlug="formularios-digitales" />
 
-      <Footer />
+      <Footer cardBg="bg-white" />
     </main>
   );
 }

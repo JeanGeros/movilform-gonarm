@@ -75,7 +75,7 @@ function CasoCard({ icon, title, description, href }: {
 
 export default function MantenimientosPreventivosYCorrectivos() {
   return (
-    <main className="w-full bg-[#feeaed] min-h-screen">
+    <main className="w-full bg-[#feeaed] min-h-screen flex flex-col">
 
       <div className="relative h-[88px]">
         <Navbar />

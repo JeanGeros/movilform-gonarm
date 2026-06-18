@@ -10,13 +10,13 @@ const IMG_INFO      = "/servicios/reportes-y-dashboards/informacion-linea.webp";
 
 export default function ReportesYDashboards() {
   return (
-    <main className="w-full bg-[#feeaed] min-h-screen">
+    <main className="w-full bg-[#feeaed] min-h-screen flex flex-col">
 
       <div className="relative h-[88px]">
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
@@ -80,7 +80,7 @@ export default function ReportesYDashboards() {
       {/* ── 4. MÁS SERVICIOS ────────────────────────────────────────────────── */}
       <ServicesCarousel currentSlug="reportes-y-dashboards" />
 
-      <Footer />
+      <Footer cardBg="bg-white" />
     </main>
   );
 }
