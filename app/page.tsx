@@ -117,7 +117,7 @@ export default function Inicio() {
             Integra tu software con MovilForm, podrás extraer o enviar
             datos, completa tus formularios digitales y optimiza tus procesos.
           </p>
-          <div className="flex gap-4 mt-10">
+          <div className="flex gap-30 mt-10">
             <a
               href="#"
               className="font-satoshi inline-flex items-center justify-center h-[50px] px-8 rounded-[30px] bg-[rgba(229,35,51,0.8)] text-white text-[18px] font-bold hover:bg-[#e52333] transition-colors"
