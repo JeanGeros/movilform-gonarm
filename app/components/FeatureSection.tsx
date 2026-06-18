@@ -30,7 +30,7 @@ export default function FeatureSection({
       <Image
         src={imageSrc}
         alt={imageAlt}
-        width={600}
+        width={500}
         height={400}
         className={`w-full h-full ${imageContain ? "object-contain" : "object-cover"}`}
       />
@@ -42,7 +42,7 @@ export default function FeatureSection({
       <h2 className="font-satoshi text-[40px] font-extrabold text-[#192437] leading-[46px]">
         {title}
       </h2>
-      <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px] space-y-4">
+      <div className="font-satoshi text-justify mt-8 text-[16px] text-[#232321] leading-[26px] space-y-4">
         {children}
       </div>
     </div>
@@ -50,7 +50,7 @@ export default function FeatureSection({
 
   return (
     <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
-      <div className={`grid gap-12 items-center ${imagePosition === "left" ? "grid-cols-[45%_55%]" : "grid-cols-[55%_45%]"}`}>
+      <div className={`grid gap-12 items-center ${imagePosition === "left" ? "grid-cols-[9fr_11fr]" : "grid-cols-[11fr_9fr]"}`}>
         {imagePosition === "left" ? (
           <>
             {imageBlock}

@@ -118,7 +118,7 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
           <FontAwesomeIcon icon={faChevronLeft} className="w-5 h-5 text-[#192437]" />
         </button>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden mx-10">
           <div
             ref={trackRef}
             className="flex"
@@ -133,7 +133,7 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
                 key={s.key}
                 href={s.href}
                 data-card
-                className="bg-white rounded-[20px] p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+                className="bg-white rounded-[20px] px-6 pt-8 pb-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
                 style={{
                   flex: `0 0 calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`,
                 }}
@@ -142,7 +142,7 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
                 <h3 className="font-satoshi mt-6 text-[24px] font-bold text-black leading-[30px]">
                   {s.title}
                 </h3>
-                <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] text-justify leading-[27px]">
+                <p className="font-satoshi mt-3 text-[15px] font-medium text-[#00000] text-justify tracking-[0px] leading-[24px]">
                   {s.description}
                 </p>
               </a>
