@@ -29,7 +29,7 @@ export default function ModuloDeRutas() {
               <p>
                 Para las empresas que realizan diferentes tipos de servicios en terreno, MovilForm
                 será su aliado perfecto utilizando el módulo de rutas.
-              </p>16px
+              </p>
               <p>
                 Con este módulo, podrás programar las visitas a tus clientes generando rutas
                 diarias, semanales o mensuales, las cuales se asignarán de forma automática al

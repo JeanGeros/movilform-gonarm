@@ -2,6 +2,7 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FeatureSection from "@/app/components/FeatureSection";
 import ServicesCarousel from "@/app/components/ServicesCarousel";
+import ReportLightbox from "./ReportLightbox";
 
 const IMG_REPORTES  = "/servicios/reportes-y-dashboards/reportes-informes.webp";
 const IMG_INFO      = "/servicios/reportes-y-dashboards/informacion-linea.webp";
@@ -58,7 +59,7 @@ export default function ReportesYDashboards() {
             capturadas por los formularios digitales. Además, la plataforma web cuenta con la
             opción de descargar la información en diferentes formatos como PDF, Excel o
             visualizar en la misma web.{" "}
-            <strong className="text-[#192437]">Ver reporte PDF</strong>
+            <ReportLightbox />
           </p>
         </FeatureSection>
 

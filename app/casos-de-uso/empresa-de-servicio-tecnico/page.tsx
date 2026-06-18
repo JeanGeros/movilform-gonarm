@@ -43,13 +43,13 @@ function TrackIcon() {
 
 export default function EmpresaDeServicioTecnico() {
   return (
-    <main className="w-full bg-[#feeaed] min-h-screen flex flex-col">
+    <main className="w-full bg-white min-h-screen flex flex-col">
 
       <div className="relative h-[88px]">
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <section className="relative rounded-[20px] overflow-hidden h-[400px]">

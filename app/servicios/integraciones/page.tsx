@@ -24,7 +24,7 @@ export default function Integraciones() {
             <h1 className="font-satoshi text-[60px] font-black text-[#e52533] leading-[68px]">
               Integraciones
             </h1>
-            <div className="font-satoshi text-[17px] text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[17px] text-justify text-[#231d1b] leading-[25px] space-y-4">
               <p>
                 MovilForm pone a disposición su API Rest de integración para diferentes tipos de
                 softwares, ya sean propios o externos. Nuestros clientes tienen acceso a su

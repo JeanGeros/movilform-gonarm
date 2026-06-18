@@ -48,13 +48,13 @@ function TrackIcon() {
 
 export default function EmpresaDeGestionDeResiduos() {
   return (
-    <main className="w-full bg-[#feeaed] min-h-screen flex flex-col">
+    <main className="w-full bg-white min-h-screen flex flex-col">
 
       <div className="relative h-[88px]">
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <section className="relative rounded-[20px] overflow-hidden h-[400px]">
@@ -74,9 +74,9 @@ export default function EmpresaDeGestionDeResiduos() {
         {/* ── 2. INTRO DOS COLUMNAS ────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
           <div className="grid grid-cols-2 gap-12">
-            <div className="flex gap-6">
-              <div className="w-[9px] flex-shrink-0 rounded-full bg-[#e42433]" />
-              <p className="font-satoshi text-[16px] text-[#231d1b] leading-[26px]">
+            <div className="flex gap-4 items-center">
+              <div className="w-[9px] flex-shrink-0 self-stretch rounded-full bg-[#feeaed]" />
+              <p className="font-satoshi text-[16px] text-[#231d1b] leading-[26px] text-justify">
                 Si tu empresa pertenece al rubro de la gestión de residuos industriales,
                 domiciliarios, de contenedores o reciclaje, estás en el lugar correcto.
                 MovilForm te permitirá planificar todos los servicios de recolección que
@@ -84,8 +84,8 @@ export default function EmpresaDeGestionDeResiduos() {
                 de vehículos, turnos del personal y servicios a realizar.
               </p>
             </div>
-            <div className="flex gap-6">
-              <div className="w-[9px] flex-shrink-0 rounded-full bg-[#e42433]" />
+            <div className="flex gap-4">
+              <div className="w-[9px] flex-shrink-0 rounded-full bg-[#feeaed]" />
               <div className="font-satoshi text-[16px] text-[#231d1b] leading-[26px] space-y-4">
                 <p>
                   Además, podrás optimizar los servicios de forma automática, generando
@@ -103,8 +103,8 @@ export default function EmpresaDeGestionDeResiduos() {
         </section>
 
         {/* ── 3. COMPROMISO Y EXCELENCIA ───────────────────────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[60px] text-center">
-          <h2 className="font-satoshi text-[32px] font-extrabold text-[#192437] leading-[40px]">
+        <section className="bg-[#feeaed] rounded-[20px] px-[70px] py-[60px] my-10 text-center">
+          <h2 className="font-satoshi text-[40px] font-extrabold text-[#e22939] leading-[40px]">
             Compromiso y excelencia
           </h2>
           <p className="font-satoshi mt-6 text-[16px] text-[#232321] leading-[26px] max-w-[500px] mx-auto">
@@ -116,62 +116,47 @@ export default function EmpresaDeGestionDeResiduos() {
 
         {/* ── 4. BENEFICIOS ────────────────────────────────────────────────── */}
         <div>
-          <h2 className="font-satoshi text-[32px] font-extrabold text-[#192437] text-center leading-[40px] mb-6">
+          <h2 className="font-satoshi text-[32px] font-extrabold text-[#e22939] text-center leading-[40px] mb-6">
             Beneficios para tu empresa
           </h2>
           <div className="grid grid-cols-3 gap-6">
-            {/* Eficiencia */}
-            <div className="bg-white rounded-[20px] overflow-hidden">
-              <div className="h-[240px] overflow-hidden rounded-t-[20px]">
-                <img src={IMG_EFICIENCIA} alt="Eficiencia operativa" className="w-full h-full object-cover" />
+            {[
+              {
+                img: IMG_EFICIENCIA,
+                alt: "Eficiencia operativa",
+                title: "Eficiencia",
+                desc: "Planifica tus servicios y optimiza los recursos y aumenta el control de las tareas que se ejecutan diariamente.",
+              },
+              {
+                img: IMG_ACCESIBILIDAD,
+                alt: "Accesibilidad desde smartphones",
+                title: "Accesibilidad",
+                desc: "Desde tu Smartphone o Tablet, captura toda la información que necesites y envía reportes automáticos.",
+              },
+              {
+                img: IMG_PRODUCTIVIDAD,
+                alt: "Productividad con formularios digitales",
+                title: "Productividad",
+                desc: "Simplifica tus procesos y facilita el trabajo de tu equipo utilizando formularios digitales.",
+              },
+            ].map(({ img, alt, title, desc }) => (
+              <div key={title} className="bg-white rounded-[20px] ">
+                <div className="h-[240px] overflow-hidden rounded-[20px]">
+                  <img src={img} alt={alt} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-5 text-center">
+                  <h3 className="font-satoshi text-[27.2px] font-bold text-[#192437] leading-[30px]">{title}</h3>
+                  <p className="font-satoshi mt-4 text-[16px] text-justify text-[#3f4648] leading-[26px]">{desc}</p>
+                </div>
               </div>
-              <div className="p-8 text-center">
-                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">
-                  Eficiencia
-                </h3>
-                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
-                  Planifica tus servicios y optimiza los recursos y aumenta el control de
-                  las tareas que se ejecutan diariamente.
-                </p>
-              </div>
-            </div>
-            {/* Accesibilidad */}
-            <div className="bg-white rounded-[20px] overflow-hidden">
-              <div className="h-[240px] overflow-hidden rounded-t-[20px]">
-                <img src={IMG_ACCESIBILIDAD} alt="Accesibilidad desde smartphones" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-8 text-center">
-                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">
-                  Accesibilidad
-                </h3>
-                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
-                  Desde tu Smartphone o Tablet, captura toda la información que necesites
-                  y envía reportes automáticos.
-                </p>
-              </div>
-            </div>
-            {/* Productividad */}
-            <div className="bg-white rounded-[20px] overflow-hidden">
-              <div className="h-[240px] overflow-hidden rounded-t-[20px]">
-                <img src={IMG_PRODUCTIVIDAD} alt="Productividad con formularios digitales" className="w-full h-full object-cover" />
-              </div>
-              <div className="p-8 text-center">
-                <h3 className="font-satoshi text-[22px] font-bold text-[#192437] leading-[30px]">
-                  Productividad
-                </h3>
-                <p className="font-satoshi mt-4 text-[15px] text-[#3f4648] leading-[26px]">
-                  Simplifica tus procesos y facilita el trabajo de tu equipo utilizando
-                  formularios digitales.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
         {/* ── 5. BANNER CTA ────────────────────────────────────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[60px] text-center">
-          <p className="font-satoshi text-[26px] font-bold text-[#192437] leading-[36px] max-w-[780px] mx-auto">
-            Planifica tus servicios y optimiza los recursos, consiguiendo control y eficiencia
+        <section className="bg-[#feeaed] rounded-[20px] px-[70px] py-[60px] text-center">
+          <p className="font-satoshi text-[32px] font-bold text-[#192437] leading-[36px] max-w-[780px] mx-auto">
+            Planifica tus servicios y optimiza los recursos, consiguiendo <span className="text-[#e22939]"> control y eficiencia </span>
             para tu empresa
           </p>
         </section>

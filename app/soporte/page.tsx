@@ -49,7 +49,7 @@ export default function Soporte() {
         <Navbar />
       </div>
 
-      <div className="px-[110px] pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. ENCABEZADO ────────────────────────────────────────────────── */}
         <section className="py-20 text-center">

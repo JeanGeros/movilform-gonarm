@@ -176,7 +176,7 @@ export default function Inicio() {
       <ClientsCarousel />
 
       {/* ── 6. SOLUTIONS ────────────────────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 md:px-[70px] py-14 md:py-20">
+      <section className="max-w-7xl mx-auto py-14 md:py-20">
         <h2 className="font-satoshi text-[28px] md:text-[40px] font-extrabold text-black text-center leading-[34px] md:leading-[40px]">
           Soluciones que se adaptan a tus necesidades
         </h2>
@@ -195,7 +195,7 @@ export default function Inicio() {
       </section>
 
       {/* ── 7. USE CASES ────────────────────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto mt-10 md:mt-0 px-6 md:px-[70px] pb-14 md:pb-20">
+      <section className="max-w-7xl mx-auto mt-10 md:mt-0 pb-14 md:pb-20">
         <p className="font-satoshi text-[40px] md:text-[28px] md:text-[40px] font-extrabold text-[#e42433] text-center leading-[34px] md:leading-[40px]">
           Casos de Usos
         </p>
