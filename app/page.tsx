@@ -106,7 +106,7 @@ export default function Inicio() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-30 mt-8 md:mt-10 w-[80%] sm:w-auto items-center">
             <a
-              href="#"
+              href="/servicios/modulo-de-tareas"
               className="font-satoshi inline-flex items-center justify-center w-full sm:w-auto h-[46px] md:h-[50px] px-8 rounded-[30px] bg-[rgba(229,35,51,0.8)] text-white text-[16px] md:text-[18px] font-bold hover:bg-[#e52333] transition-colors"
             >
               Ver servicios

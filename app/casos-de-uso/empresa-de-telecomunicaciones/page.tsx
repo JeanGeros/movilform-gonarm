@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import BenefitsCarousel from "../BenefitsCarousel";
@@ -23,10 +24,12 @@ export default function EmpresaDeTelecomunicaciones() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <section className="relative rounded-[20px] overflow-hidden h-[250px] md:h-[400px]">
-          <img
+          <Image
             src={IMG_HERO}
             alt="Empresas de telecomunicaciones"
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 1280px"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/70 rounded-[20px]" />
           <div className="relative h-full flex items-center justify-center px-6">

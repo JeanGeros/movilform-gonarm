@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
@@ -79,10 +80,12 @@ export default function MantenimientosPreventivosYCorrectivos() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <section className="relative rounded-[20px] overflow-hidden h-[250px] md:h-[400px]">
-          <img
+          <Image
             src={IMG_HERO}
             alt="Mantenimientos preventivos y correctivos"
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            sizes="(max-width: 768px) 100vw, 1280px"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/70 rounded-[20px]" />
           <div className="relative h-full flex items-center justify-center px-6">
@@ -108,10 +111,12 @@ export default function MantenimientosPreventivosYCorrectivos() {
               </div>
             </div>
             <div className="rounded-[10px] overflow-hidden shadow-[10px_10px_20px_rgba(0,0,0,0.25)]">
-              <img
+              <Image
                 src={IMG_MODULO}
                 alt="Módulo de mantenimientos preventivos o correctivos"
-                className="w-full h-full object-cover"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -121,10 +126,12 @@ export default function MantenimientosPreventivosYCorrectivos() {
         <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[50px]">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="order-2 md:order-1 rounded-[15px] overflow-hidden shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
-              <img
+              <Image
                 src={IMG_INVENTARIO}
                 alt="Gestión de inventario de artículos en MovilForm"
-                className="w-full h-full object-cover"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
               />
             </div>
             <div className="order-1 md:order-2">
@@ -159,10 +166,12 @@ export default function MantenimientosPreventivosYCorrectivos() {
               </div>
             </div>
             <div className="rounded-[10px] overflow-hidden shadow-[10px_10px_20px_rgba(0,0,0,0.25)]">
-              <img
+              <Image
                 src={IMG_ORDENES}
                 alt="Administración de órdenes de servicio con MovilForm"
-                className="w-full h-full object-cover"
+                width={600}
+                height={400}
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
