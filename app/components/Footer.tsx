@@ -11,11 +11,12 @@ const SERVICIOS = [
 ];
 
 const CASOS_DE_USO = [
-  "Empresa de Gestión de Residuos",
-  "Empresa de Telecomunicaciones",
-  "Empresa de Control de Plagas",
-  "Empresa de Servicio Técnico",
-  "Empresa de Servicio de higiene",
+  { label: "Mantenimientos Preventivos y Correctivos", href: "/casos-de-uso/mantenimientos-preventivos-y-correctivos" },
+  { label: "Empresa de Gestión de Residuos",           href: "/casos-de-uso/empresa-de-gestion-de-residuos" },
+  { label: "Empresa de Telecomunicaciones",            href: "/casos-de-uso/empresa-de-telecomunicaciones" },
+  { label: "Empresa de Control de Plagas",             href: "/casos-de-uso/empresa-de-control-de-plagas" },
+  { label: "Empresa de Servicio de Higiene",           href: "/casos-de-uso/empresa-de-servicio-de-higiene" },
+  { label: "Empresa de Servicio Técnico",              href: "/casos-de-uso/empresa-de-servicio-tecnico" },
 ];
 
 export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string }) {
@@ -58,12 +59,12 @@ export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string })
             </h4>
             <ul className="space-y-1">
               {CASOS_DE_USO.map((item) => (
-                <li key={item}>
+                <li key={item.label}>
                   <a
-                    href="#"
+                    href={item.href}
                     className="font-satoshi text-[15px] md:text-[16px] text-black hover:underline"
                   >
-                    {item}
+                    {item.label}
                   </a>
                 </li>
               ))}
