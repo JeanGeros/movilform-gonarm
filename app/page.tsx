@@ -184,7 +184,7 @@ export default function Inicio() {
           Con MovilForm podrás optimizar, gestionar y controlar de forma fácil y eficiente tu operación.
         </p>
 
-        <div className="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+        <div className="mt-8 md:mt-10 grid px-5 md:px-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           <SolutionCard icon={<FormIcon />}        title="Módulo de Formularios"  description="Los formularios digitales son la evolución del papel, diseña los tuyos con fotos, checkbox o desplegables, potencia tus equipos de trabajo y aumenta su productividad y eficiencia." />
           <SolutionCard icon={<RouteIcon />}        title="Módulo de Rutas"         description="Planifica tus servicios, programa fácilmente las visitas a tus clientes y recibe información en línea de las actividades ejecutadas." />
           <SolutionCard icon={<TaskIcon />}         title="Módulo de Tareas"        description="Programa tus visitas individuales sin necesidad de asignarlas a una ruta, podrás incluir diferentes servicios en una misma visita y validar los trabajos realizados de forma online." />
@@ -203,7 +203,7 @@ export default function Inicio() {
           Descubre cómo MovilForm impulsa la eficiencia en tu negocio
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-[390px_1fr] gap-6 gap-y-10">
+        <div className="mt-10 grid grid-cols-1  lg:grid-cols-[390px_1fr] gap-6 gap-y-10">
           {/* Dark left panel */}
           <div className="relative hidden md:block rounded-[12px] overflow-hidden lg:row-span-2 min-h-[300px] lg:min-h-[706px]">
             <Image src={IMG_USE_CASE_BG} alt="" fill className="object-cover" />
@@ -221,12 +221,12 @@ export default function Inicio() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-25 md:gap-6 mt-18 md:mt-0 lg:mt-14">
+          <div className="grid grid-cols-1 px-5 md:px-0 sm:grid-cols-2 gap-25 md:gap-6 mt-18 md:mt-0 lg:mt-14">
             <UseCaseCard img={IMG_SERVICES} title="Servicios Técnicos"    description="Organiza todos los requerimientos de tus clientes asignando tareas claras y visitas programadas a tus técnicos en terreno." />
             <UseCaseCard img={IMG_WASTE}    title="Gestión de Residuos"   description="Planifica servicios urbanos, industriales y gestiona residuos peligrosos, todo desde una misma aplicación." />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-25 md:gap-6 mt-18 lg:mt-14">
+          <div className="grid grid-cols-1 px-5 md:px-0 sm:grid-cols-2 gap-25 md:gap-6 mt-18 lg:mt-14">
             <UseCaseCard img={IMG_TELECOM} title="Telecomunicaciones"   description="Gestiona y asigna las reparaciones de fibra óptica, cambios de hardware, inspecciones, gestiona presupuestos y mucho más, digitaliza y mejora la operación de tu empresa." />
             <UseCaseCard img={IMG_PEST}    title="Controles de Plagas"  description="¿Realizas control de plagas, sanitización y desinfección ambiental? Con MovilForm podrás llevar el control de todas las visitas que realices a tus clientes emitiendo los certificados digitales de forma automática." />
           </div>

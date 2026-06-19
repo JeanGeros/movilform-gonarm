@@ -42,6 +42,7 @@ export default function Navbar() {
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
+      if (mobileOpen) return;
       if (serviciosRef.current && !serviciosRef.current.contains(e.target as Node)) {
         setServiciosOpen(false);
       }
@@ -51,7 +52,7 @@ export default function Navbar() {
     }
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
+  }, [mobileOpen]);
 
   useEffect(() => {
     if (mobileOpen) {
@@ -63,7 +64,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <nav className="absolute top-4 left-1/2 -translate-x-1/2 z-20 w-[calc(100%-32px)] md:w-[calc(100%-80px)] max-w-7xl">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] md:w-[calc(100%-80px)] max-w-7xl">
       <div className="bg-white rounded-[20px] px-5 md:px-8 h-[60px] md:h-[72px] flex items-center justify-between shadow-[0_4px_24px_rgba(0,0,0,0.12)]">
 
         {/* Logo */}
@@ -177,9 +178,13 @@ export default function Navbar() {
             {serviciosOpen && (
               <div className="pl-4 pb-2">
                 {SERVICIOS.map((item) => (
-                  <a key={item.label} href={item.href} onClick={() => setMobileOpen(false)} className="block py-2 text-[15px] text-black hover:text-[#e42433]">
+                  <button
+                    key={item.label}
+                    onClick={(e) => { e.stopPropagation(); window.location.href = item.href; }}
+                    className="block w-full text-left py-2 text-[15px] text-black hover:text-[#e42433] cursor-pointer"
+                  >
                     {item.label}
-                  </a>
+                  </button>
                 ))}
               </div>
             )}
@@ -195,9 +200,13 @@ export default function Navbar() {
             {casosOpen && (
               <div className="pl-4 pb-2">
                 {CASOS_DE_USO.map((item) => (
-                  <a key={item.label} href={item.href} onClick={() => setMobileOpen(false)} className="block py-2 text-[15px] text-black hover:text-[#e42433]">
+                  <button
+                    key={item.label}
+                    onClick={(e) => { e.stopPropagation(); window.location.href = item.href; }}
+                    className="block w-full text-left py-2 text-[15px] text-black hover:text-[#e42433] cursor-pointer"
+                  >
                     {item.label}
-                  </a>
+                  </button>
                 ))}
               </div>
             )}

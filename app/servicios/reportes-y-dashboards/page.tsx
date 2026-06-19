@@ -13,7 +13,7 @@ export default function ReportesYDashboards() {
   return (
     <main className="w-full bg-[#feeaed] min-h-screen">
 
-      <div className="relative h-[88px]">
+      <div className="relative z-50 h-[88px]">
         <Navbar />
       </div>
 

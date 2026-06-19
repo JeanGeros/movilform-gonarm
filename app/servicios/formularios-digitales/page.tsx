@@ -47,7 +47,7 @@ export default function FormulariosDigitales() {
     <main className="w-full bg-[#feeaed] min-h-screen flex flex-col">
 
       {/* ── Navbar overlay ──────────────────────────────────────────────────── */}
-      <div className="relative h-[88px]">
+      <div className="relative z-50 h-[88px]">
         <Navbar />
       </div>
 
