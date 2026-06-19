@@ -17,15 +17,15 @@ export default function ModuloDeTareas() {
         <Navbar />
       </div>
 
-      <div className="mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
+      <div className="px-4 md:px-0 mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
-          <div className="grid grid-cols-[40%_1fr] gap-12 items-center">
-            <h1 className="font-satoshi text-[60px] font-black text-[#e52533] leading-[68px]">
+        <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[60px]">
+          <div className="grid grid-cols-1 md:grid-cols-[40%_1fr] gap-8 md:gap-12 items-center">
+            <h1 className="font-satoshi text-[36px] md:text-[60px] font-black text-[#e52533] leading-[42px] md:leading-[68px]">
               Módulo de<br />Tareas
             </h1>
-            <div className="font-satoshi text-[17px] text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[15px] md:text-[17px] text-[#231d1b] leading-[24px] md:leading-[28px] space-y-4">
               <p>
                 Con el módulo de tareas podrás programar visitas individuales sin necesidad de
                 asignarlas a una ruta, pudiendo manejar diferentes servicios en una misma visita.

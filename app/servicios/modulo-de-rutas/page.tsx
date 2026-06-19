@@ -17,15 +17,15 @@ export default function ModuloDeRutas() {
         <Navbar />
       </div>
 
-      <div className="mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
+      <div className="px-4 md:px-0 mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
-        <section className="mt-10 bg-white rounded-[20px] px-[70px] py-[60px]">
-          <div className="grid grid-cols-[35%_1fr] gap-12 items-center">
-            <h1 className="font-satoshi text-[60px] font-black text-[#e52533] leading-[68px]">
+        <section className="mt-4 md:mt-10 bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[60px]">
+          <div className="grid grid-cols-1 md:grid-cols-[35%_1fr] gap-8 md:gap-12 items-center">
+            <h1 className="font-satoshi text-[36px] md:text-[60px] font-black text-[#e52533] leading-[42px] md:leading-[68px]">
               Módulo de<br />Rutas
             </h1>
-            <div className="font-satoshi text-[17.6px] text-justify text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[15px] md:text-[17.6px] text-justify text-[#231d1b] leading-[24px] md:leading-[28px] space-y-4">
               <p>
                 Para las empresas que realizan diferentes tipos de servicios en terreno, MovilForm
                 será su aliado perfecto utilizando el módulo de rutas.

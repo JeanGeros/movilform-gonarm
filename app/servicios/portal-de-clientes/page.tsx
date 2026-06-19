@@ -15,15 +15,15 @@ export default function PortalDeClientes() {
         <Navbar />
       </div>
 
-      <div className="mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
+      <div className="px-4 md:px-0 mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
-          <div className="grid grid-cols-[42%_1fr] gap-12 items-center">
-            <h1 className="font-satoshi text-[62px] font-black text-[#e52533] leading-[70px]">
+        <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[60px]">
+          <div className="grid grid-cols-1 md:grid-cols-[42%_1fr] gap-8 md:gap-12 items-center">
+            <h1 className="font-satoshi text-[36px] md:text-[62px] font-black text-[#e52533] leading-[42px] md:leading-[70px]">
               Portal de<br />Clientes
             </h1>
-            <div className="font-satoshi text-[17px] text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[15px] md:text-[17px] text-[#231d1b] leading-[24px] md:leading-[28px] space-y-4">
               <p>
                 Permite a tus clientes interactuar con información y datos de forma automática,
                 con este portal podrás entregarles acceso a informes, documentos y Dashboard

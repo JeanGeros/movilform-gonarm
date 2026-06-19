@@ -20,17 +20,17 @@ function StepItem({
   bullets: string[];
 }) {
   return (
-    <div className="flex gap-8 py-6 border-0">
-      <div className="flex-shrink-0 w-[110px] h-[110px] mt-2 rounded-full bg-[#f6c5cd] flex items-center justify-center">
+    <div className="flex flex-col md:flex-row gap-4 md:gap-8 py-6 border-0">
+      <div className="flex-shrink-0 w-[70px] h-[70px] md:w-[110px] md:h-[110px] mt-2 rounded-full bg-[#f6c5cd] flex items-center justify-center">
         {icon}
       </div>
       <div className="flex flex-col justify-center">
-        <h3 className="font-satoshi text-[32px] font-bold text-black leading-[42px]">
+        <h3 className="font-satoshi text-[24px] md:text-[32px] font-bold text-black leading-[32px] md:leading-[42px]">
           {title}
         </h3>
         <ul className="mt-2 space-y-1">
           {bullets.map((b) => (
-            <li key={b} className="font-satoshi text-[16px] font-medium text-black leading-[27px]">
+            <li key={b} className="font-satoshi text-[14px] md:text-[16px] font-medium text-black leading-[22px] md:leading-[27px]">
               {b}
             </li>
           ))}
@@ -51,15 +51,15 @@ export default function FormulariosDigitales() {
         <Navbar />
       </div>
 
-      <div className="mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
+      <div className="px-4 md:px-0 mt-10 pb-16 flex flex-col gap-10 max-w-7xl mx-auto">
 
         {/* ── 1. HEADER ───────────────────────────────────────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
-          <div className="grid grid-cols-[42%_1fr] gap-12 items-center">
-            <h1 className="font-satoshi text-[64px] font-black text-[#e52533] leading-[68px]">
+        <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[60px]">
+          <div className="grid grid-cols-1 md:grid-cols-[42%_1fr] gap-8 md:gap-12 items-center">
+            <h1 className="font-satoshi text-[36px] md:text-[64px] font-black text-[#e52533] leading-[42px] md:leading-[68px]">
               Formularios<br />Digitales
             </h1>
-            <div className="font-satoshi text-[17px] text-[#231d1b] leading-[28px] space-y-4">
+            <div className="font-satoshi text-[15px] md:text-[17px] text-[#231d1b] leading-[24px] md:leading-[28px] space-y-4">
               <p>
                 Los formularios digitales han sido diseñados para capturar información de forma
                 ordenada y efectiva. Esta tecnología es una evolución del formulario en papel, la
@@ -122,13 +122,13 @@ export default function FormulariosDigitales() {
         </FeatureSection>
 
         {/* ── 4. HOW IT WORKS ─────────────────────────────────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
-          <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
+        <section className="bg-white rounded-[20px] px-6 py-8 md:px-[70px] md:py-[50px]">
+          <h2 className="font-satoshi text-[28px] md:text-[38px] font-extrabold text-[#192437] leading-[34px] md:leading-[46px]">
             ¿Como funciona?
           </h2>
           <div className="mt-8 divide-y divide-gray-100">
             <StepItem
-              icon={<FontAwesomeIcon icon={faPlusCircle} className="text-[4rem] text-white" />}
+              icon={<FontAwesomeIcon icon={faPlusCircle} className="text-[2rem] md:text-[4rem] text-white" />}
               title="Crear"
               bullets={[
                 "- Edita una plantilla o comienza desde cero en el diseñador de formularios.",
@@ -138,7 +138,7 @@ export default function FormulariosDigitales() {
               ]}
             />
             <StepItem
-              icon={<FontAwesomeIcon icon={faFileSignature} className="text-[4rem] text-white" />}
+              icon={<FontAwesomeIcon icon={faFileSignature} className="text-[2rem] md:text-[4rem] text-white" />}
               title="Asignar"
               bullets={[
                 "- Selecciona o crea una ruta o tarea.",
@@ -148,7 +148,7 @@ export default function FormulariosDigitales() {
               ]}
             />
             <StepItem
-              icon={<FontAwesomeIcon icon={faFileAlt} className="text-[4rem] text-white" />}
+              icon={<FontAwesomeIcon icon={faFileAlt} className="text-[2rem] md:text-[4rem] text-white" />}
               title="Recibir información"
               bullets={[
                 "- Recibe los datos capturados de forma automática y online.",

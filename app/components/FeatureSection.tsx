@@ -39,18 +39,18 @@ export default function FeatureSection({
 
   const textBlock = (
     <div>
-      <h2 className="font-satoshi text-[40px] font-extrabold text-[#192437] leading-[46px]">
+      <h2 className="font-satoshi text-[28px] md:text-[40px] font-extrabold text-[#192437] leading-[34px] md:leading-[46px]">
         {title}
       </h2>
-      <div className="font-satoshi text-justify mt-8 text-[17.6px] text-[#232321] leading-[26px] space-y-4">
+      <div className="font-satoshi text-justify mt-5 md:mt-8 text-[15px] md:text-[17.6px] text-[#232321] leading-[24px] md:leading-[26px] space-y-4">
         {children}
       </div>
     </div>
   );
 
   return (
-    <section className="bg-white rounded-[20px] px-[70px] py-[40px]">
-      <div className={`grid gap-12 items-center ${imagePosition === "left" ? "grid-cols-[9fr_11fr]" : "grid-cols-[11fr_9fr]"}`}>
+    <section className="bg-white rounded-[20px] px-6 py-8 md:px-[70px] md:py-[40px]">
+      <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${imagePosition === "left" ? "md:grid-cols-[9fr_11fr]" : "md:grid-cols-[11fr_9fr]"}`}>
         {imagePosition === "left" ? (
           <>
             {imageBlock}
@@ -58,8 +58,8 @@ export default function FeatureSection({
           </>
         ) : (
           <>
-            {textBlock}
-            {imageBlock}
+            <div className="order-2 md:order-1">{textBlock}</div>
+            <div className="order-1 md:order-2">{imageBlock}</div>
           </>
         )}
       </div>
