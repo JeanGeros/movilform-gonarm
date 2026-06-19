@@ -135,7 +135,7 @@ export default function Navbar() {
             Soporte
           </a>
 
-          <a href="#" className="text-[16px] font-bold text-black hover:text-[#e42433] transition-colors">
+          <a href="https://cmtelecomunicaciones.atlassian.net/wiki/spaces/MD/overview" className="text-[16px] font-bold text-black hover:text-[#e42433] transition-colors">
             Recursos
           </a>
         </div>
@@ -206,7 +206,7 @@ export default function Navbar() {
           <a href="/soporte" className="block py-3 text-[16px] font-bold text-black hover:text-[#e42433] border-t border-gray-100" onClick={() => setMobileOpen(false)}>
             Soporte
           </a>
-          <a href="#" className="block py-3 text-[16px] font-bold text-black hover:text-[#e42433] border-t border-gray-100" onClick={() => setMobileOpen(false)}>
+          <a href="https://cmtelecomunicaciones.atlassian.net/wiki/spaces/MD/overview" className="block py-3 text-[16px] font-bold text-black hover:text-[#e42433] border-t border-gray-100" onClick={() => setMobileOpen(false)}>
             Recursos
           </a>
 
