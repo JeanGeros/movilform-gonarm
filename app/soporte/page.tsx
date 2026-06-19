@@ -49,14 +49,14 @@ export default function Soporte() {
         <Navbar />
       </div>
 
-      <div className="pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="px-4 md:px-0 pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. ENCABEZADO ────────────────────────────────────────────────── */}
-        <section className="py-20 text-center">
-          <h1 className="font-satoshi text-[48px] font-black text-[#dd2838] leading-[56px]">
+        <section className="py-10 md:py-20 text-center">
+          <h1 className="font-satoshi text-[32px] md:text-[48px] font-black text-[#dd2838] leading-[40px] md:leading-[56px]">
             Soporte
           </h1>
-          <p className="font-satoshi mt-6 text-[18px] text-[#3f4648] leading-[21px] max-w-[600px] mx-auto">
+          <p className="font-satoshi mt-4 md:mt-6 text-[15px] md:text-[18px] text-[#3f4648] leading-[22px] md:leading-[21px] max-w-[600px] mx-auto">
             Si necesitas ayuda de nuestro soporte puedes contactarnos a través de nuestros
             canales de atención, los cuales están disponibles de{" "}
             <strong className="text-[#192437]">lunes a viernes de 09:00hrs a 18:00hrs.</strong>
@@ -64,7 +64,7 @@ export default function Soporte() {
         </section>
 
         {/* ── 2. CANALES DE SOPORTE ────────────────────────────────────────── */}
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <SupportCard
             icon="/soporte/icon-ticket.png"
             alt="Ticket de soporte"
@@ -93,8 +93,8 @@ export default function Soporte() {
         </div>
 
         {/* ── 3. PREGUNTAS FRECUENTES ──────────────────────────────────────── */}
-        <section className="bg-[#feeaed] rounded-[30px] px-[70px] py-[40px]">
-          <h2 className="font-satoshi text-[32px] font-extrabold text-[#dd2838] text-center leading-[40px] mb-8">
+        <section className="bg-[#feeaed] rounded-[20px] md:rounded-[30px] px-4 py-8 md:px-[70px] md:py-[40px]">
+          <h2 className="font-satoshi text-[24px] md:text-[32px] font-extrabold text-[#dd2838] text-center leading-[30px] md:leading-[40px] mb-6 md:mb-8">
             Preguntas frecuentes
           </h2>
           <div className="max-w-[700px] mx-auto flex flex-col gap-3">
@@ -104,17 +104,17 @@ export default function Soporte() {
                 <div key={i}>
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : i)}
-                    className="w-full flex items-center justify-center gap-3 bg-white rounded-full px-6 py-4 text-left"
+                    className="w-full flex items-center gap-3 bg-white rounded-full px-4 py-3 md:px-6 md:py-4 text-left cursor-pointer"
                   >
                     <TriangleIcon open={isOpen} />
-                    <span className={`font-satoshi text-[16px] leading-[22px] transition-colors duration-300 ${isOpen ? "text-[#434343]" : "text-[#192437]"}`}>
+                    <span className={`font-satoshi text-[14px] md:text-[16px] leading-[20px] md:leading-[22px] transition-colors duration-300 ${isOpen ? "text-[#434343]" : "text-[#192437]"}`}>
                       {faq.q}
                     </span>
                   </button>
                   <div className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100 mt-1" : "grid-rows-[0fr] opacity-0"}`}>
                     <div className="overflow-hidden">
-                      <div className="bg-white rounded-[20px] px-6 py-4">
-                        <p className="font-satoshi text-[16px] text-[#3f4648] leading-[26px] whitespace-pre-line">
+                      <div className="bg-white rounded-[20px] px-4 py-3 md:px-6 md:py-4">
+                        <p className="font-satoshi text-[14px] md:text-[16px] text-[#3f4648] leading-[22px] md:leading-[26px] whitespace-pre-line">
                           {faq.a}
                         </p>
                       </div>
