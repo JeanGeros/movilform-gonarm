@@ -2,7 +2,10 @@
 
 import { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 interface Feature {
@@ -11,7 +14,11 @@ interface Feature {
   desc: string;
 }
 
-export default function FeaturesCardCarousel({ features }: { features: Feature[] }) {
+export default function FeaturesCardCarousel({
+  features,
+}: {
+  features: Feature[];
+}) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
   const [animating, setAnimating] = useState(false);
@@ -42,7 +49,8 @@ export default function FeaturesCardCarousel({ features }: { features: Feature[]
   function onTouchEnd(e: React.TouchEvent) {
     const diff = startX.current - e.changedTouches[0].clientX;
     if (Math.abs(diff) > 50) {
-      if (diff > 0) next(); else prev();
+      if (diff > 0) next();
+      else prev();
     }
   }
 
@@ -90,12 +98,22 @@ export default function FeaturesCardCarousel({ features }: { features: Feature[]
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center"
           aria-label="Anterior"
         >
-          <FontAwesomeIcon icon={faChevronLeft} className="text-[#e42233] text-lg" />
+          <FontAwesomeIcon
+            icon={faChevronLeft}
+            className="text-[#e42233] text-lg"
+          />
         </button>
 
-        <div className={`px-10 ${slideClass}`} key={animating ? "exit" : current}>
+        <div
+          className={`px-10 ${slideClass}`}
+          key={animating ? "exit" : current}
+        >
           <div className="bg-[#feeaed] rounded-[20px] p-8 flex flex-col items-center text-center">
-            <FontAwesomeIcon icon={features[current].icon} className="text-[#4d4d4d]" style={{ fontSize: "2.5rem" }} />
+            <FontAwesomeIcon
+              icon={features[current].icon}
+              className="text-[#4d4d4d]"
+              style={{ fontSize: "2.5rem" }}
+            />
             <h3 className="font-satoshi mt-4 text-[18px] font-bold text-black leading-[24px]">
               {features[current].title}
             </h3>
@@ -110,7 +128,10 @@ export default function FeaturesCardCarousel({ features }: { features: Feature[]
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center"
           aria-label="Siguiente"
         >
-          <FontAwesomeIcon icon={faChevronRight} className="text-[#e42233] text-lg" />
+          <FontAwesomeIcon
+            icon={faChevronRight}
+            className="text-[#e42233] text-lg"
+          />
         </button>
 
         <div className="flex justify-center gap-2 mt-4">
@@ -132,10 +153,21 @@ export default function FeaturesCardCarousel({ features }: { features: Feature[]
       {/* Desktop grid */}
       <div className="hidden md:grid grid-cols-4 gap-6 my-15">
         {features.map((f) => (
-          <div key={f.title} className="bg-[#feeaed] rounded-[20px] p-8 flex flex-col items-center text-center">
-            <FontAwesomeIcon icon={f.icon} className="text-[#4d4d4d] w-12 h-12" />
-            <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[28px]">{f.title}</h3>
-            <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[26px]">{f.desc}</p>
+          <div
+            key={f.title}
+            className="bg-[#feeaed] rounded-[20px] p-8 flex flex-col items-center text-center"
+          >
+            <FontAwesomeIcon
+              icon={f.icon}
+              className="text-[#4d4d4d]"
+              style={{ fontSize: "3rem" }}
+            />
+            <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[28px]">
+              {f.title}
+            </h3>
+            <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[26px]">
+              {f.desc}
+            </p>
           </div>
         ))}
       </div>
