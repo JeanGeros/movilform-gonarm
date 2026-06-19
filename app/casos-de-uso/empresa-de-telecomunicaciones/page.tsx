@@ -1,6 +1,7 @@
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BenefitsCarousel from "../BenefitsCarousel";
+import FeaturesCardCarousel from "../FeaturesCardCarousel";
 import { faTasks, faMapMarkedAlt, faRoute, faTabletAlt } from "@fortawesome/free-solid-svg-icons";
 
 const IMG_HERO          = "/casos-de-uso/empresa-de-telecomunicaciones/hero.webp";
@@ -18,45 +19,44 @@ export default function EmpresaDeTelecomunicaciones() {
         <Navbar />
       </div>
 
-      <div className="pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="px-4 md:px-0 pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-        <section className="relative rounded-[20px] overflow-hidden h-[400px]">
+        <section className="relative rounded-[20px] overflow-hidden h-[250px] md:h-[400px]">
           <img
             src={IMG_HERO}
             alt="Empresas de telecomunicaciones"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70 rounded-[20px]" />
-          <div className="relative h-full flex items-center justify-center">
-            <h1 className="font-satoshi text-[38px] font-bold text-white text-center leading-[48px]">
+          <div className="relative h-full flex items-center justify-center px-6">
+            <h1 className="font-satoshi text-[26px] md:text-[38px] font-bold text-white text-center leading-[34px] md:leading-[48px]">
               Empresas de telecomunicaciones
             </h1>
           </div>
         </section>
 
         {/* ── 2. INTRO DOS COLUMNAS ────────────────────────────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[60px]">
-          <div className="grid grid-cols-2 gap-12">
+        <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[60px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div className="flex gap-4 items-center">
-              <div className="w-[9px] flex-shrink-0 self-stretch rounded-full bg-[#feeaed]" />
+              <div className="w-[9px] hidden md:block flex-shrink-0 self-stretch rounded-full bg-[#feeaed]" />
               <div>
- <p className="font-satoshi text-[16px] text-[#231d1b] leading-[26px] text-justify">
-                Las empresas de Telecomunicaciones están a la vanguardia en tecnología y
-                también lo deben estar en sus procesos operativos, digitalizándolos para
-                ser más eficientes y competitivos.
-              </p>
-              <p className="font-satoshi text-[16px] mt-3 text-[#231d1b] leading-[26px] text-justify">
-                Con MovilForm podrán generar y planificar
-                las ordenes de servicio o trabajo que realiza su personal en terreno, pudiendo
-                gestionar al personal interno como a las empresas contratistas.
-              </p>
+                <p className="font-satoshi text-[16px] text-[#231d1b] leading-[24px] md:leading-[26px] text-justify">
+                  Las empresas de Telecomunicaciones están a la vanguardia en tecnología y
+                  también lo deben estar en sus procesos operativos, digitalizándolos para
+                  ser más eficientes y competitivos.
+                </p>
+                <p className="font-satoshi text-[16px] mt-3 text-[#231d1b] leading-[24px] md:leading-[26px] text-justify">
+                  Con MovilForm podrán generar y planificar
+                  las ordenes de servicio o trabajo que realiza su personal en terreno, pudiendo
+                  gestionar al personal interno como a las empresas contratistas.
+                </p>
               </div>
-             
             </div>
             <div className="flex gap-4 items-center">
-              <div className="w-[9px] flex-shrink-0 self-stretch rounded-full bg-[#feeaed]" />
-              <div className="font-satoshi text-[16px] text-[#231d1b] leading-[26px] space-y-4">
+              <div className="w-[9px] hidden md:block flex-shrink-0 self-stretch rounded-full bg-[#feeaed]" />
+              <div className="font-satoshi text-[16px] text-[#231d1b] leading-[24px] md:leading-[26px] space-y-4 text-justify">
                 <p>
                   Podrán obtener información en línea y centralizada para generar informes
                   y obtener métricas para medir el desempeño y los cumplimientos de SLA.
@@ -71,93 +71,46 @@ export default function EmpresaDeTelecomunicaciones() {
         </section>
 
         {/* ── 3. DIGITALIZA Y PLANIFICA ────────────────────────────────────── */}
-        <section className="bg-[#feeaed] rounded-[20px] px-[70px] py-[60px] my-10 text-center">
-          <h2 className="font-satoshi text-[40px] font-extrabold text-[#e22939] leading-[40px]">
+        <section className="bg-[#feeaed] rounded-[20px] px-6 py-10 md:px-[70px] md:py-[60px] my-4 md:my-10 text-center">
+          <h2 className="font-satoshi text-[28px] md:text-[40px] font-extrabold text-[#e22939] leading-[34px] md:leading-[40px]">
             Digitaliza y planifica
           </h2>
-          <p className="font-satoshi mt-6 text-[16px] text-[#232321] leading-[26px] w-[40%] mx-auto">
+          <p className="font-satoshi mt-4 md:mt-6 text-[15px] md:text-[16px] text-[#232321] leading-[24px] md:leading-[26px] max-w-[500px] mx-auto">
             Mejora tus procesos operativos y optimiza tus recursos en terreno con MovilForm.
           </p>
         </section>
 
         {/* ── 4. BENEFICIOS ────────────────────────────────────────────────── */}
         <div>
-          <h2 className="font-satoshi text-[32px] font-extrabold text-[#e22939] text-center leading-[40px] mb-6">
+          <h2 className="font-satoshi text-[24px] md:text-[32px] font-extrabold text-[#e22939] text-center leading-[30px] md:leading-[40px] mb-6">
             Beneficios para tu empresa
           </h2>
-          <div className="grid grid-cols-3 gap-6">
-            {[
-              {
-                img: IMG_EFICIENCIA,
-                alt: "Eficiencia en telecomunicaciones",
-                title: "Eficiencia",
-                desc: "Planifica tus servicios y optimiza los recursos y aumenta el control de las tareas que se ejecutan diariamente.",
-              },
-              {
-                img: IMG_ACCESIBILIDAD,
-                alt: "Accesibilidad desde smartphones",
-                title: "Accesibilidad",
-                desc: "Desde tu Smartphone o Tablet, captura toda la información que necesites y envía reportes automáticos.",
-              },
-              {
-                img: IMG_PRODUCTIVIDAD,
-                alt: "Productividad con formularios digitales",
-                title: "Productividad",
-                desc: "Simplifica tus procesos y facilita el trabajo de tu equipo utilizando formularios digitales.",
-              },
-            ].map(({ img, alt, title, desc }) => (
-              <div key={title} className="bg-white rounded-[20px]">
-                <div className="h-[240px] overflow-hidden rounded-[20px]">
-                  <img src={img} alt={alt} className="w-full h-full object-cover" />
-                </div>
-                <div className="p-5 text-center">
-                  <h3 className="font-satoshi text-[27.2px] font-bold text-[#192437] leading-[30px]">{title}</h3>
-                  <p className="font-satoshi mt-4 text-[16px] text-justify text-[#3f4648] leading-[26px]">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <BenefitsCarousel
+            benefits={[
+              { img: IMG_EFICIENCIA, alt: "Eficiencia en telecomunicaciones", title: "Eficiencia", desc: "Planifica tus servicios y optimiza los recursos y aumenta el control de las tareas que se ejecutan diariamente." },
+              { img: IMG_ACCESIBILIDAD, alt: "Accesibilidad desde smartphones", title: "Accesibilidad", desc: "Desde tu Smartphone o Tablet, captura toda la información que necesites y envía reportes automáticos." },
+              { img: IMG_PRODUCTIVIDAD, alt: "Productividad con formularios digitales", title: "Productividad", desc: "Simplifica tus procesos y facilita el trabajo de tu equipo utilizando formularios digitales." },
+            ]}
+          />
         </div>
 
         {/* ── 5. BANNER CTA ────────────────────────────────────────────────── */}
-        <section className="bg-[#feeaed] rounded-[20px] px-[70px] py-[60px] text-center">
-          <p className="font-satoshi text-[32px] font-bold text-[#192437] leading-[36px] max-w-[780px] mx-auto">
+        <section className="bg-[#feeaed] rounded-[20px] px-6 py-10 md:px-[70px] md:py-[60px] text-center">
+          <p className="font-satoshi text-[22px] md:text-[32px] font-bold text-[#192437] leading-[30px] md:leading-[36px] max-w-[780px] mx-auto">
             Digitaliza y planifica tus servicios, consiguiendo <span className="text-[#e22939]">control y eficiencia</span> para
             tu empresa.
           </p>
         </section>
 
         {/* ── 6. FUNCIONALIDADES ───────────────────────────────────────────── */}
-        <div className="grid grid-cols-4 gap-6 my-15">
-          {[
-            {
-              icon: faTasks,
-              title: "Asigna tareas",
-              desc: "Asigna tareas individuales sin necesidad de generar rutas y registra toda la actividad realizada en terreno.",
-            },
-            {
-              icon: faMapMarkedAlt,
-              title: "Planifica rutas",
-              desc: "Establece los criterios necesarios para planificar tus servicios diarios, semanales o mensuales.",
-            },
-            {
-              icon: faRoute,
-              title: "Optimiza rutas",
-              desc: "Mejora la eficiencia y reduce costos operativos con la mejor secuencia de atención.",
-            },
-            {
-              icon: faTabletAlt,
-              title: "Controla rutas",
-              desc: "Realiza el seguimiento de los servicios de forma remota y totalmente online.",
-            },
-          ].map(({ icon, title, desc }) => (
-            <div key={title} className="bg-[#feeaed] rounded-[20px] p-8 flex flex-col items-center text-center">
-              <FontAwesomeIcon icon={icon} className="text-[#4d4d4d] w-12 h-12" />
-              <h3 className="font-satoshi mt-6 text-[20px] font-bold text-black leading-[28px]">{title}</h3>
-              <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[26px]">{desc}</p>
-            </div>
-          ))}
-        </div>
+        <FeaturesCardCarousel
+          features={[
+            { icon: faTasks, title: "Asigna tareas", desc: "Asigna tareas individuales sin necesidad de generar rutas y registra toda la actividad realizada en terreno." },
+            { icon: faMapMarkedAlt, title: "Planifica rutas", desc: "Establece los criterios necesarios para planificar tus servicios diarios, semanales o mensuales." },
+            { icon: faRoute, title: "Optimiza rutas", desc: "Mejora la eficiencia y reduce costos operativos con la mejor secuencia de atención." },
+            { icon: faTabletAlt, title: "Controla rutas", desc: "Realiza el seguimiento de los servicios de forma remota y totalmente online." },
+          ]}
+        />
 
       </div>
 

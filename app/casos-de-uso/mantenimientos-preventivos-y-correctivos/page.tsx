@@ -57,19 +57,13 @@ function WrenchIcon() {
   );
 }
 
-function CasoCard({ icon, title, description, href }: {
-  icon: React.ReactNode; title: string; description: string; href: string;
-}) {
-  return (
-    <a href={href} className="bg-white rounded-[20px] p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
-      <div className="w-[80px] h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
-        {icon}
-      </div>
-      <h3 className="font-satoshi mt-6 text-[22px] font-bold text-black leading-[30px]">{title}</h3>
-      <p className="font-satoshi mt-3 text-[15px] font-medium text-[#3f4648] leading-[27px]">{description}</p>
-    </a>
-  );
-}
+const CASOS = [
+  { icon: <ResiduesIcon />, title: "Empresa de Gestión de Residuos", description: "MovilForm optimiza la recolección de residuos, planificando rutas, turnos y vehículos. Ahorra tiempo y recursos, y genera reportes automáticos.", href: "/casos-de-uso/empresa-de-gestion-de-residuos" },
+  { icon: <TelecomIcon />, title: "Empresa de Telecomunicaciones", description: "Planifica tus ordenes de servicio o trabajo que realiza su personal en terreno, podrás gestionar a tu personal interno como a las empresas colaboradoras.", href: "/casos-de-uso/empresa-de-telecomunicaciones" },
+  { icon: <BugIcon />, title: "Empresa de Control de Plagas", description: "Con MovilForm podrás gestionar y planificar todos tus servicios de desratización, control de aves, termitas, TUV, cucarachas y también podrás generar tus certificados digitales.", href: "/casos-de-uso/empresa-de-control-de-plagas" },
+  { icon: <HygieneIcon />, title: "Empresas de Servicio de Higiene", description: "Gestiona y programa los servicios de higiene para tus clientes, registrando cada visita y generando informes personalizados de forma automática.", href: "/casos-de-uso/empresa-de-servicio-de-higiene" },
+  { icon: <WrenchIcon />, title: "Empresas de Servicio Técnico", description: "Administra las órdenes de trabajo de tu equipo técnico, asigna tareas, registra las intervenciones realizadas y genera reportes detallados.", href: "/casos-de-uso/empresa-de-servicio-tecnico" },
+];
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
@@ -81,31 +75,31 @@ export default function MantenimientosPreventivosYCorrectivos() {
         <Navbar />
       </div>
 
-      <div className="pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
+      <div className="px-4 md:px-0 pb-16 flex flex-col gap-6 max-w-7xl mx-auto">
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
-        <section className="relative rounded-[20px] overflow-hidden h-[400px]">
+        <section className="relative rounded-[20px] overflow-hidden h-[250px] md:h-[400px]">
           <img
             src={IMG_HERO}
             alt="Mantenimientos preventivos y correctivos"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/70 rounded-[20px]" />
-          <div className="relative h-full flex items-center justify-center">
-            <h1 className="font-satoshi text-[38px] font-bold text-white text-center leading-[48px]">
+          <div className="relative h-full flex items-center justify-center px-6">
+            <h1 className="font-satoshi text-[26px] md:text-[38px] font-bold text-white text-center leading-[34px] md:leading-[48px]">
               Mantenimientos preventivos y correctivos
             </h1>
           </div>
         </section>
 
         {/* ── 2. MÓDULO DE TAREAS (texto izq, imagen der) ──────────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
-          <div className="grid grid-cols-2 gap-12 items-center">
+        <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[50px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[28px] md:text-[38px] font-extrabold text-[#192437] leading-[34px] md:leading-[46px]">
                 Mantenimientos<br />preventivos y correctivos
               </h2>
-              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px]">
+              <div className="font-satoshi mt-6 md:mt-8 text-[15px] md:text-[16px] text-[#232321] leading-[24px] md:leading-[26px] text-justify">
                 <p>
                   Realiza la programación de tus mantenimientos preventivos o correctivos con el
                   módulo de tareas, programa visitas mensuales, semestrales o anuales o para uno
@@ -124,20 +118,20 @@ export default function MantenimientosPreventivosYCorrectivos() {
         </section>
 
         {/* ── 3. GESTIÓN DE INVENTARIO (imagen izq, texto der) ─────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
-          <div className="grid grid-cols-2 gap-12 items-center">
-            <div className="rounded-[15px] overflow-hidden shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
+        <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[50px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 md:order-1 rounded-[15px] overflow-hidden shadow-[-10px_10px_20px_rgba(0,0,0,0.25)]">
               <img
                 src={IMG_INVENTARIO}
                 alt="Gestión de inventario de artículos en MovilForm"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div>
-              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
+            <div className="order-1 md:order-2">
+              <h2 className="font-satoshi text-[28px] md:text-[38px] font-extrabold text-[#192437] leading-[34px] md:leading-[46px]">
                 Gestión de Inventario
               </h2>
-              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px]">
+              <div className="font-satoshi mt-6 md:mt-8 text-[15px] md:text-[16px] text-[#232321] leading-[24px] md:leading-[26px] text-justify">
                 <p>
                   Administra tu inventario en nuestro portal, podrás crear grupos y tipos de
                   artículos, gestionar su ubicación y además podrás ver los servicios realizados
@@ -149,13 +143,13 @@ export default function MantenimientosPreventivosYCorrectivos() {
         </section>
 
         {/* ── 4. ÓRDENES DE SERVICIO (texto izq, imagen der) ───────────────── */}
-        <section className="bg-white rounded-[20px] px-[70px] py-[50px]">
-          <div className="grid grid-cols-2 gap-12 items-center">
+        <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[50px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-              <h2 className="font-satoshi text-[38px] font-extrabold text-[#192437] leading-[46px]">
+              <h2 className="font-satoshi text-[28px] md:text-[38px] font-extrabold text-[#192437] leading-[34px] md:leading-[46px]">
                 Órdenes de Servicio
               </h2>
-              <div className="font-satoshi mt-8 text-[16px] text-[#232321] leading-[26px]">
+              <div className="font-satoshi mt-6 md:mt-8 text-[15px] md:text-[16px] text-[#232321] leading-[24px] md:leading-[26px] text-justify">
                 <p>
                   Gestiona tus ordenes de servicio y empresas colaboradoras, selecciona la empresa
                   que ejecutará el trabajo y asígnale una orden de servicio, luego de su ejecución,
@@ -177,41 +171,20 @@ export default function MantenimientosPreventivosYCorrectivos() {
       </div>
 
       {/* ── 5. CONOCE NUESTROS CASOS DE USO ─────────────────────────────────── */}
-      <section className="pb-16 max-w-7xl mx-auto px-[110px]">
-        <h2 className="font-satoshi text-[45px] font-black text-[#e22939] text-center leading-[52px] mb-10">
+      <section className="pb-16 max-w-7xl mx-auto px-4 md:px-[110px]">
+        <h2 className="font-satoshi text-[30px] md:text-[45px] font-black text-[#e22939] text-center leading-[36px] md:leading-[52px] mb-8 md:mb-10">
           Conoce nuestros casos de uso
         </h2>
-        <div className="grid grid-cols-3 gap-6">
-          <CasoCard
-            icon={<ResiduesIcon />}
-            title="Empresa de Gestión de Residuos"
-            description="MovilForm optimiza la recolección de residuos, planificando rutas, turnos y vehículos. Ahorra tiempo y recursos, y genera reportes automáticos."
-            href="/casos-de-uso/empresa-de-gestion-de-residuos"
-          />
-          <CasoCard
-            icon={<TelecomIcon />}
-            title="Empresa de Telecomunicaciones"
-            description="Planifica tus ordenes de servicio o trabajo que realiza su personal en terreno, podrás gestionar a tu personal interno como a las empresas colaboradoras."
-            href="/casos-de-uso/empresa-de-telecomunicaciones"
-          />
-          <CasoCard
-            icon={<BugIcon />}
-            title="Empresa de Control de Plagas"
-            description="Con MovilForm podrás gestionar y planificar todos tus servicios de desratización, control de aves, termitas, TUV, cucarachas y también podrás generar tus certificados digitales."
-            href="/casos-de-uso/empresa-de-control-de-plagas"
-          />
-          <CasoCard
-            icon={<HygieneIcon />}
-            title="Empresas de Servicio de Higiene"
-            description="Gestiona y programa los servicios de higiene para tus clientes, registrando cada visita y generando informes personalizados de forma automática."
-            href="/casos-de-uso/empresa-de-servicio-de-higiene"
-          />
-          <CasoCard
-            icon={<WrenchIcon />}
-            title="Empresas de Servicio Técnico"
-            description="Administra las órdenes de trabajo de tu equipo técnico, asigna tareas, registra las intervenciones realizadas y genera reportes detallados."
-            href="/casos-de-uso/empresa-de-servicio-tecnico"
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {CASOS.map((c) => (
+            <a key={c.title} href={c.href} className="bg-white rounded-[20px] p-6 md:p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+              <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-[#feeaed] flex items-center justify-center">
+                {c.icon}
+              </div>
+              <h3 className="font-satoshi mt-4 md:mt-6 text-[18px] md:text-[22px] font-bold text-black leading-[24px] md:leading-[30px]">{c.title}</h3>
+              <p className="font-satoshi mt-2 md:mt-3 text-[14px] md:text-[15px] font-medium text-[#3f4648] leading-[22px] md:leading-[27px]">{c.description}</p>
+            </a>
+          ))}
         </div>
       </section>
 
