@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Integraciones - Movilform",
+  description:
+    "Conecta MovilForm a tus sistemas con su API Rest captura datos en terreno y sincronízalos en tiempo real para análisis, reportes y gestión de rutas avanzadas",
+  alternates: { canonical: "/servicios/integraciones" },
+};
+
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FeatureSection from "@/app/components/FeatureSection";

@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portal de Clientes - Movilform",
+  description:
+    "Entrega a tus clientes acceso directo a documentos e informes automatizados con el Portal de Clientes de MovilForm mejora su experiencia y reduce la carga operativa",
+  alternates: { canonical: "/servicios/portal-de-clientes" },
+};
+
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FeatureSection from "@/app/components/FeatureSection";

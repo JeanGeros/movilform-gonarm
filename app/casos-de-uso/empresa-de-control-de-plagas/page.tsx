@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Empresa de Control de Plagas - Movilform",
+  description:
+    "Digitaliza y optimiza la gestión de tu empresa de control de plagas con MovilForm. Programa rutas, asigna tareas en terreno y genera reportes automáticos para tus clientes.",
+  alternates: { canonical: "/casos-de-uso/empresa-de-control-de-plagas" },
+};
+
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";

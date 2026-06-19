@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contacto - Movilform",
+  description:
+    "Para mayor información de nuestros productos, no dude en consultarnos. Tenemos un equipo especializado dispuesto a atenderlo y a entregar el mejor servicio.",
+  alternates: { canonical: "/contacto" },
+};
+
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 

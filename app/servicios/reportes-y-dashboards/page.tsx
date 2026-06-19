@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Reportes y Dashboards - Movilform",
+  description:
+    "MovilForm permite generar informes automáticos en PDF tras cada visita. Personaliza reportes según tus necesidades y automatiza su envío a tus clientes finales.",
+  alternates: { canonical: "/servicios/reportes-y-dashboards" },
+};
+
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FeatureSection from "@/app/components/FeatureSection";

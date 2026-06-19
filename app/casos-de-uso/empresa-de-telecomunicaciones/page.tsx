@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Empresa de Telecomunicaciones - Movilform",
+  description:
+    "Optimiza las operaciones de tu empresa de telecomunicaciones con MovilForm. Gestiona instalaciones, mantenciones y reparaciones en terreno con formularios digitales y reportes automáticos.",
+  alternates: { canonical: "/casos-de-uso/empresa-de-telecomunicaciones" },
+};
+
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";

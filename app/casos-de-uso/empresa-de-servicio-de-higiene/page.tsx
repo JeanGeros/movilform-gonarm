@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Empresa de Servicio de Higiene - Movilform",
+  description:
+    "Optimiza tus servicios de higiene ambiental e industrial con MovilForm. Programa tareas, realiza seguimiento en terreno y genera reportes automáticos para tus clientes.",
+  alternates: { canonical: "/casos-de-uso/empresa-de-servicio-de-higiene" },
+};
+
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";

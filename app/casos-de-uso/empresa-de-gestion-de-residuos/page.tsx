@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Empresa de Gestión de Residuos - Movilform",
+  description:
+    "Gestiona y optimiza la recolección y tratamiento de residuos con MovilForm. Planifica rutas de recolección, asigna tareas y genera reportes de trazabilidad automáticos.",
+  alternates: { canonical: "/casos-de-uso/empresa-de-gestion-de-residuos" },
+};
+
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";

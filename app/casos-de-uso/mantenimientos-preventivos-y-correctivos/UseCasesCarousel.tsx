@@ -126,14 +126,14 @@ export default function UseCasesCarousel() {
       <div className="w-[60px] h-[60px] md:w-[80px] md:h-[80px] rounded-full bg-white flex items-center justify-center">
         <FontAwesomeIcon
           icon={c.icon}
-          className="text-[#e42233]"
+          className="text-[#e42233] group-hover:text-[#c01f2d] transition-colors duration-300"
           style={{ fontSize: "2.5rem" }}
         />
       </div>
-      <h3 className="font-satoshi mt-4 md:mt-6 text-[18px] md:text-[22px] font-bold text-black leading-[24px] md:leading-[28px]">
+      <h3 className="font-satoshi mt-4 md:mt-6 text-[18px] md:text-[22px] font-bold text-black group-hover:text-[#e42233] leading-[24px] md:leading-[28px] transition-colors duration-300">
         {c.title}
       </h3>
-      <p className="font-satoshi mt-2 md:mt-3 text-[14px] md:text-[16px] font-medium text-[#3f4648] text-justify leading-[22px] md:leading-[24px]">
+      <p className="font-satoshi mt-2 md:mt-3 text-[14px] md:text-[16px] font-medium text-[#3f4648] group-hover:text-[#192437] text-justify leading-[22px] md:leading-[24px] transition-colors duration-300">
         {c.description}
       </p>
     </>
@@ -243,7 +243,7 @@ export default function UseCasesCarousel() {
                 key={c.key}
                 href={c.href}
                 data-card
-                className="bg-[#feeaed] rounded-[20px] p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+                className="group bg-[#feeaed] rounded-[20px] p-8 flex flex-col items-center text-center hover:bg-[#ebebeb] hover:shadow-lg transition-all duration-300"
                 style={{
                   flex: `0 0 calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`,
                 }}

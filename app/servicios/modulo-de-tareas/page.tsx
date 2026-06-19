@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Modulo de Tareas - Movilform",
+  description:
+    "Gestiona emergencias y tareas específicas con el Módulo de Tareas de MovilForm asigna visitas individuales, programa mantenciones sin ruta y visualiza reportes en PDF",
+  alternates: { canonical: "/servicios/modulo-de-tareas" },
+};
+
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FeatureSection from "@/app/components/FeatureSection";

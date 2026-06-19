@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Mantenimientos Preventivos y Correctivos - Movilform",
+  description:
+    "Programa y gestiona mantenimientos preventivos y correctivos con MovilForm. Administra tareas, inventario y órdenes de servicio en un solo lugar, mejorando la eficiencia operativa y el control de tus activos.",
+  alternates: { canonical: "/casos-de-uso/mantenimientos-preventivos-y-correctivos" },
+};
+
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";

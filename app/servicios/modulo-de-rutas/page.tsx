@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Modulo de Rutas - Movilform",
+  description:
+    "Optimiza y automatiza tus servicios en terreno con el Módulo de Rutas de MovilForm: planifica visitas diarias, asigna automáticamente a tu equipo y registra inspecciones, mantenimientos y reparaciones en un solo sistema.",
+  alternates: { canonical: "/servicios/modulo-de-rutas" },
+};
+
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FeatureSection from "@/app/components/FeatureSection";

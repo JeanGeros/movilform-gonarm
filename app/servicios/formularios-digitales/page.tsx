@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Formularios Digitales - Movilform",
+  description:
+    "Captura datos con formularios digitales de MovilForm diseña plantillas personalizadas, registra ubicación y firma, y genera reportes automáticos desde cualquier dispositivo",
+  alternates: { canonical: "/servicios/formularios-digitales" },
+};
+
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import FeatureSection from "@/app/components/FeatureSection";

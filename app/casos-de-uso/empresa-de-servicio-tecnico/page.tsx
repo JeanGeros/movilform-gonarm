@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Empresas de Servicio Técnico - Movilform",
+  description:
+    "Gestiona y programa servicios técnicos con eficiencia usando MovilForm. Visualiza tareas por técnico o cliente, y organiza tu calendario de atenciones diarias, semanales o mensuales.",
+  alternates: { canonical: "/casos-de-uso/empresa-de-servicio-tecnico" },
+};
+
 import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
