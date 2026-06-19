@@ -124,13 +124,13 @@ export default function Inicio() {
           aria-label="Anterior"
           className="absolute left-3 md:left-5 top-1/2 -translate-y-1/2 w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition-colors"
         >
-          <Image src={IMG_ARROW_LEFT} alt="" width={9} height={20} />
+          <Image src={IMG_ARROW_LEFT} alt="" width={9} height={20} unoptimized />
         </button>
         <button
           aria-label="Siguiente"
           className="absolute right-3 md:right-5 top-1/2 -translate-y-1/2 w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full bg-black/10 flex items-center justify-center hover:bg-black/20 transition-colors"
         >
-          <Image src={IMG_ARROW_RIGHT} alt="" width={9} height={20} />
+          <Image src={IMG_ARROW_RIGHT} alt="" width={9} height={20} unoptimized />
         </button>
 
         <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-[5px]">
@@ -160,10 +160,10 @@ export default function Inicio() {
       {/* ── 3. IMAGES ───────────────────────────────────────────────────────── */}
       <section className="max-w-7xl mx-auto px-6 md:px-[140px] pb-16 md:pb-30">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-26">
-          <div className="hidden md:block rounded-[15px] overflow-hidden h-[360px]">
-            <Image src={IMG_TEAM} alt="Equipo técnico utilizando MovilForm" width={600} height={360} className="w-full h-full object-cover" />
+          <div className="hidden md:block rounded-[15px] overflow-hidden h-[350px]">
+            <Image src={IMG_TEAM} alt="Equipo técnico utilizando MovilForm" width={600} height={360} className="w-full h-full object-cover" style={{ width: "100%", height: "100%" }} />
           </div>
-          <div className="rounded-[15px] overflow-hidden h-[240px] md:h-[360px]">
+          <div className="rounded-[15px] overflow-hidden h-[240px] md:h-[350px]">
             <Image src={IMG_TASKS} alt="Vista de tareas asignadas a diferentes técnicos" width={600} height={360} className="w-full h-full object-cover" />
           </div>
         </div>
@@ -206,7 +206,7 @@ export default function Inicio() {
         <div className="mt-10 grid grid-cols-1  lg:grid-cols-[390px_1fr] gap-6 gap-y-10">
           {/* Dark left panel */}
           <div className="relative hidden md:block rounded-[12px] overflow-hidden lg:row-span-2 min-h-[300px] lg:min-h-[706px]">
-            <Image src={IMG_USE_CASE_BG} alt="" fill className="object-cover" />
+            <Image src={IMG_USE_CASE_BG} alt="" fill sizes="390px" className="object-cover" />
             <div className="absolute inset-0 bg-black/70" />
             <div className="relative z-10 h-full flex flex-col items-center justify-center py-12 lg:pb-20 px-8">
               <h3 className="font-satoshi text-white text-[26px] lg:text-[32px] font-bold text-center leading-[32px]">
