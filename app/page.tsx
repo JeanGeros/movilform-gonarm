@@ -112,7 +112,9 @@ export default function Inicio() {
               Ver servicios
             </a>
             <a
-              href="#"
+              href="https://wa.me/+56961558312"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-satoshi inline-flex items-center justify-center w-full sm:w-auto h-[46px] md:h-[50px] px-8 rounded-[30px] bg-[rgba(229,35,51,0.8)] text-white text-[16px] md:text-[18px] font-bold hover:bg-[#e52333] transition-colors"
             >
               Solicitar demo

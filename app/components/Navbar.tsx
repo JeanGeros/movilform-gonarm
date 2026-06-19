@@ -143,7 +143,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <a
-          href="#"
+          href="/contacto"
           className="font-gilmer flex-shrink-0 hidden lg:inline-flex items-center justify-center h-[46px] px-8 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"
         >
           Contacto
@@ -221,7 +221,7 @@ export default function Navbar() {
 
           <div className="mt-4 border-t border-gray-100 pt-4">
             <a
-              href="#"
+              href="/contacto"
               className="block text-center py-3 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"
               onClick={() => setMobileOpen(false)}
             >
