@@ -38,6 +38,7 @@ export default function EmpresaDeGestionDeResiduos() {
             src={IMG_HERO}
             alt="Gestión de residuos domiciliarios e industriales"
             fill
+            priority
             sizes="(max-width: 768px) 100vw, 1280px"
             className="object-cover"
           />

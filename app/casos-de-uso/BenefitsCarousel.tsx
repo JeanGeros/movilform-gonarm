@@ -104,7 +104,8 @@ export default function BenefitsCarousel({ benefits }: { benefits: Benefit[] }) 
                 alt={benefits[current].alt}
                 width={600}
                 height={400}
-                className="w-full h-full object-cover"
+                className="w-full object-cover"
+                style={{ height: "100%" }}
               />
             </div>
             <div className="p-5 text-center">
@@ -148,7 +149,7 @@ export default function BenefitsCarousel({ benefits }: { benefits: Benefit[] }) 
         {benefits.map((b) => (
           <div key={b.title} className="bg-white rounded-[20px]">
             <div className="h-[240px] rounded-[20px] overflow-hidden">
-              <Image src={b.img} alt={b.alt} width={600} height={400} className="w-full h-full object-cover" />
+              <Image src={b.img} alt={b.alt} width={600} height={400} className="w-full object-cover" style={{ height: "100%" }} />
             </div>
             <div className="p-5 text-center">
               <h3 className="font-satoshi text-[27.2px] font-bold text-[#192437] leading-[30px]">{b.title}</h3>

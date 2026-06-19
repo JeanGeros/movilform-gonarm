@@ -74,7 +74,9 @@ export default function ClientsCarousel() {
               className="flex-shrink-0 flex items-center justify-center h-12 md:h-20"
               style={{ width: `${itemWidth}px` }}
             >
-              <Image src={client.src} alt={client.alt} height={80} width={150} className="object-contain" style={{ height: "auto", width: "auto", maxHeight: "80px" }} />
+              <div className="relative w-full h-full">
+                <Image src={client.src} alt={client.alt} fill className="object-contain" />
+              </div>
             </div>
           ))}
         </div>

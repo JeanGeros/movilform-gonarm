@@ -29,7 +29,9 @@ export default function Footer({ cardBg = "bg-[#feeaed]" }: { cardBg?: string })
           {/* Logo */}
           <div className="flex items-center justify-center sm:justify-start pt-1">
             <Link href="/">
-              <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" width={300} height={140} className="h-[100px] md:h-[150px] w-auto object-contain" />
+              <div className="relative h-[100px] md:h-[150px] w-[200px] md:w-[300px]">
+                <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" fill className="object-contain" />
+              </div>
             </Link>
           </div>
 

@@ -33,7 +33,7 @@ function ChevronDown({ open }: { open?: boolean }) {
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ bgColor = "bg-white" }: { bgColor?: string } = {}) {
   const [serviciosOpen, setServiciosOpen] = useState(false);
   const [casosOpen, setCasosOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -65,11 +65,13 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] md:w-[calc(100%-80px)] max-w-7xl">
-      <div className="bg-white rounded-[20px] px-5 md:px-8 h-[60px] md:h-[72px] flex items-center justify-between shadow-[0_4px_24px_rgba(0,0,0,0.12)]">
+      <div className={`${bgColor} rounded-[20px] px-5 md:px-8 h-[60px] md:h-[72px] flex items-center justify-between shadow-[0_4px_24px_rgba(0,0,0,0.12)]`}>
 
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
-          <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" width={160} height={44} className="h-[36px] md:h-[44px] w-auto object-contain" />
+          <div className="relative h-[36px] md:h-[44px] w-[130px] md:w-[160px]">
+              <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" fill className="object-contain" />
+            </div>
         </a>
 
         {/* Desktop nav links */}

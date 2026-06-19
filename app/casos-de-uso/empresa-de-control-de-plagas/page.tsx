@@ -37,6 +37,7 @@ export default function EmpresaDeControlDePlagas() {
             src={IMG_HERO}
             alt="Empresas de control de plagas"
             fill
+            priority
             sizes="(max-width: 768px) 100vw, 1280px"
             className="object-cover"
           />

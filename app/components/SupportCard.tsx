@@ -14,7 +14,9 @@ export default function SupportCard({ icon, alt, title, description, href, label
   return (
     <div className="bg-[#feeaed] rounded-[20px] p-6 md:p-10 flex flex-col items-center text-center">
       <div className="w-[120px] h-[60px] md:w-[200px] md:h-[100px] rounded-full bg-[#feeaed] flex items-center justify-center">
-        <Image src={icon} alt={alt} width={100} height={80} className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] object-contain" />
+        <div className="relative w-[60px] h-[60px] md:w-[100px] md:h-[100px]">
+          <Image src={icon} alt={alt} fill className="object-contain" />
+        </div>
       </div>
       <h2 className="font-satoshi mt-4 md:mt-8 text-[20px] md:text-[24px] font-bold text-[#e42433] leading-[26px] md:leading-[30px]">
         {title}

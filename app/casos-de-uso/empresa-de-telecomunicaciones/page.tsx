@@ -37,6 +37,7 @@ export default function EmpresaDeTelecomunicaciones() {
             src={IMG_HERO}
             alt="Empresas de telecomunicaciones"
             fill
+            priority
             sizes="(max-width: 768px) 100vw, 1280px"
             className="object-cover"
           />

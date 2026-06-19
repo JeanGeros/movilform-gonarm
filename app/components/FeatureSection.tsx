@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SlideIn from "./SlideIn";
 
 export default function FeatureSection({
   title,
@@ -49,11 +50,13 @@ export default function FeatureSection({
   );
 
   return (
-    <section className="bg-white rounded-[20px] px-6 py-8 md:px-[70px] md:py-[40px]">
-      <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${imagePosition === "left" ? "md:grid-cols-[9fr_11fr]" : "md:grid-cols-[11fr_9fr]"}`}>
-        <div className={`order-2 ${imagePosition === "left" ? "md:order-1" : "md:order-2"}`}>{imageBlock}</div>
-        <div className={`order-1 ${imagePosition === "left" ? "md:order-2" : "md:order-1"}`}>{textBlock}</div>
-      </div>
-    </section>
+    <SlideIn>
+      <section className="bg-white rounded-[20px] px-6 py-8 md:px-[70px] md:py-[40px]">
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center ${imagePosition === "left" ? "md:grid-cols-[9fr_11fr]" : "md:grid-cols-[11fr_9fr]"}`}>
+          <div className={`order-2 ${imagePosition === "left" ? "md:order-1" : "md:order-2"}`}>{imageBlock}</div>
+          <div className={`order-1 ${imagePosition === "left" ? "md:order-2" : "md:order-1"}`}>{textBlock}</div>
+        </div>
+      </section>
+    </SlideIn>
   );
 }

@@ -37,6 +37,7 @@ export default function EmpresaDeServicioDeHigiene() {
             src={IMG_HERO}
             alt="Empresa de servicio de higiene"
             fill
+            priority
             sizes="(max-width: 768px) 100vw, 1280px"
             className="object-cover"
           />

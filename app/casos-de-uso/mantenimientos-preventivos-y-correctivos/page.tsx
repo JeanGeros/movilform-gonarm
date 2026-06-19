@@ -35,6 +35,7 @@ export default function MantenimientosPreventivosYCorrectivos() {
             src={IMG_HERO}
             alt="Mantenimientos preventivos y correctivos"
             fill
+            priority
             sizes="(max-width: 768px) 100vw, 1280px"
             className="object-cover"
           />

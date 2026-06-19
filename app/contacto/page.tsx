@@ -14,7 +14,7 @@ export default function Contacto() {
   return (
     <main className="w-full bg-white min-h-screen flex flex-col">
       <div className="relative z-50 h-[88px]">
-        <Navbar />
+        <Navbar bgColor="bg-[#feeaed]" />
       </div>
 
       <div className="px-4 md:px-0 pb-16 flex flex-col gap-10 md:gap-20 w-full max-w-7xl mx-auto mt-10 md:mt-30">

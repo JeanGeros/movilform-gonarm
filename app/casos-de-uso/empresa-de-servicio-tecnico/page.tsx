@@ -37,6 +37,7 @@ export default function EmpresaDeServicioTecnico() {
             src={IMG_HERO}
             alt="Empresa de servicio técnico"
             fill
+            priority
             sizes="(max-width: 768px) 100vw, 1280px"
             className="object-cover"
           />

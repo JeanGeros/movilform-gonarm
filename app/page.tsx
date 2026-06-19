@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FeaturesCarousel from "./components/FeaturesCarousel";
 import ClientsCarousel from "./components/ClientsCarousel";
+import SlideIn from "./components/SlideIn";
 
 const IMG_HERO        = "/inicio/hero.jpg";
 const IMG_TEAM        = "/inicio/team.jpg";
@@ -142,32 +143,34 @@ export default function Inicio() {
       </section>
 
       {/* ── 2. VALUE PROPOSITION ────────────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 md:px-[70px] pt-16 md:pt-28 pb-12 md:pb-16">
-        <h2 className="font-satoshi text-[30px] md:text-[42px] font-black leading-[38px] md:leading-[49px] text-center max-w-[760px] mx-auto">
-          <span className="text-[#192437]">Simplificamos tus </span>
-          <span className="text-[#e42433]">procesos,</span>
-          <br />
-          <span className="text-[#192437]">impulsamos tu </span>
-          <span className="text-[#e42433]">crecimiento.</span>
-        </h2>
-        <p className="font-satoshi mt-8 md:mt-10 text-[16px] md:text-[17.6px] leading-[24px] md:leading-[25px] text-black text-justify max-w-[960px] mx-auto">
-          Transformamos la gestión de procesos operativos mediante la
-          digitalización de documentos, la optimización de rutas y la
-          programación de tareas. Ofrecemos soluciones seguras y personalizadas,
-          ayudando a las empresas a ahorrar tiempo y costos operativos para
-          alcanzar un crecimiento eficiente.
-        </p>
-      </section>
+      <SlideIn>
+        <section className="max-w-7xl mx-auto px-6 md:px-[70px] pt-16 md:pt-28 pb-12 md:pb-16">
+          <h2 className="font-satoshi text-[30px] md:text-[42px] font-black leading-[38px] md:leading-[49px] text-center max-w-[760px] mx-auto">
+            <span className="text-[#192437]">Simplificamos tus </span>
+            <span className="text-[#e42433]">procesos,</span>
+            <br />
+            <span className="text-[#192437]">impulsamos tu </span>
+            <span className="text-[#e42433]">crecimiento.</span>
+          </h2>
+          <p className="font-satoshi mt-8 md:mt-10 text-[16px] md:text-[17.6px] leading-[24px] md:leading-[25px] text-black text-justify max-w-[960px] mx-auto">
+            Transformamos la gestión de procesos operativos mediante la
+            digitalización de documentos, la optimización de rutas y la
+            programación de tareas. Ofrecemos soluciones seguras y personalizadas,
+            ayudando a las empresas a ahorrar tiempo y costos operativos para
+            alcanzar un crecimiento eficiente.
+          </p>
+        </section>
+      </SlideIn>
 
       {/* ── 3. IMAGES ───────────────────────────────────────────────────────── */}
       <section className="max-w-7xl mx-auto px-6 md:px-[140px] pb-16 md:pb-30">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-26">
-          <div className="hidden md:block rounded-[15px] overflow-hidden h-[350px]">
+          <SlideIn direction="left" className="hidden md:block rounded-[15px] overflow-hidden h-[350px]">
             <Image src={IMG_TEAM} alt="Equipo técnico utilizando MovilForm" width={600} height={360} className="w-full h-full object-cover" style={{ width: "100%", height: "100%" }} />
-          </div>
-          <div className="rounded-[15px] overflow-hidden h-[240px] md:h-[350px]">
+          </SlideIn>
+          <SlideIn direction="right" delay={200} className="rounded-[15px] overflow-hidden h-[240px] md:h-[350px]">
             <Image src={IMG_TASKS} alt="Vista de tareas asignadas a diferentes técnicos" width={600} height={360} className="w-full h-full object-cover" />
-          </div>
+          </SlideIn>
         </div>
       </section>
 
@@ -178,6 +181,7 @@ export default function Inicio() {
       <ClientsCarousel />
 
       {/* ── 6. SOLUTIONS ────────────────────────────────────────────────────── */}
+      <SlideIn>
       <section className="max-w-7xl mx-auto py-14 md:py-20">
         <h2 className="font-satoshi text-[28px] md:text-[40px] font-extrabold text-black text-center leading-[34px] md:leading-[40px]">
           Soluciones que se adaptan a tus necesidades
@@ -195,8 +199,10 @@ export default function Inicio() {
           <SolutionCard icon={<UserIcon />}         title="Portal de Clientes"      description="Entrega a tus clientes un acceso exclusivo para compartir información de las actividades realizadas." />
         </div>
       </section>
+      </SlideIn>
 
       {/* ── 7. USE CASES ────────────────────────────────────────────────────── */}
+      <SlideIn>
       <section className="max-w-7xl mx-auto mt-10 md:mt-0 pb-14 md:pb-20">
         <p className="font-satoshi text-[40px] md:text-[28px] md:text-[40px] font-extrabold text-[#e42433] text-center leading-[34px] md:leading-[40px]">
           Casos de Usos
@@ -234,8 +240,10 @@ export default function Inicio() {
           </div>
         </div>
       </section>
+      </SlideIn>
 
       {/* ── 8. INTEGRATION ──────────────────────────────────────────────────── */}
+      <SlideIn>
       <section className="mx-4 md:mx-auto max-w-7xl mb-12 md:mb-16 p-10 md:p-6 md:p-15 rounded-[20px] bg-[#1d1d1b] overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-15 md:w-[90%] mx-auto">
           <div className="p-0 md:p-3">
@@ -268,6 +276,7 @@ export default function Inicio() {
           </div>
         </div>
       </section>
+      </SlideIn>
 
       <Footer />
     </main>
