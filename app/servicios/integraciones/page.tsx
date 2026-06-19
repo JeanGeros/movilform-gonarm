@@ -71,7 +71,7 @@ export default function Integraciones() {
 
         {/* ── 3. INTEGRACIÓN CON GPSGATE ──────────────────────────────────── */}
         <FeatureSection
-          title={<>Integración de MovilForm con<br />GpsGate</>}
+          title={<>Integración de MovilForm con GpsGate</>}
           imageSrc={IMG_GPSGATE}
           imageAlt="Integración de MovilForm con GpsGate para gestión de flotas"
           imageShadow
