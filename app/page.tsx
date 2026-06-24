@@ -119,7 +119,7 @@ function UseCaseCard({
   description: string;
 }) {
   return (
-    <div className="relative bg-[#f9dfe2] rounded-[12px] pt-[80px] pb-8 px-8">
+    <div className="group relative bg-[#f9dfe2] rounded-[12px] pt-[80px] pb-8 px-8">
       <div className="absolute -top-[55px] left-1/2 -translate-x-1/2 w-[120px] h-[120px] rounded-full bg-[#f9dfe2] flex items-center justify-center overflow-hidden">
         <Image
           src={img}
@@ -129,10 +129,10 @@ function UseCaseCard({
           className="w-2/3 h-2/3 object-contain"
         />
       </div>
-      <h3 className="font-satoshi text-[24px] font-black text-[#313131] leading-[26px]">
+      <h3 className="font-satoshi text-[24px] font-black text-[#313131] group-hover:text-[#e42233] leading-[26px] transition-colors duration-300">
         {title}
       </h3>
-      <p className="font-satoshi mt-3 text-[16px] text-[#3f4648] leading-[27px] text-justify">
+      <p className="font-satoshi mt-3 text-[16px] text-[#3f4648]  leading-[27px] text-justify transition-colors duration-300">
         {description}
       </p>
     </div>
@@ -285,7 +285,7 @@ export default function Inicio() {
                   operación.
                 </h3>
                 <a
-                  href="#"
+                  href="/contacto"
                   className="font-satoshi mt-8 flex items-center justify-center h-[40px] px-10 rounded-[14px] bg-[#1d1d1b] text-white text-[16px] hover:bg-[#333] transition-colors"
                 >
                   Haz clic aquí
@@ -353,7 +353,7 @@ export default function Inicio() {
               </p>
               <div className="mt-8 md:mt-10 flex justify-center">
                 <a
-                  href="#"
+                  href="/contacto"
                   className="inline-flex items-center justify-center h-[46px] md:h-[49px] px-10 md:px-12 rounded-full bg-[#e22939] text-white text-[16px] md:text-[18px] font-black hover:bg-[#c01f2d] transition-colors"
                 >
                   Más información

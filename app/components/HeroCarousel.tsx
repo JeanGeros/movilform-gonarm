@@ -30,14 +30,23 @@ const SLIDES = [
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
+  const [animating, setAnimating] = useState(true);
+
+  const changeTo = useCallback((index: number) => {
+    setAnimating(false);
+    setTimeout(() => {
+      setCurrent(index);
+      setAnimating(true);
+    }, 50);
+  }, []);
 
   const next = useCallback(
-    () => setCurrent((c) => (c + 1) % SLIDES.length),
-    [],
+    () => changeTo((current + 1) % SLIDES.length),
+    [current, changeTo],
   );
   const prev = useCallback(
-    () => setCurrent((c) => (c === 0 ? SLIDES.length - 1 : c - 1)),
-    [],
+    () => changeTo(current === 0 ? SLIDES.length - 1 : current - 1),
+    [current, changeTo],
   );
 
   useEffect(() => {
@@ -49,28 +58,51 @@ export default function HeroCarousel() {
 
   return (
     <section className="relative w-full h-[500px] md:h-[700px] overflow-hidden">
-      <Image
-        src={slide.bg}
-        alt=""
-        fill
-        sizes="100vw"
-        quality={100}
-        priority
-        className="object-cover"
-      />
+      {SLIDES.map((s, i) => (
+        <Image
+          key={s.bg}
+          src={s.bg}
+          alt=""
+          fill
+          sizes="100vw"
+          quality={100}
+          priority={i === 0}
+          className={`object-cover transition-opacity duration-1000 ${
+            i === current ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
       <div className="absolute inset-0 bg-[rgba(20,20,20,0.8)]" />
 
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 md:px-8 pt-16 md:pt-0">
-        <h1 className="font-montserrat text-[32px] md:text-[55px] font-bold leading-[40px] md:leading-[60px] tracking-[-1px] text-white w-[80%]">
+        <h1
+          className={`font-montserrat text-[32px] md:text-[55px] font-bold leading-[40px] md:leading-[60px] tracking-[-1px] text-white w-[80%] transition-all duration-700 ${
+            animating
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-6"
+          }`}
+        >
           {slide.title}
         </h1>
-        <p className="font-montserrat font-medium text-justify mt-5 md:mt-5 text-[16px] md:text-[20px] leading-[22px] text-[#b5b5b5] max-w-[600px]">
+        <p
+          className={`font-montserrat font-medium text-justify mt-5 md:mt-5 text-[16px] md:text-[20px] leading-[22px] text-[#b5b5b5] max-w-[600px] transition-all duration-700 delay-150 ${
+            animating
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-6"
+          }`}
+        >
           {slide.description}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-30 mt-8 md:mt-10 w-[80%] sm:w-auto items-center">
+        <div
+          className={`flex flex-col sm:flex-row gap-4 sm:gap-30 mt-8 md:mt-10 w-[80%] sm:w-auto items-center transition-all duration-700 delay-300 ${
+            animating
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-6"
+          }`}
+        >
           <a
             href="/servicios/modulo-de-tareas"
-            className="font-montserrat inline-flex items-center justify-center w-full sm:w-auto h-[46px] md:h-[40px] px-10 rounded-[30px] hover:text-[rgba(229,35,51,0.8)] hover:bg-white bg-[rgba(229,35,51,0.8)] text-white text-[16px] md:text-[17px] font-bold transition-colors"
+            className="font-montserrat inline-flex items-center justify-center w-full sm:w-auto h-[45px] px-10 rounded-[30px] hover:text-[rgba(229,35,51,0.8)] hover:bg-white bg-[rgba(229,35,51,0.8)] text-white text-[16px] md:text-[17px] font-bold transition-colors"
           >
             Ver servicios
           </a>
@@ -78,7 +110,7 @@ export default function HeroCarousel() {
             href="https://wa.me/+56961558312"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-montserrat inline-flex items-center justify-center w-full sm:w-auto h-[46px] md:h-[40px] px-10 rounded-[30px] hover:text-[rgba(229,35,51,0.8)] hover:bg-white bg-[rgba(229,35,51,0.8)] text-white text-[16px] md:text-[17px] font-bold transition-colors"
+            className="font-montserrat inline-flex items-center justify-center w-full sm:w-auto h-[45px] px-10 rounded-[30px] hover:text-[rgba(229,35,51,0.8)] hover:bg-white bg-[rgba(229,35,51,0.8)] text-white text-[16px] md:text-[17px] font-bold transition-colors"
           >
             Solicitar demo
           </a>
@@ -88,14 +120,14 @@ export default function HeroCarousel() {
       <button
         onClick={prev}
         aria-label="Anterior"
-        className="absolute z-20 left-3 md:left-5 top-1/2 -translate-y-1/2 w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+        className="absolute z-20 left-3 md:left-5 top-1/2 -translate-y-1/2 w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-300"
       >
         <FontAwesomeIcon icon={faChevronLeft} className="text-white text-lg" />
       </button>
       <button
         onClick={next}
         aria-label="Siguiente"
-        className="absolute z-20 right-3 md:right-5 top-1/2 -translate-y-1/2 w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+        className="absolute z-20 right-3 md:right-5 top-1/2 -translate-y-1/2 w-[50px] h-[50px] md:w-[70px] md:h-[70px] rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 hover:scale-110 transition-all duration-300"
       >
         <FontAwesomeIcon icon={faChevronRight} className="text-white text-lg" />
       </button>
@@ -104,9 +136,9 @@ export default function HeroCarousel() {
         {SLIDES.map((_, i) => (
           <button
             key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-[60px] h-[3px] rounded-full transition-colors ${
-              i === current ? "bg-white/70" : "bg-white/30"
+            onClick={() => changeTo(i)}
+            className={`h-[3px] rounded-full transition-all duration-500 ${
+              i === current ? "w-[80px] bg-white/90" : "w-[40px] bg-white/30 hover:bg-white/50"
             }`}
           />
         ))}

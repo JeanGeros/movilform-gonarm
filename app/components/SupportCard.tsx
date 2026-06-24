@@ -21,7 +21,7 @@ export default function SupportCard({ icon, alt, title, description, href, label
       <h2 className="font-satoshi mt-4 md:mt-8 text-[20px] md:text-[24px] font-bold text-[#e42433] leading-[26px] md:leading-[30px]">
         {title}
       </h2>
-      <p className="font-satoshi mt-3 md:mt-4 text-[14px] md:text-[16px] text-[#3f4648] leading-[22px] md:leading-[26px] max-w-[260px]">
+      <p className="font-satoshi mt-3 md:mt-4 text-[14px] md:text-[16px] text-[#3f4648] leading-[22px] md:leading-[26px] max-w-[260px] flex-1">
         {description}
       </p>
       <a

@@ -71,7 +71,11 @@ function wrap(n: number, len: number) {
   return ((n % len) + len) % len;
 }
 
-export default function ServicesCarousel({ currentSlug }: { currentSlug: string }) {
+export default function ServicesCarousel({
+  currentSlug,
+}: {
+  currentSlug: string;
+}) {
   const services = ALL_SERVICES.filter((s) => s.slug !== currentSlug);
   const len = services.length;
 
@@ -83,7 +87,9 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
 
   // Mobile carousel state
   const [mobileCurrent, setMobileCurrent] = useState(0);
-  const [mobileDirection, setMobileDirection] = useState<"left" | "right">("right");
+  const [mobileDirection, setMobileDirection] = useState<"left" | "right">(
+    "right",
+  );
   const [mobileAnimating, setMobileAnimating] = useState(false);
   const touchStartX = useRef(0);
 
@@ -170,11 +176,14 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
         {/* ── Mobile: single card carousel ──────────────────────────────── */}
         <div
           className="md:hidden relative overflow-hidden"
-          onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+          onTouchStart={(e) => {
+            touchStartX.current = e.touches[0].clientX;
+          }}
           onTouchEnd={(e) => {
             const diff = touchStartX.current - e.changedTouches[0].clientX;
             if (Math.abs(diff) > 50) {
-              if (diff > 0) mobileNext(); else mobilePrev();
+              if (diff > 0) mobileNext();
+              else mobilePrev();
             }
           }}
         >
@@ -183,15 +192,25 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center"
             aria-label="Anterior"
           >
-            <FontAwesomeIcon icon={faChevronLeft} className="text-[#e42233] text-lg" />
+            <FontAwesomeIcon
+              icon={faChevronLeft}
+              className="text-[#e42233] text-lg"
+            />
           </button>
 
-          <div className={`px-10 ${mobileSlideClass}`} key={mobileAnimating ? "exit" : mobileCurrent}>
+          <div
+            className={`px-10 ${mobileSlideClass}`}
+            key={mobileAnimating ? "exit" : mobileCurrent}
+          >
             <a
               href={services[mobileCurrent].href}
               className="bg-white rounded-[20px] px-6 py-8 flex flex-col items-center text-center"
             >
-              <FontAwesomeIcon icon={services[mobileCurrent].icon} className="text-[#e42233]" style={{ fontSize: "2.5rem" }} />
+              <FontAwesomeIcon
+                icon={services[mobileCurrent].icon}
+                className="text-[#e42233]"
+                style={{ fontSize: "2.5rem" }}
+              />
               <h3 className="font-satoshi mt-4 text-[20px] font-bold text-black leading-[26px]">
                 {services[mobileCurrent].title}
               </h3>
@@ -206,7 +225,10 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center"
             aria-label="Siguiente"
           >
-            <FontAwesomeIcon icon={faChevronRight} className="text-[#e42233] text-lg" />
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className="text-[#e42233] text-lg"
+            />
           </button>
 
           <div className="flex justify-center gap-2 mt-4">
@@ -231,7 +253,10 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
             onClick={() => slide("left")}
             className="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors"
           >
-            <FontAwesomeIcon icon={faChevronLeft} className="w-5 h-5 text-[#192437]" />
+            <FontAwesomeIcon
+              icon={faChevronLeft}
+              className="w-5 h-5 text-[#192437]"
+            />
           </button>
 
           <div className="overflow-hidden mx-10">
@@ -249,16 +274,20 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
                   key={s.key}
                   href={s.href}
                   data-card
-                  className="bg-white rounded-[20px] px-6 p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-[20px] group px-6 p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow"
                   style={{
                     flex: `0 0 calc((100% - ${GAP * (VISIBLE - 1)}px) / ${VISIBLE})`,
                   }}
                 >
-                  <FontAwesomeIcon icon={s.icon} className="text-[#e42233]" style={{ fontSize: "3rem" }} />
-                  <h3 className="font-satoshi mt-6 text-[24px] font-bold text-black leading-[30px]">
+                  <FontAwesomeIcon
+                    icon={s.icon}
+                    className="text-[#e42233] group-hover:text-[#4d4d4d]"
+                    style={{ fontSize: "3rem" }}
+                  />
+                  <h3 className="font-satoshi mt-6 text-[24px] font-bold text-black leading-[30px] group-hover:text-[#e42233] transition-colors duration-300">
                     {s.title}
                   </h3>
-                  <p className="font-satoshi mt-5 text-[15px] font-medium text-[#00000] text-justify tracking-[0px] leading-[24px]">
+                  <p className="font-satoshi mt-5 text-[15px] font-medium text-[#00000] text-justify tracking-[0px] leading-[24px] group-hover:text-[#4d4d4d] transition-colors duration-300">
                     {s.description}
                   </p>
                 </a>
@@ -270,7 +299,10 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
             onClick={() => slide("right")}
             className="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-gray-50 transition-colors"
           >
-            <FontAwesomeIcon icon={faChevronRight} className="w-5 h-5 text-[#192437]" />
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className="w-5 h-5 text-[#192437]"
+            />
           </button>
         </div>
       </section>
