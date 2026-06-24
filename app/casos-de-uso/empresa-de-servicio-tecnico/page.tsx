@@ -38,8 +38,10 @@ export default function EmpresaDeServicioTecnico() {
             alt="Empresa de servicio técnico"
             fill
             priority
+            quality={100}
             sizes="(max-width: 768px) 100vw, 1280px"
-            className="object-cover"
+            className="object-cover scale-100"
+            style={{ objectPosition: "center calc(80%)" }}
           />
           <div className="absolute inset-0 bg-black/70 rounded-[20px]" />
           <div className="relative h-full flex items-center justify-center px-6">
@@ -51,8 +53,8 @@ export default function EmpresaDeServicioTecnico() {
 
         {/* ── 2. INTRO UNA COLUMNA ─────────────────────────────────────────── */}
         <section className="bg-white rounded-[20px] px-6 py-10 md:px-[70px] md:py-[60px]">
-          <div className="flex gap-4 max-w-[700px] mx-auto items-center">
-            <div className="w-[9px] hidden md:block flex-shrink-0 self-stretch rounded-full bg-[#feeaed]" />
+          <div className="flex gap-4 max-w-[700px] mx-auto items-stretch">
+            <div className="w-[9px] hidden md:block flex-shrink-0 rounded-full bg-[#feeaed]" />
             <p className="font-satoshi text-[16px] text-[#231d1b] leading-[24px] md:leading-[26px] text-justify">
               Si tu empresa se encuentra en el rubro de la atención y reparación de productos o
               sistemas, MovilForm será tu nuevo aliado ya que podrás utilizar el módulo de tareas
