@@ -70,7 +70,7 @@ export default function Navbar({ bgColor = "bg-white" }: { bgColor?: string } = 
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <div className="relative h-[36px] md:h-[44px] w-[130px] md:w-[160px]">
-              <Image src="/cropped-movilform-logo-sticky-1-1.png" alt="MovilForm" fill className="object-contain" />
+              <Image src="/movilform-logo.svg" alt="MovilForm" fill className="object-contain" />
             </div>
         </a>
 

@@ -50,11 +50,11 @@ export default function Footer({
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[250px_1fr_1fr_1fr] gap-8">
           {/* Logo */}
-          <div className="flex items-center justify-center sm:justify-start pt-1">
+          <div className="flex items-center justify-center pt-1">
             <Link href="/">
-              <div className="relative h-[100px] md:h-[150px] w-[200px] md:w-[250px]">
+              <div className="relative h-[100px] md:h-[150px] w-[200px]">
                 <Image
-                  src="/cropped-movilform-logo-sticky-1-1.png"
+                  src="/movilform-logo.svg"
                   alt="MovilForm"
                   fill
                   quality={100}
