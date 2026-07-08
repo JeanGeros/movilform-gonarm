@@ -132,7 +132,7 @@ export default function UseCasesCarousel() {
           if (Math.abs(diff) > 50) { if (diff > 0) mobileNext(); else mobilePrev(); }
         }}
       >
-        <button onClick={mobilePrev} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center" aria-label="Anterior">
+        <button onClick={mobilePrev} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center" aria-label={t("anterior")}>
           <FontAwesomeIcon icon={faChevronLeft} className="text-[#e42233] text-lg" />
         </button>
 
@@ -142,7 +142,7 @@ export default function UseCasesCarousel() {
           </Link>
         </div>
 
-        <button onClick={mobileNext} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center" aria-label="Siguiente">
+        <button onClick={mobileNext} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center" aria-label={t("siguiente")}>
           <FontAwesomeIcon icon={faChevronRight} className="text-[#e42233] text-lg" />
         </button>
 

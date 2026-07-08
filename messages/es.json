@@ -47,7 +47,9 @@
     "innovacion": "Innovación reconocida:",
     "innovacionDesc": "MovilForm es utilizado por empresas líderes del mercado nacional e internacional.",
     "compromiso": "Compromiso con el éxito:",
-    "compromisoDesc": "Estamos para apoyarte y alcanzar el éxito de tu operación."
+    "compromisoDesc": "Estamos para apoyarte y alcanzar el éxito de tu operación.",
+    "anterior": "Anterior",
+    "siguiente": "Siguiente"
   },
   "home": {
     "metaTitle": "MovilForm - Optimización de Tareas y Rutas",
@@ -235,7 +237,15 @@
     "portalesTitle2": "medida",
     "portalesDesc": "Podrás agregar imágenes y contenido relacionados con tu negocio y generar cuentas de acceso con niveles de seguridad para ofrecer una experiencia de usuario con información relevante y útil."
   },
+  "not-found": {
+    "heading": "Página no encontrada",
+    "desc": "Lo sentimos, la página que buscas no existe o fue movida.",
+    "cta": "Volver al inicio"
+  },
   "common": {
+    "anterior": "Anterior",
+    "siguiente": "Siguiente",
+    "clientsHeading": "Empresas que confían en nosotros",
     "benefitsHeading": "Beneficios para tu empresa",
     "eficienciaTitle": "Eficiencia",
     "eficienciaDesc": "Planifica tus servicios y optimiza los recursos y aumenta el control de las tareas que se ejecutan diariamente.",
@@ -351,6 +361,8 @@
     "telecomTitle": "Empresa de Telecomunicaciones",
     "telecomDesc": "Planifica tus ordenes de servicio o trabajo que realiza su personal en terreno, podrás gestionar a tu personal interno como a las empresas colaboradoras.",
     "plagasTitle": "Empresa de Control de Plagas",
-    "plagasDesc": "Con MovilForm podrás gestionar y planificar todos tus servicios de desratización, control de aves, termitas, TUV, cucarachas y también podrás generar tus certificados digitales."
+    "plagasDesc": "Con MovilForm podrás gestionar y planificar todos tus servicios de desratización, control de aves, termitas, TUV, cucarachas y también podrás generar tus certificados digitales.",
+    "anterior": "Anterior",
+    "siguiente": "Siguiente"
   }
 }

@@ -47,7 +47,9 @@
     "innovacion": "Recognized innovation:",
     "innovacionDesc": "MovilForm is used by leading companies in national and international markets.",
     "compromiso": "Commitment to success:",
-    "compromisoDesc": "We are here to support you and achieve the success of your operation."
+    "compromisoDesc": "We are here to support you and achieve the success of your operation.",
+    "anterior": "Previous",
+    "siguiente": "Next"
   },
   "home": {
     "metaTitle": "MovilForm - Task and Route Optimization",
@@ -235,7 +237,15 @@
     "portalesTitle2": "your needs",
     "portalesDesc": "You can add images and content related to your business and create access accounts with security levels to offer a user experience with relevant and useful information."
   },
+  "not-found": {
+    "heading": "Page not found",
+    "desc": "Sorry, the page you're looking for doesn't exist or has been moved.",
+    "cta": "Back to home"
+  },
   "common": {
+    "anterior": "Previous",
+    "siguiente": "Next",
+    "clientsHeading": "Companies that trust us",
     "benefitsHeading": "Benefits for your company",
     "eficienciaTitle": "Efficiency",
     "eficienciaDesc": "Plan your services and optimize resources to increase control of tasks performed daily.",
@@ -351,6 +361,8 @@
     "telecomTitle": "Telecommunications Company",
     "telecomDesc": "Plan your service or work orders for your field staff and manage both your internal team and contractor companies.",
     "plagasTitle": "Pest Control Company",
-    "plagasDesc": "With MovilForm you can manage and plan all your pest control services — rodent control, bird control, termites, cockroaches — and generate your digital certificates."
+    "plagasDesc": "With MovilForm you can manage and plan all your pest control services — rodent control, bird control, termites, cockroaches — and generate your digital certificates.",
+    "anterior": "Previous",
+    "siguiente": "Next"
   }
 }

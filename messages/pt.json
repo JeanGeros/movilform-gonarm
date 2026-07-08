@@ -47,7 +47,9 @@
     "innovacion": "Inovação reconhecida:",
     "innovacionDesc": "O MovilForm é utilizado por empresas líderes nos mercados nacional e internacional.",
     "compromiso": "Compromisso com o sucesso:",
-    "compromisoDesc": "Estamos aqui para apoiá-lo e alcançar o sucesso da sua operação."
+    "compromisoDesc": "Estamos aqui para apoiá-lo e alcançar o sucesso da sua operação.",
+    "anterior": "Anterior",
+    "siguiente": "Próximo"
   },
   "home": {
     "metaTitle": "MovilForm - Otimização de Tarefas e Rotas",
@@ -235,7 +237,15 @@
     "portalesTitle2": "seu jeito",
     "portalesDesc": "Você pode adicionar imagens e conteúdo relacionados ao seu negócio e criar contas de acesso com níveis de segurança para oferecer uma experiência de usuário com informações relevantes e úteis."
   },
+  "not-found": {
+    "heading": "Página não encontrada",
+    "desc": "Desculpe, a página que você está procurando não existe ou foi movida.",
+    "cta": "Voltar ao início"
+  },
   "common": {
+    "anterior": "Anterior",
+    "siguiente": "Próximo",
+    "clientsHeading": "Empresas que confiam em nós",
     "benefitsHeading": "Benefícios para sua empresa",
     "eficienciaTitle": "Eficiência",
     "eficienciaDesc": "Planeje seus serviços e otimize os recursos para aumentar o controle das tarefas executadas diariamente.",
@@ -351,6 +361,8 @@
     "telecomTitle": "Empresa de Telecomunicações",
     "telecomDesc": "Planeje suas ordens de serviço ou trabalho realizadas pelo pessoal em campo e gerencie tanto a equipe interna quanto as empresas contratadas.",
     "plagasTitle": "Empresa de Controle de Pragas",
-    "plagasDesc": "Com o MovilForm você pode gerenciar e planejar todos os seus serviços de controle de pragas — roedores, aves, cupins, baratas — e emitir certificados digitais."
+    "plagasDesc": "Com o MovilForm você pode gerenciar e planejar todos os seus serviços de controle de pragas — roedores, aves, cupins, baratas — e emitir certificados digitais.",
+    "anterior": "Anterior",
+    "siguiente": "Próximo"
   }
 }

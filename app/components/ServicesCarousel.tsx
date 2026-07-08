@@ -203,7 +203,7 @@ export default function ServicesCarousel({ currentSlug }: { currentSlug: string 
                   <h3 className="font-satoshi mt-6 text-[24px] font-bold text-black leading-[30px] group-hover:text-[#e42233] transition-colors duration-300">
                     {s.title}
                   </h3>
-                  <p className="font-satoshi mt-5 text-[15px] font-medium text-[#00000] text-justify tracking-[0px] leading-[24px] group-hover:text-[#4d4d4d] transition-colors duration-300">
+                  <p className="font-satoshi mt-5 text-[15px] font-medium text-black text-justify tracking-[0px] leading-[24px] group-hover:text-[#4d4d4d] transition-colors duration-300">
                     {s.description}
                   </p>
                 </Link>

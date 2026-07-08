@@ -2,6 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const CLIENTS = [
   { src: "/clientes/imgi_11_Rentokil-1-1.webp",      alt: "Rentokil" },
@@ -28,6 +29,7 @@ function useIsMobile() {
 }
 
 export default function ClientsCarousel() {
+  const t = useTranslations("common");
   const isMobile = useIsMobile();
   const itemWidth = isMobile ? 120 : 180;
   const gap = isMobile ? 24 : 40;
@@ -57,7 +59,7 @@ export default function ClientsCarousel() {
   return (
     <section className="max-w-7xl mx-0 md:mx-auto rounded-none md:rounded-[20px] bg-[#e42233] py-8 md:py-10 overflow-hidden">
       <h2 className="font-satoshi text-[24px] md:text-[40px] font-black text-white text-center leading-[30px] md:leading-[40px] mb-6 md:mb-8 px-4">
-        Empresas que confían en nosotros
+        {t("clientsHeading")}
       </h2>
       <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <div

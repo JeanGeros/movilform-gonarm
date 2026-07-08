@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono, Montserrat, Inter, Nunito_Sans } from "next/font/google";
 import { routing } from "@/i18n/routing";
@@ -63,7 +63,10 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
-  const messages = await getMessages();
+  const [messages, th] = await Promise.all([
+    getMessages(),
+    getTranslations({ locale, namespace: "home" }),
+  ]);
 
   return (
     <html
@@ -87,7 +90,7 @@ export default async function LocaleLayout({
                   "@id": `${siteUrl}/#website`,
                   url: `${siteUrl}/`,
                   name: "Movilform",
-                  description: "Movilform digitaliza y optimiza tareas en terreno: planificación de rutas, formularios, inventario y reportes automáticos.",
+                  description: th("metaDesc"),
                   inLanguage: locale,
                 },
               ],
