@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git status *)",
+      "Bash(git fetch *)",
+      "Bash(git restore *)",
+      "Bash(git pull *)",
+      "Bash(npm install *)",
+      "Bash(mkdir -p \"c:/Users/erosp/OneDrive/Escritorio/movilform-gonarm/app/[locale]\" 2>/dev/null; echo \"ok\")",
+      "Read(//c/Users/erosp/OneDrive/Escritorio/movilform-gonarm/app/**)",
+      "Read(//c/Users/erosp/Downloads/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\erosp\\OneDrive\\Escritorio\\movilform-gonarm\\app"
+    ]
+  }
+}
