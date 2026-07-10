@@ -28,9 +28,9 @@ const IMG_TELECOM     = "/inicio/telecom.png";
 const IMG_PEST        = "/inicio/pest.png";
 const IMG_INTEGRATION = "/inicio/integration.jpg";
 
-function SolutionCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+function SolutionCard({ href, icon, title, description }: { href: React.ComponentProps<typeof Link>["href"]; icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="group bg-[#feeaed] rounded-[20px] hover:bg-[#ebebeb] p-[30px] flex flex-col">
+    <Link href={href} className="group bg-[#feeaed] rounded-[20px] hover:bg-[#ebebeb] p-[30px] flex flex-col">
       <div className="flex items-center justify-center">
         <div className="w-20 h-20 bg-white rounded-[40px] flex items-center justify-center">{icon}</div>
       </div>
@@ -40,13 +40,13 @@ function SolutionCard({ icon, title, description }: { icon: React.ReactNode; tit
       <p className="font-satoshi mt-3 text-[16px] font-medium text-[#3f4648] group-hover:text-[#192437] text-justify leading-[26px] transition-colors duration-300">
         {description}
       </p>
-    </div>
+    </Link>
   );
 }
 
-function UseCaseCard({ img, title, description }: { img: string; title: string; description: string }) {
+function UseCaseCard({ href, img, title, description }: { href: React.ComponentProps<typeof Link>["href"]; img: string; title: string; description: string }) {
   return (
-    <div className="group relative bg-[#f9dfe2] rounded-[12px] pt-[80px] pb-8 px-8">
+    <Link href={href} className="group relative block bg-[#f9dfe2] rounded-[12px] pt-[80px] pb-8 px-8">
       <div className="absolute -top-[55px] left-1/2 -translate-x-1/2 w-[120px] h-[120px] rounded-full bg-[#f9dfe2] flex items-center justify-center overflow-hidden">
         <Image src={img} alt={title} width={80} height={80} className="w-2/3 h-2/3 object-contain" />
       </div>
@@ -56,7 +56,7 @@ function UseCaseCard({ img, title, description }: { img: string; title: string; 
       <p className="font-satoshi mt-3 text-[16px] text-[#3f4648] leading-[27px] text-justify transition-colors duration-300">
         {description}
       </p>
-    </div>
+    </Link>
   );
 }
 
@@ -132,12 +132,12 @@ export default async function HomePage({
             {t("solutionsDesc")}
           </p>
           <div className="mt-8 md:mt-10 grid px-5 md:px-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-            <SolutionCard icon={<FontAwesomeIcon icon={faMobileAlt} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("formsTitle")} description={t("formsDesc")} />
-            <SolutionCard icon={<FontAwesomeIcon icon={faRoute} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("routesTitle")} description={t("routesDesc")} />
-            <SolutionCard icon={<FontAwesomeIcon icon={faFileAlt} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("tasksTitle")} description={t("tasksDesc")} />
-            <SolutionCard icon={<FontAwesomeIcon icon={faChartBar} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("reportsTitle")} description={t("reportsDesc")} />
-            <SolutionCard icon={<FontAwesomeIcon icon={faProjectDiagram} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("integrationsTitle")} description={t("integrationsDesc")} />
-            <SolutionCard icon={<FontAwesomeIcon icon={faUserCircle} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("portalTitle")} description={t("portalDesc")} />
+            <SolutionCard href="/servicios/formularios-digitales" icon={<FontAwesomeIcon icon={faMobileAlt} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("formsTitle")} description={t("formsDesc")} />
+            <SolutionCard href="/servicios/modulo-de-rutas" icon={<FontAwesomeIcon icon={faRoute} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("routesTitle")} description={t("routesDesc")} />
+            <SolutionCard href="/servicios/modulo-de-tareas" icon={<FontAwesomeIcon icon={faFileAlt} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("tasksTitle")} description={t("tasksDesc")} />
+            <SolutionCard href="/servicios/reportes-y-dashboards" icon={<FontAwesomeIcon icon={faChartBar} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("reportsTitle")} description={t("reportsDesc")} />
+            <SolutionCard href="/servicios/integraciones" icon={<FontAwesomeIcon icon={faProjectDiagram} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("integrationsTitle")} description={t("integrationsDesc")} />
+            <SolutionCard href="/servicios/portal-de-clientes" icon={<FontAwesomeIcon icon={faUserCircle} className="text-[#4d4d4d] group-hover:text-[#e42233] transition-colors duration-300" style={{ fontSize: "2.5rem" }} />} title={t("portalTitle")} description={t("portalDesc")} />
           </div>
         </section>
       </SlideIn>
@@ -170,12 +170,12 @@ export default async function HomePage({
             </div>
 
             <div className="grid grid-cols-1 px-5 md:px-0 sm:grid-cols-2 gap-25 md:gap-6 mt-18 md:mt-0 lg:mt-14">
-              <UseCaseCard img={IMG_SERVICES} title={t("tecnicosTitle")} description={t("tecnicosDesc")} />
-              <UseCaseCard img={IMG_WASTE} title={t("residuosTitle")} description={t("residuosDesc")} />
+              <UseCaseCard href="/casos-de-uso/empresa-de-servicio-tecnico" img={IMG_SERVICES} title={t("tecnicosTitle")} description={t("tecnicosDesc")} />
+              <UseCaseCard href="/casos-de-uso/empresa-de-gestion-de-residuos" img={IMG_WASTE} title={t("residuosTitle")} description={t("residuosDesc")} />
             </div>
             <div className="grid grid-cols-1 px-5 md:px-0 sm:grid-cols-2 gap-25 md:gap-6 mt-18 lg:mt-14">
-              <UseCaseCard img={IMG_TELECOM} title={t("telecomTitle")} description={t("telecomDesc")} />
-              <UseCaseCard img={IMG_PEST} title={t("plagasTitle")} description={t("plagasDesc")} />
+              <UseCaseCard href="/casos-de-uso/empresa-de-telecomunicaciones" img={IMG_TELECOM} title={t("telecomTitle")} description={t("telecomDesc")} />
+              <UseCaseCard href="/casos-de-uso/empresa-de-control-de-plagas" img={IMG_PEST} title={t("plagasTitle")} description={t("plagasDesc")} />
             </div>
           </div>
         </section>
