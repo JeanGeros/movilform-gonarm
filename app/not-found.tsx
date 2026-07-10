@@ -1,14 +1,19 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import "./globals.css";
 
+// ponytail: not-found raíz (rutas sin locale). Autónomo: sin Navbar/Footer ni
+// useTranslations, porque el layout raíz no monta el NextIntlClientProvider.
+// El 404 con idioma vive en app/[locale]/not-found.tsx.
 export default function NotFound() {
   return (
-    <main className="w-full bg-white min-h-screen flex flex-col">
-      <div className="relative z-50 h-[88px]">
-        <Navbar />
-      </div>
-
-      <div className="flex-1 flex flex-col items-center justify-center px-6 py-20 text-center">
+    <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400&display=swap"
+        />
+      </head>
+      <body className="w-full bg-white min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center antialiased">
         <h1 className="font-satoshi text-[120px] md:text-[180px] font-black text-[#e42433] leading-none">
           404
         </h1>
@@ -24,9 +29,7 @@ export default function NotFound() {
         >
           Volver al inicio
         </a>
-      </div>
-
-      <Footer />
-    </main>
+      </body>
+    </html>
   );
 }

@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await transporter.sendMail({
-      from: `"MovilForm Contacto" <${process.env.SMTP_USER}>`,
+      from: `"MovilForm Contacto" <${process.env.SMTP_FROM}>`,
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: correo,
       subject: `Nuevo mensaje de contacto — ${asunto}`,
