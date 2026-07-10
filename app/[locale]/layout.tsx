@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Geist, Geist_Mono, Montserrat, Inter, Nunito_Sans } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { buildAlternates } from "@/i18n/seo";
+import LanguageSwitcher from "@/app/components/LanguageSwitcher";
 import "../globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -101,6 +102,9 @@ export default async function LocaleLayout({
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider messages={messages}>
           {children}
+          <div className="fixed bottom-4 left-4 z-50">
+            <LanguageSwitcher />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

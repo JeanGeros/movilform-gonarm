@@ -77,7 +77,7 @@ export default function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-2 text-[14px] font-bold text-black hover:text-[#e42433] transition-colors cursor-pointer px-2 py-1 rounded-[8px] border border-gray-200 hover:border-[#e42433]"
+        className="flex items-center gap-2 text-[14px] font-bold text-black hover:text-[#e42433] transition-colors cursor-pointer px-2 py-1 rounded-[8px] bg-white border border-gray-200 hover:border-[#e42433] shadow-[0_2px_8px_rgba(0,0,0,0.08)]"
       >
         <current.Flag />
         <span className="font-satoshi">{current.code.toUpperCase()}</span>
@@ -91,7 +91,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute top-[calc(100%+6px)] right-0 bg-white rounded-[14px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.14)] min-w-[170px] py-1">
+        <div className="absolute bottom-[calc(100%+6px)] left-0 bg-white rounded-[14px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.14)] min-w-[170px] py-1">
           {LOCALES.map(({ code, label, Flag }) => (
             <button
               key={code}
