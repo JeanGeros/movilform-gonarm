@@ -4,27 +4,23 @@ import { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { useTranslations } from "next-intl";
 
-const FEATURES = [
-  {
-    img: "/inicio/coding.png",
-    title: "Plataforma Web:",
-    description: "Accede a diferentes módulos para gestionar tu operación.",
-  },
-  {
-    img: "/inicio/innovation.png",
-    title: "Innovación reconocida:",
-    description: "MovilForm es utilizado por empresas líderes del mercado nacional e internacional.",
-  },
-  {
-    img: "/inicio/quality.png",
-    title: "Compromiso con el éxito:",
-    description: "Estamos para apoyarte y alcanzar el éxito de tu operación.",
-  },
+const FEATURE_IMGS = [
+  "/inicio/coding.png",
+  "/inicio/innovation.png",
+  "/inicio/quality.png",
 ];
 
 export default function FeaturesCarousel() {
+  const t = useTranslations("features");
   const [current, setCurrent] = useState(0);
+
+  const FEATURES = [
+    { img: FEATURE_IMGS[0], title: t("plataforma"),  description: t("plataformaDesc") },
+    { img: FEATURE_IMGS[1], title: t("innovacion"),  description: t("innovacionDesc") },
+    { img: FEATURE_IMGS[2], title: t("compromiso"),  description: t("compromisoDesc") },
+  ];
 
   function prev() {
     setCurrent((c) => (c === 0 ? FEATURES.length - 1 : c - 1));
@@ -58,7 +54,7 @@ export default function FeaturesCarousel() {
         <button
           onClick={prev}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center"
-          aria-label="Anterior"
+          aria-label={t("anterior") ?? "Anterior"}
         >
           <FontAwesomeIcon icon={faChevronLeft} className="text-[#e42233]" style={{ fontSize: "1.25rem" }} />
         </button>
@@ -78,7 +74,7 @@ export default function FeaturesCarousel() {
         <button
           onClick={next}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center"
-          aria-label="Siguiente"
+          aria-label={t("siguiente") ?? "Siguiente"}
         >
           <FontAwesomeIcon icon={faChevronRight} className="text-[#e42233]" style={{ fontSize: "1.25rem" }} />
         </button>

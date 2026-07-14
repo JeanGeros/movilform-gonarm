@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { useTranslations } from "next-intl";
 
 interface Benefit {
   img: string;
@@ -13,6 +14,7 @@ interface Benefit {
 }
 
 export default function BenefitsCarousel({ benefits }: { benefits: Benefit[] }) {
+  const t = useTranslations("common");
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
   const [animating, setAnimating] = useState(false);
@@ -91,7 +93,7 @@ export default function BenefitsCarousel({ benefits }: { benefits: Benefit[] }) 
         <button
           onClick={prev}
           className="absolute left-0 top-[100px] -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center"
-          aria-label="Anterior"
+          aria-label={t("anterior")}
         >
           <FontAwesomeIcon icon={faChevronLeft} className="text-[#e42233] text-lg" />
         </button>
@@ -122,7 +124,7 @@ export default function BenefitsCarousel({ benefits }: { benefits: Benefit[] }) 
         <button
           onClick={next}
           className="absolute right-0 top-[100px] -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center"
-          aria-label="Siguiente"
+          aria-label={t("siguiente")}
         >
           <FontAwesomeIcon icon={faChevronRight} className="text-[#e42233] text-lg" />
         </button>

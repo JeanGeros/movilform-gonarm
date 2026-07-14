@@ -7,6 +7,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { useTranslations } from "next-intl";
 
 export default function ImageCarousel({
   images,
@@ -15,6 +16,7 @@ export default function ImageCarousel({
   images: string[];
   contain?: boolean;
 }) {
+  const t = useTranslations("common");
   const [current, setCurrent] = useState(0);
 
   const next = useCallback(
@@ -35,7 +37,7 @@ export default function ImageCarousel({
     <div className="flex items-center gap-0">
       <button
         onClick={prev}
-        aria-label="Anterior"
+        aria-label={t("anterior")}
         className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
       >
         <FontAwesomeIcon
@@ -74,7 +76,7 @@ export default function ImageCarousel({
 
       <button
         onClick={next}
-        aria-label="Siguiente"
+        aria-label={t("siguiente")}
         className="shrink-0 w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
       >
         <FontAwesomeIcon

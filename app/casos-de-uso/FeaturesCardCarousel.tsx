@@ -7,6 +7,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { useTranslations } from "next-intl";
 
 interface Feature {
   icon: IconDefinition;
@@ -19,6 +20,7 @@ export default function FeaturesCardCarousel({
 }: {
   features: Feature[];
 }) {
+  const t = useTranslations("common");
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
   const [animating, setAnimating] = useState(false);
@@ -96,7 +98,7 @@ export default function FeaturesCardCarousel({
         <button
           onClick={prev}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center"
-          aria-label="Anterior"
+          aria-label={t("anterior")}
         >
           <FontAwesomeIcon
             icon={faChevronLeft}
@@ -126,7 +128,7 @@ export default function FeaturesCardCarousel({
         <button
           onClick={next}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center"
-          aria-label="Siguiente"
+          aria-label={t("siguiente")}
         >
           <FontAwesomeIcon
             icon={faChevronRight}
