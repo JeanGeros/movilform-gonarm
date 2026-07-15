@@ -95,7 +95,7 @@ export default function HeroCarousel() {
             {t("verServicios")}
           </Link>
           <a
-            href="https://wa.me/+56961558312"
+            href="https://wa.me/+56985297643"
             target="_blank"
             rel="noopener noreferrer"
             className="font-montserrat inline-flex items-center justify-center w-full sm:w-auto h-[45px] px-10 rounded-[30px] hover:text-[rgba(229,35,51,0.8)] hover:bg-white bg-[rgba(229,35,51,0.8)] text-white text-[16px] md:text-[17px] font-bold transition-colors"
