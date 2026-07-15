@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 function ChevronDown({ open }: { open?: boolean }) {
   return (
@@ -150,12 +151,15 @@ export default function Navbar({ bgColor = "bg-white" }: { bgColor?: string } = 
         </div>
 
         {/* Desktop CTA */}
-        <Link
-          href="/contacto"
-          className="font-gilmer flex-shrink-0 hidden lg:inline-flex items-center justify-center h-[46px] px-8 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"
-        >
-          {t("contacto")}
-        </Link>
+        <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+          <LanguageSwitcher />
+          <Link
+            href="/contacto"
+            className="font-gilmer inline-flex items-center justify-center h-[46px] px-8 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"
+          >
+            {t("contacto")}
+          </Link>
+        </div>
 
         {/* Mobile hamburger */}
         <button
@@ -233,7 +237,8 @@ export default function Navbar({ bgColor = "bg-white" }: { bgColor?: string } = 
             {t("recursos")}
           </a>
 
-          <div className="mt-4 border-t border-gray-100 pt-4">
+          <div className="mt-4 border-t border-gray-100 pt-4 flex items-center gap-3">
+            <LanguageSwitcher />
             <Link
               href="/contacto"
               className="inline-flex items-center justify-center py-3 px-8 rounded-full bg-[#e42433] text-white text-[16px] font-semibold hover:bg-[#c01f2d] transition-colors"

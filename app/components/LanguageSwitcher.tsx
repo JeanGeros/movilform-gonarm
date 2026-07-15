@@ -91,7 +91,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute bottom-[calc(100%+6px)] left-0 bg-white rounded-[14px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.14)] min-w-[170px] py-1">
+        <div className="absolute top-[calc(100%+6px)] right-0 bg-white rounded-[14px] overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.14)] min-w-[170px] py-1">
           {LOCALES.map(({ code, label, Flag }) => (
             <button
               key={code}
