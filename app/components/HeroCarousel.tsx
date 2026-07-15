@@ -3,7 +3,10 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
@@ -48,7 +51,7 @@ export default function HeroCarousel() {
   const slide = SLIDES[current];
 
   return (
-    <section className="relative w-full h-[500px] md:h-[700px] overflow-hidden">
+    <section className="relative w-full h-[550px] md:h-[700px] overflow-hidden">
       {BG_SLIDES.map((bg, i) => (
         <Image
           key={bg}
@@ -65,9 +68,9 @@ export default function HeroCarousel() {
       ))}
       <div className="absolute inset-0 bg-[rgba(20,20,20,0.8)]" />
 
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 md:px-8 pt-16 md:pt-0">
+      <div className="relative z-10 h-full flex flex-col items-center justify-end text-center px-6 md:px-8 py-10 md:py-0">
         <h1
-          className={`font-montserrat text-[32px] md:text-[55px] font-bold leading-[40px] md:leading-[60px] tracking-[-1px] text-white w-[80%] transition-all duration-700 ${
+          className={`font-montserrat text-[32px] md:text-[55px] font-bold leading-[40px] md:leading-[60px] tracking-[-1px] text-white w-90 md:w-[80%] transition-all duration-700 ${
             animating ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
@@ -123,7 +126,9 @@ export default function HeroCarousel() {
             key={i}
             onClick={() => changeTo(i)}
             className={`h-[3px] rounded-full transition-all duration-500 ${
-              i === current ? "w-[80px] bg-white/90" : "w-[40px] bg-white/30 hover:bg-white/50"
+              i === current
+                ? "w-[80px] bg-white/90"
+                : "w-[40px] bg-white/30 hover:bg-white/50"
             }`}
           />
         ))}
